@@ -1,0 +1,60 @@
+{% extends 'base.html' %} {% block content %}
+<h2>Edit User</h2>
+<a
+  href="{{ url_for('user_management.user_management') }}"
+  class="btn btn-secondary"
+  >&laquo; Back to Users</a
+>
+<form method="post" class="crud-form">
+  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input
+      type="text"
+      name="username"
+      id="username"
+      value="{{ user.username }}"
+      required
+      minlength="3"
+      maxlength="64"
+      pattern="[a-zA-Z0-9_]+"
+      title="Only letters, numbers, and underscores allowed"
+    />
+  </div>
+  <div class="form-group">
+    <label for="password">Password (kosongkan jika tidak diubah)</label>
+    <input type="password" name="password" id="password" minlength="6" />
+  </div>
+  <div class="form-group">
+    <label for="role">Role</label>
+    <select name="role" id="role" required>
+      <option
+        value="user"
+        {%
+        if
+        user.role.value=""
+        ="user"
+        %}selected{%
+        endif
+        %}
+      >
+        User
+      </option>
+      <option
+        value="admin"
+        {%
+        if
+        user.role.value=""
+        ="admin"
+        %}selected{%
+        endif
+        %}
+      >
+        Admin
+      </option>
+    </select>
+  </div>
+  <button type="submit">Update User</button>
+  <a href="{{ url_for('user_management.user_management') }}">Batal</a>
+</form>
+{% endblock %}

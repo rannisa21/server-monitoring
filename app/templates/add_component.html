@@ -1,0 +1,67 @@
+{% extends 'base.html' %} {% block content %}
+<h2>Add Component to {{ server.name }}</h2>
+
+<div class="server-info-card">
+  <p>
+    <strong>Server:</strong> {{ server.name }} | <strong>IP:</strong> {{
+    server.ip }} | <strong>Brand:</strong> {{ server.brand }}
+  </p>
+</div>
+
+<a
+  href="{{ url_for('component.components', server_id=server.id) }}"
+  class="btn btn-secondary"
+  >&laquo; Back to Components</a
+>
+
+<form method="post" class="form-add-component" style="margin-top: 1rem">
+  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+
+  <div class="form-group">
+    <label for="category">Category</label>
+    <select name="category" id="category" required>
+      <option value="">-- Select Category --</option>
+      <option value="PSU">PSU (Power Supply Unit)</option>
+      <option value="harddisk">Harddisk</option>
+      <option value="suhu">Suhu (Temperature)</option>
+      <option value="fan">Fan</option>
+    </select>
+    <small class="help-text"
+      >Component status will be classified based on server brand ({{
+      server.brand }})</small
+    >
+  </div>
+
+  <div class="form-group">
+    <label for="name">Component Name</label>
+    <input
+      type="text"
+      name="name"
+      id="name"
+      required
+      placeholder="e.g., PSU 1, Fan CPU, HDD Bay 1"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="oid">OID (SNMP Object Identifier)</label>
+    <input
+      type="text"
+      name="oid"
+      id="oid"
+      required
+      placeholder="e.g., 1.3.6.1.4.1.232.6.2.6.7.1.9.0.1"
+    />
+    <small class="help-text">SNMP OID to monitor this component</small>
+  </div>
+
+  <div class="form-actions">
+    <button type="submit" class="btn">Save & Start Monitoring</button>
+    <a
+      href="{{ url_for('component.components', server_id=server.id) }}"
+      class="btn btn-secondary"
+      >Cancel</a
+    >
+  </div>
+</form>
+{% endblock %}

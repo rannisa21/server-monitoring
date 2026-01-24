@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Server Monitoring</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    {% if current_user.is_authenticated %}
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="sidebar-title">Server Monitor</div>
+        <nav class="sidebar-menu">
+          <a
+            href="{{ url_for('dashboard.dashboard') }}"
+            class="{% if request.endpoint == 'dashboard.dashboard' %}active{% endif %}"
+            >Dashboard</a
+          >
+          {% if current_user.role.value == 'admin' %}
+          <a
+            href="{{ url_for('server.servers') }}"
+            class="{% if 'server' in request.endpoint or 'component' in request.endpoint %}active{% endif %}"
+            >Server Management</a
+          >
+          <a
+            href="{{ url_for('user_management.user_management') }}"
+            class="{% if 'user_management' in request.endpoint %}active{% endif %}"
+            >Users</a
+          >
+          <a
+            href="{{ url_for('report.report') }}"
+            class="{% if 'report' in request.endpoint %}active{% endif %}"
+            >Reports</a
+          >
+          {% endif %}
+        </nav>
+        <div class="sidebar-user">
+          <span>{{ current_user.username }}</span>
+          <a href="{{ url_for('auth.logout') }}">Logout</a>
+        </div>
+      </aside>
+      <main class="main-content">
+        {% with messages = get_flashed_messages(with_categories=true) %} {% if
+        messages %} {% for category, message in messages %}
+        <div class="flash flash-{{ category }}">{{ message }}</div>
+        {% endfor %} {% endif %} {% endwith %} {% block content %}{% endblock %}
+      </main>
+    </div>
+    {% else %}
+    <div class="login-page">
+      {% with messages = get_flashed_messages(with_categories=true) %} {% if
+      messages %} {% for category, message in messages %}
+      <div
+        class="flash flash-{{ category }}"
+        style="max-width: 320px; margin: 1rem auto"
+      >
+        {{ message }}
+      </div>
+      {% endfor %} {% endif %} {% endwith %} {% block login_content %}{%
+      endblock %}
+    </div>
+    {% endif %}
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+</html>

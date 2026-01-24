@@ -1,0 +1,253 @@
+﻿{% extends 'base.html' %}
+{% block content %}
+<div class="page-header">
+    <h2>Dashboard</h2>
+    <div class="header-actions">
+        <span class="total-info">{{ total_items }} items</span>
+        <button type="button" class="btn btn-success" onclick="openReportModal()">
+            <span>📥</span> Download Report
+        </button>
+    </div>
+</div>
+
+<!-- Download Report Modal -->
+<div id="reportModal" class="modal-overlay" style="display: none;">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Download Report Excel</h3>
+            <button type="button" class="modal-close" onclick="closeReportModal()">&times;</button>
+        </div>
+        <form action="{{ url_for('dashboard.download_report') }}" method="post">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="report_month">Bulan</label>
+                    <select name="month" id="report_month" required>
+                        <option value="">-- Pilih Bulan --</option>
+                        <option value="1">Januari</option>
+                        <option value="2">Februari</option>
+                        <option value="3">Maret</option>
+                        <option value="4">April</option>
+                        <option value="5">Mei</option>
+                        <option value="6">Juni</option>
+                        <option value="7">Juli</option>
+                        <option value="8">Agustus</option>
+                        <option value="9">September</option>
+                        <option value="10">Oktober</option>
+                        <option value="11">November</option>
+                        <option value="12">Desember</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="report_year">Tahun</label>
+                    <select name="year" id="report_year" required>
+                        <option value="">-- Pilih Tahun --</option>
+                        {% for y in range(2024, 2031) %}
+                        <option value="{{ y }}">{{ y }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onclick="closeReportModal()">Batal</button>
+                <button type="submit" class="btn btn-primary">Download</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Filter, Search, and Sort Section -->
+<div class="dashboard-toolbar">
+    <form method="get" action="{{ url_for('dashboard.dashboard') }}" class="filter-form" id="dashboardForm">
+        <div class="filter-row">
+            <!-- Search -->
+            <div class="filter-item">
+                <input type="text" name="search" id="search" value="{{ search_query }}" placeholder="Search server, component, IP, OID...">
+            </div>
+
+            <!-- Server Filter (Multi-select Dropdown) -->
+            <div class="filter-item">
+                <div class="multi-select-wrapper">
+                    <button type="button" class="multi-select-btn" onclick="toggleDropdown('serverDropdown')">
+                        <span id="serverLabel">{% if server_filter %}{{ server_filter|length }} server(s){% else %}All Servers{% endif %}</span>
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div id="serverDropdown" class="multi-select-dropdown">
+                        <label class="checkbox-item">
+                            <input type="checkbox" id="selectAllServers" onchange="toggleAllServers(this)"> <strong>Select All</strong>
+                        </label>
+                        {% for server in servers %}
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="server_id" value="{{ server.id }}" {% if server.id in server_filter %}checked{% endif %} onchange="updateServerLabel()"> {{ server.name }}
+                        </label>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category Filter -->
+            <div class="filter-item">
+                <select name="category" id="category" onchange="this.form.submit()">
+                    <option value="">All Categories</option>
+                    {% for cat in categories %}
+                    <option value="{{ cat }}" {% if category_filter == cat %}selected{% endif %}>{{ cat }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <!-- Status Filter -->
+            <div class="filter-item">
+                <select name="status" id="status" onchange="this.form.submit()">
+                    <option value="">All Status</option>
+                    <option value="OK" {% if status_filter == 'OK' %}selected{% endif %}>OK</option>
+                    <option value="Warning" {% if status_filter == 'Warning' %}selected{% endif %}>Warning</option>
+                    <option value="Critical" {% if status_filter == 'Critical' %}selected{% endif %}>Critical</option>
+                    <option value="no_data" {% if status_filter == 'no_data' %}selected{% endif %}>No Data</option>
+                </select>
+            </div>
+
+            <!-- Sort -->
+            <div class="filter-item sort-group">
+                <select name="sort" id="sort" onchange="this.form.submit()">
+                    <option value="server" {% if sort_by == 'server' %}selected{% endif %}>Server</option>
+                    <option value="component" {% if sort_by == 'component' %}selected{% endif %}>Component</option>
+                    <option value="category" {% if sort_by == 'category' %}selected{% endif %}>Category</option>
+                    <option value="status" {% if sort_by == 'status' %}selected{% endif %}>Status</option>
+                    <option value="timestamp" {% if sort_by == 'timestamp' %}selected{% endif %}>Timestamp</option>
+                </select>
+                <select name="order" id="order" onchange="this.form.submit()">
+                    <option value="asc" {% if sort_order == 'asc' %}selected{% endif %}>↑ Asc</option>
+                    <option value="desc" {% if sort_order == 'desc' %}selected{% endif %}>↓ Desc</option>
+                </select>
+            </div>
+
+            <!-- Actions -->
+            <div class="filter-item filter-actions">
+                <button type="submit" class="btn btn-primary btn-sm">Apply</button>
+                {% if search_query or server_filter or category_filter or status_filter %}
+                <a href="{{ url_for('dashboard.dashboard') }}" class="btn btn-secondary btn-sm">Clear</a>
+                {% endif %}
+            </div>
+        </div>
+    </form>
+</div>
+
+{% if error %}
+<div class="flash flash-danger">{{ error }}</div>
+{% endif %}
+
+<div class="dashboard-table-wrapper">
+    <table class="data-table" id="dashboardTable">
+        <thead>
+            <tr>
+                <th>Server</th>
+                <th>Component</th>
+                <th>Category</th>
+                <th>OID</th>
+                <th>Brand</th>
+                <th>Status</th>
+                <th>Value</th>
+                <th>Timestamp</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in dashboard_data %}
+            <tr class="{% if item.metric %}status-row-{{ item.metric.status|lower }}{% else %}status-row-unknown{% endif %}">
+                <td><strong>{{ item.server.name }}</strong></td>
+                <td>{{ item.component.name }}</td>
+                <td><span class="category-badge {{ item.component.category }}">{{ item.component.category }}</span></td>
+                <td><code>{{ item.component.oid }}</code></td>
+                <td>{{ item.server.brand }}</td>
+                <td>
+                    {% if item.metric %}
+                    <span class="status-badge status-{{ item.metric.status|lower }}">{{ item.metric.status }}</span>
+                    {% else %}
+                    <span class="status-badge status-unknown">No Data</span>
+                    {% endif %}
+                </td>
+                <td>{{ item.metric.value if item.metric else '-' }}</td>
+                <td>{{ item.metric.timestamp.strftime('%Y-%m-%d %H:%M:%S') if item.metric else '-' }}</td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="8" class="text-center">No data available</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<script>
+function toggleDropdown(id) {
+    var dropdown = document.getElementById(id);
+    dropdown.classList.toggle('show');
+}
+
+function toggleAllServers(checkbox) {
+    var checkboxes = document.querySelectorAll('#serverDropdown input[name="server_id"]');
+    checkboxes.forEach(function(cb) {
+        cb.checked = checkbox.checked;
+    });
+    updateServerLabel();
+}
+
+function updateServerLabel() {
+    var checkboxes = document.querySelectorAll('#serverDropdown input[name="server_id"]:checked');
+    var label = document.getElementById('serverLabel');
+    var selectAll = document.getElementById('selectAllServers');
+    var total = document.querySelectorAll('#serverDropdown input[name="server_id"]').length;
+    
+    if (checkboxes.length === 0) {
+        label.textContent = 'All Servers';
+    } else if (checkboxes.length === total) {
+        label.textContent = 'All Servers';
+    } else {
+        label.textContent = checkboxes.length + ' server(s)';
+    }
+    
+    selectAll.checked = checkboxes.length === total;
+}
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function(e) {
+    if (!e.target.closest('.multi-select-wrapper')) {
+        document.querySelectorAll('.multi-select-dropdown').forEach(function(dropdown) {
+            dropdown.classList.remove('show');
+        });
+    }
+});
+
+// Auto-refresh every 5 minutes
+setTimeout(function() {
+    window.location.reload();
+}, 5 * 60 * 1000);
+
+// Report Modal Functions
+function openReportModal() {
+    document.getElementById('reportModal').style.display = 'flex';
+    // Set default to current month/year
+    var now = new Date();
+    document.getElementById('report_month').value = now.getMonth() + 1;
+    document.getElementById('report_year').value = now.getFullYear();
+}
+
+function closeReportModal() {
+    document.getElementById('reportModal').style.display = 'none';
+}
+
+// Close modal when clicking outside
+document.addEventListener('click', function(e) {
+    var modal = document.getElementById('reportModal');
+    if (e.target === modal) {
+        closeReportModal();
+    }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeReportModal();
+    }
+});
+</script>
+{% endblock %}

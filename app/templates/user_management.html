@@ -1,0 +1,129 @@
+﻿{% extends 'base.html' %}
+{% block content %}
+<div class="page-header">
+    <h2>User Management</h2>
+    <button type="button" class="btn btn-primary" onclick="toggleAddForm()">+ Add User</button>
+</div>
+
+<!-- Add User Form (Collapsible) -->
+<div id="addUserForm" class="card" style="display: none; margin-bottom: 1.5rem;">
+    <div class="card-header">
+        <h3>Add New User</h3>
+        <button type="button" class="btn-close" onclick="toggleAddForm()">&times;</button>
+    </div>
+    <form method="post" class="card-body">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" required minlength="3" maxlength="64" pattern="[a-zA-Z0-9_]+" title="Only letters, numbers, and underscores allowed" placeholder="Enter username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required minlength="6" placeholder="Min 6 characters">
+            </div>
+            <div class="form-group">
+                <label for="role">Role</label>
+                <select name="role" id="role" required>
+                    <option value="user">User</option>
+                    <option value="admin">Admin</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Add User</button>
+            <button type="button" class="btn btn-secondary" onclick="toggleAddForm()">Cancel</button>
+        </div>
+    </form>
+</div>
+
+<!-- Toolbar: Search, Filter, Sort -->
+<div class="toolbar">
+    <form method="get" action="{{ url_for('user_management.user_management') }}" class="toolbar-form" id="userForm">
+        <div class="toolbar-group">
+            <input type="text" name="search" id="search" value="{{ search_query }}" placeholder="Search username...">
+            <button type="submit" class="btn btn-sm">Search</button>
+            {% if search_query or role_filter %}
+            <a href="{{ url_for('user_management.user_management') }}" class="btn btn-sm btn-secondary">Clear</a>
+            {% endif %}
+        </div>
+        <div class="toolbar-group">
+            <label for="role_filter">Role:</label>
+            <select name="role" id="role_filter" onchange="document.getElementById('userForm').submit()">
+                <option value="">All Roles</option>
+                <option value="admin" {% if role_filter == 'admin' %}selected{% endif %}>Admin</option>
+                <option value="user" {% if role_filter == 'user' %}selected{% endif %}>User</option>
+            </select>
+        </div>
+        <div class="toolbar-group">
+            <label for="sort">Sort:</label>
+            <select name="sort" id="sort" onchange="document.getElementById('userForm').submit()">
+                <option value="username" {% if sort_by == 'username' %}selected{% endif %}>Username</option>
+                <option value="role" {% if sort_by == 'role' %}selected{% endif %}>Role</option>
+            </select>
+            <select name="order" id="order" onchange="document.getElementById('userForm').submit()">
+                <option value="asc" {% if sort_order == 'asc' %}selected{% endif %}>Asc</option>
+                <option value="desc" {% if sort_order == 'desc' %}selected{% endif %}>Desc</option>
+            </select>
+        </div>
+    </form>
+</div>
+
+<!-- Users Table -->
+{% if users %}
+<table class="data-table">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Role</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in users %}
+        <tr>
+            <td><strong>{{ user.username }}</strong></td>
+            <td><span class="role-badge role-{{ user.role.value }}">{{ user.role.value|upper }}</span></td>
+            <td class="actions">
+                {% if user.id != current_user.id %}
+                <a href="{{ url_for('user_management.edit_user', user_id=user.id) }}" class="btn btn-sm">Edit</a>
+                <form action="{{ url_for('user_management.delete_user', user_id=user.id) }}" method="post" style="display:inline;" onsubmit="return confirm('Delete user {{ user.username }}?');">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                    <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                </form>
+                {% else %}
+                <span class="badge badge-info">You</span>
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<!-- Pagination -->
+{% if pagination and pagination.pages > 1 %}
+<div class="pagination">
+    {% if pagination.has_prev %}
+    <a href="{{ url_for('user_management.user_management', page=pagination.prev_num, search=search_query, role=role_filter, sort=sort_by, order=sort_order) }}" class="btn btn-sm">&laquo; Prev</a>
+    {% endif %}
+    <span class="page-info">Page {{ pagination.page }} of {{ pagination.pages }}</span>
+    {% if pagination.has_next %}
+    <a href="{{ url_for('user_management.user_management', page=pagination.next_num, search=search_query, role=role_filter, sort=sort_by, order=sort_order) }}" class="btn btn-sm">Next &raquo;</a>
+    {% endif %}
+</div>
+{% endif %}
+
+{% else %}
+<div class="empty-state">
+    <p>No users found.</p>
+    <button type="button" class="btn btn-primary" onclick="toggleAddForm()">Add First User</button>
+</div>
+{% endif %}
+
+<script>
+function toggleAddForm() {
+    var form = document.getElementById('addUserForm');
+    form.style.display = form.style.display === 'none' ? 'block' : 'none';
+}
+</script>
+{% endblock %}

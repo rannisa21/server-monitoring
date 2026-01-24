@@ -1,0 +1,207 @@
+{% extends 'base.html' %} {% block content %}
+<h2>Edit Server</h2>
+<a href="{{ url_for('server.servers') }}" class="btn btn-secondary"
+  >&laquo; Back to Servers</a
+>
+
+<form method="post" class="form-edit-server">
+  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+  <div class="form-group">
+    <label for="name">Server Name</label>
+    <input
+      type="text"
+      name="name"
+      id="name"
+      value="{{ server.name }}"
+      required
+    />
+  </div>
+  <div class="form-group">
+    <label for="ip">IP Address</label>
+    <input type="text" name="ip" id="ip" value="{{ server.ip }}" required />
+  </div>
+  <div class="form-group">
+    <label for="brand">Brand</label>
+    <select name="brand" id="brand" required>
+      <option value="HPE" {% if server.brand="" ="HPE" %}selected{% endif %}>
+        HPE
+      </option>
+      <option value="Dell" {% if server.brand="" ="Dell" %}selected{% endif %}>
+        Dell
+      </option>
+      <option
+        value="supermicro"
+        {%
+        if
+        server.brand=""
+        ="supermicro"
+        %}selected{%
+        endif
+        %}
+      >
+        Supermicro
+      </option>
+      <option
+        value="custom"
+        {%
+        if
+        server.brand=""
+        ="custom"
+        %}selected{%
+        endif
+        %}
+      >
+        Custom
+      </option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="snmp_version">SNMP Version</label>
+    <select
+      name="snmp_version"
+      id="snmp_version"
+      required
+      onchange="toggleSnmpFields()"
+    >
+      <option
+        value="v2c"
+        {%
+        if
+        server.snmp_version=""
+        ="v2c"
+        %}selected{%
+        endif
+        %}
+      >
+        v2c
+      </option>
+      <option
+        value="v3"
+        {%
+        if
+        server.snmp_version=""
+        ="v3"
+        %}selected{%
+        endif
+        %}
+      >
+        v3
+      </option>
+    </select>
+  </div>
+  <div class="form-group" id="community-group">
+    <label for="community">Community</label>
+    <input
+      type="text"
+      name="community"
+      id="community"
+      value="{{ server.community or '' }}"
+    />
+  </div>
+  <div id="snmpv3-fields" style="display: none">
+    <div class="form-group">
+      <label for="snmp_auth_user">Auth User</label>
+      <input
+        type="text"
+        name="snmp_auth_user"
+        id="snmp_auth_user"
+        value="{{ server.snmp_auth_user or '' }}"
+      />
+    </div>
+    <div class="form-group">
+      <label for="snmp_auth_pass">Auth Password</label>
+      <input
+        type="password"
+        name="snmp_auth_pass"
+        id="snmp_auth_pass"
+        value="{{ server.snmp_auth_pass or '' }}"
+      />
+    </div>
+    <div class="form-group">
+      <label for="snmp_priv_pass">Priv Password</label>
+      <input
+        type="password"
+        name="snmp_priv_pass"
+        id="snmp_priv_pass"
+        value="{{ server.snmp_priv_pass or '' }}"
+      />
+    </div>
+    <div class="form-group">
+      <label for="snmp_auth_proto">Auth Protocol</label>
+      <select name="snmp_auth_proto" id="snmp_auth_proto">
+        <option
+          value="MD5"
+          {%
+          if
+          server.snmp_auth_proto=""
+          ="MD5"
+          %}selected{%
+          endif
+          %}
+        >
+          MD5
+        </option>
+        <option
+          value="SHA"
+          {%
+          if
+          server.snmp_auth_proto=""
+          ="SHA"
+          %}selected{%
+          endif
+          %}
+        >
+          SHA
+        </option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="snmp_priv_proto">Priv Protocol</label>
+      <select name="snmp_priv_proto" id="snmp_priv_proto">
+        <option
+          value="DES"
+          {%
+          if
+          server.snmp_priv_proto=""
+          ="DES"
+          %}selected{%
+          endif
+          %}
+        >
+          DES
+        </option>
+        <option
+          value="AES"
+          {%
+          if
+          server.snmp_priv_proto=""
+          ="AES"
+          %}selected{%
+          endif
+          %}
+        >
+          AES
+        </option>
+      </select>
+    </div>
+  </div>
+  <button type="submit">Update</button>
+  <a href="{{ url_for('server.servers') }}">Cancel</a>
+</form>
+
+<script>
+  function toggleSnmpFields() {
+    var version = document.getElementById("snmp_version").value;
+    var v3Fields = document.getElementById("snmpv3-fields");
+    var communityGroup = document.getElementById("community-group");
+    if (version === "v3") {
+      v3Fields.style.display = "block";
+      communityGroup.style.display = "none";
+    } else {
+      v3Fields.style.display = "none";
+      communityGroup.style.display = "block";
+    }
+  }
+  document.addEventListener("DOMContentLoaded", toggleSnmpFields);
+</script>
+{% endblock %}

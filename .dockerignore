@@ -1,0 +1,65 @@
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Git
+.git/
+.gitignore
+
+# Logs
+logs/
+*.log
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Docker
+Dockerfile
+docker-compose*.yml
+.docker/
+
+# Documentation
+*.md
+!README.md
+
+# Environment files (actual .env will be loaded from docker-compose)
+.env
+.env.*
+
+# OS files
+.DS_Store
+Thumbs.db

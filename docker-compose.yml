@@ -1,0 +1,44 @@
+services:
+  web:
+    build: .
+    command: gunicorn -b 0.0.0.0:5000 --timeout 120 --workers 2 wsgi:app
+    volumes:
+      - .:/app
+      - ./logs:/app/logs
+    ports:
+      - "5000:5000"
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/monitoring
+      - SECRET_KEY=${SECRET_KEY:-$(openssl rand -hex 32)}
+      - FLASK_ENV=${FLASK_ENV:-production}
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - ITEMS_PER_PAGE=${ITEMS_PER_PAGE:-20}
+      - ENABLE_SCHEDULER=true
+      - SNMP_POLL_INTERVAL=${SNMP_POLL_INTERVAL:-5}
+    depends_on:
+      - db
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://localhost:5000/')",
+        ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+  db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      POSTGRES_DB: monitoring
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata:

@@ -1,0 +1,14 @@
+Flask
+Flask-SQLAlchemy
+Flask-Migrate
+Flask-Login
+Flask-Bcrypt
+Flask-Cors
+Flask-WTF
+gunicorn
+psycopg2-binary
+pysnmp==4.4.12
+pyasn1==0.4.8
+APScheduler
+pandas
+openpyxl

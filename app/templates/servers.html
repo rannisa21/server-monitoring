@@ -1,0 +1,42 @@
+﻿{% extends 'base.html' %}
+{% block content %}
+<h2>Server Management</h2>
+
+<a href="{{ url_for('server.add_server') }}" class="btn" style="margin-bottom: 1rem;">+ Add Server</a>
+
+{% if servers %}
+<table class="server-table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>IP</th>
+      <th>Brand</th>
+      <th>SNMP Version</th>
+      <th>Components</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for server in servers %}
+    <tr>
+      <td>{{ server.name }}</td>
+      <td>{{ server.ip }}</td>
+      <td>{{ server.brand }}</td>
+      <td>{{ server.snmp_version }}</td>
+      <td><span class="badge">{{ server.components|length }}</span></td>
+      <td>
+        <a href="{{ url_for('component.components', server_id=server.id) }}" class="btn btn-sm btn-primary">View</a>
+        <a href="{{ url_for('server.edit_server', server_id=server.id) }}" class="btn btn-sm">Edit</a>
+        <form action="{{ url_for('server.delete_server', server_id=server.id) }}" method="post" style="display: inline" onsubmit="return confirm('Delete this server?');">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+          <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<p class="no-data">No servers found. <a href="{{ url_for('server.add_server') }}">Add a server</a></p>
+{% endif %}
+{% endblock %}
