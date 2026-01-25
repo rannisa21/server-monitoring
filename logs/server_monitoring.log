@@ -1,0 +1,1524 @@
+2026-01-25 04:49:35,989 - app - INFO - Server Monitoring application starting...
+2026-01-25 04:49:35,991 - app - INFO - Server Monitoring application starting...
+2026-01-25 04:49:37,460 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 04:49:37,460 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 04:49:37,463 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 04:49:37,463 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 04:49:37,463 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 04:49:37,463 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 04:49:37,464 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 04:49:37,464 - app - INFO - Application initialized successfully
+2026-01-25 04:49:37,464 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 04:49:37,465 - app - INFO - Application initialized successfully
+2026-01-25 04:49:38,001 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 04:50:10,991 - app - INFO - Server Monitoring application starting...
+2026-01-25 04:50:11,643 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 04:50:11,644 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 04:50:11,644 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 04:50:11,645 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 04:50:11,645 - app - INFO - Application initialized successfully
+2026-01-25 04:52:23,787 - app - INFO - Server Monitoring application starting...
+2026-01-25 04:52:23,831 - app - INFO - Server Monitoring application starting...
+2026-01-25 04:52:24,548 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 04:52:24,548 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 04:52:24,550 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 04:52:24,550 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 04:52:24,551 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 04:52:24,551 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 04:52:24,551 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 04:52:24,551 - app - INFO - Application initialized successfully
+2026-01-25 04:52:24,552 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 04:52:24,552 - app - INFO - Application initialized successfully
+2026-01-25 04:52:35,191 - app - INFO - Server Monitoring application starting...
+2026-01-25 04:52:36,321 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 04:52:36,322 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 04:52:36,322 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 04:52:36,322 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 04:52:36,323 - app - INFO - Application initialized successfully
+2026-01-25 04:52:49,865 - app - INFO - Server Monitoring application starting...
+2026-01-25 04:52:50,373 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 04:52:50,374 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 04:52:50,374 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 04:52:50,375 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 04:52:50,375 - app - INFO - Application initialized successfully
+2026-01-25 04:52:55,688 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 04:53:00,347 - app.routes.auth - INFO - User admin logged in successfully
+2026-01-25 04:53:00,525 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 04:53:03,940 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 04:53:04,810 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 04:55:57,255 - app - WARNING - Page not found: http://127.0.0.1:5000/favicon.ico
+2026-01-25 04:56:02,840 - app.routes.auth - INFO - User admin logged in successfully
+2026-01-25 04:56:02,963 - app - WARNING - Page not found: http://127.0.0.1:5000/favicon.ico
+2026-01-25 04:57:36,508 - apscheduler.executors.default - WARNING - Run time of job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 04:57:24 UTC)" was missed by 0:00:11.960065
+2026-01-25 04:57:36,508 - apscheduler.executors.default - WARNING - Run time of job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 05:02:24 UTC)" was missed by 0:00:11.960070
+2026-01-25 05:01:04,390 - app - WARNING - Page not found: http://127.0.0.1:5000/favicon.ico
+2026-01-25 05:02:34,929 - apscheduler.executors.default - WARNING - Run time of job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 05:07:24 UTC)" was missed by 0:00:10.381087
+2026-01-25 05:02:34,929 - apscheduler.executors.default - WARNING - Run time of job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 05:07:24 UTC)" was missed by 0:00:10.381114
+2026-01-25 05:07:33,643 - apscheduler.executors.default - WARNING - Run time of job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 05:12:24 UTC)" was missed by 0:00:09.094770
+2026-01-25 05:07:33,643 - apscheduler.executors.default - WARNING - Run time of job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 05:12:24 UTC)" was missed by 0:00:09.094836
+2026-01-25 05:12:33,592 - apscheduler.executors.default - WARNING - Run time of job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 05:17:24 UTC)" was missed by 0:00:09.043733
+2026-01-25 05:12:33,592 - apscheduler.executors.default - WARNING - Run time of job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 05:17:24 UTC)" was missed by 0:00:09.043967
+2026-01-25 05:14:07,846 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:14:08,525 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:14:17,964 - app.routes.server - INFO - Server 1 (v2) created by admin
+2026-01-25 05:14:18,056 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:14:21,441 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:14:22,348 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:15:23,612 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 05:15:24,658 - app.scheduler.monitor - ERROR - SNMP Exception for v2/fan1: Malformed Object ID (3, '6') at ObjectName: '>=' not supported between instances of 'str' and 'int'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1246, in prettyIn
+    tupleOfInts = tuple([int(subOid) for subOid in value if subOid >= 0])
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1246, in <listcomp>
+    tupleOfInts = tuple([int(subOid) for subOid in value if subOid >= 0])
+                                                            ^^^^^^^^^^^
+TypeError: '>=' not supported between instances of 'str' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 88, in snmp_get
+    errorIndication, errorStatus, errorIndex, varBinds = next(iterator)
+                                                         ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/asyncore/sync/cmdgen.py", line 108, in getCmd
+    cmdgen.getCmd(snmpEngine, authData, transportTarget,
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/asyncore/cmdgen.py", line 130, in getCmd
+    vbProcessor.makeVarBinds(snmpEngine, varBinds), __cbFun,
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/varbinds.py", line 39, in makeVarBinds
+    __varBinds.append(varBind.resolveWithMib(mibViewController, ignoreErrors=False))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/rfc1902.py", line 853, in resolveWithMib
+    self.__args[0].resolveWithMib(mibViewController)
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/rfc1902.py", line 420, in resolveWithMib
+    prefix, label, suffix = mibViewController.getNodeNameByOid(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 205, in getNodeNameByOid
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 5 more times]
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 191, in __getOidLabel
+    resLabel = label + tuple([str(x) for x in suffix])
+               ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1182, in __add__
+    return self.clone(self._value + other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/base.py", line 376, in clone
+    return self.__class__(value, **initializers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/base.py", line 267, in __init__
+    value = self.prettyIn(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1249, in prettyIn
+    raise error.PyAsn1Error(
+pyasn1.error.PyAsn1Error: Malformed Object ID (3, '6') at ObjectName: '>=' not supported between instances of 'str' and 'int'
+2026-01-25 05:15:24,688 - app.scheduler.monitor - INFO - SNMP polling completed: 0 success, 1 errors, duration: 1.07s
+2026-01-25 05:15:24,690 - app.routes.component - INFO - SNMP polling triggered after adding component 1
+2026-01-25 05:15:24,693 - app.routes.component - INFO - Component 1 (fan1) added to server 1 by admin
+2026-01-25 05:15:24,797 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:15:26,850 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:15:28,658 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:15:29,537 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:15:40,377 - app.routes.server - WARNING - Validation error adding server: A server with IP 192.168.56.102 already exists
+2026-01-25 05:15:40,447 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:15:42,027 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:15:43,150 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:15:44,086 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:15:45,224 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:16:08,708 - app.routes.component - WARNING - Validation error adding component: A component with OID 3.6.1.2.1.2.2.1.1.2 already exists on this server
+2026-01-25 05:16:08,751 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:16:23,337 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 05:16:24,185 - app.scheduler.monitor - ERROR - SNMP Exception for v2/fan1: Malformed Object ID (3, '6') at ObjectName: '>=' not supported between instances of 'str' and 'int'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1246, in prettyIn
+    tupleOfInts = tuple([int(subOid) for subOid in value if subOid >= 0])
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1246, in <listcomp>
+    tupleOfInts = tuple([int(subOid) for subOid in value if subOid >= 0])
+                                                            ^^^^^^^^^^^
+TypeError: '>=' not supported between instances of 'str' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 88, in snmp_get
+    errorIndication, errorStatus, errorIndex, varBinds = next(iterator)
+                                                         ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/asyncore/sync/cmdgen.py", line 108, in getCmd
+    cmdgen.getCmd(snmpEngine, authData, transportTarget,
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/asyncore/cmdgen.py", line 130, in getCmd
+    vbProcessor.makeVarBinds(snmpEngine, varBinds), __cbFun,
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/varbinds.py", line 39, in makeVarBinds
+    __varBinds.append(varBind.resolveWithMib(mibViewController, ignoreErrors=False))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/rfc1902.py", line 853, in resolveWithMib
+    self.__args[0].resolveWithMib(mibViewController)
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/rfc1902.py", line 420, in resolveWithMib
+    prefix, label, suffix = mibViewController.getNodeNameByOid(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 205, in getNodeNameByOid
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 5 more times]
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 191, in __getOidLabel
+    resLabel = label + tuple([str(x) for x in suffix])
+               ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1182, in __add__
+    return self.clone(self._value + other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/base.py", line 376, in clone
+    return self.__class__(value, **initializers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/base.py", line 267, in __init__
+    value = self.prettyIn(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1249, in prettyIn
+    raise error.PyAsn1Error(
+pyasn1.error.PyAsn1Error: Malformed Object ID (3, '6') at ObjectName: '>=' not supported between instances of 'str' and 'int'
+2026-01-25 05:16:24,348 - app.scheduler.monitor - INFO - SNMP polling completed: 1 success, 1 errors, duration: 1.01s
+2026-01-25 05:16:24,351 - app.routes.component - INFO - SNMP polling triggered after adding component 2
+2026-01-25 05:16:24,355 - app.routes.component - INFO - Component 2 (fan2) added to server 1 by admin
+2026-01-25 05:16:24,453 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:16:25,551 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:16:38,211 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:16:39,458 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:16:40,685 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:16:52,617 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 05:16:52,721 - app.scheduler.monitor - ERROR - SNMP Exception for v2/fan1: Malformed Object ID (3, '6') at ObjectName: '>=' not supported between instances of 'str' and 'int'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1246, in prettyIn
+    tupleOfInts = tuple([int(subOid) for subOid in value if subOid >= 0])
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1246, in <listcomp>
+    tupleOfInts = tuple([int(subOid) for subOid in value if subOid >= 0])
+                                                            ^^^^^^^^^^^
+TypeError: '>=' not supported between instances of 'str' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 88, in snmp_get
+    errorIndication, errorStatus, errorIndex, varBinds = next(iterator)
+                                                         ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/asyncore/sync/cmdgen.py", line 108, in getCmd
+    cmdgen.getCmd(snmpEngine, authData, transportTarget,
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/asyncore/cmdgen.py", line 130, in getCmd
+    vbProcessor.makeVarBinds(snmpEngine, varBinds), __cbFun,
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/varbinds.py", line 39, in makeVarBinds
+    __varBinds.append(varBind.resolveWithMib(mibViewController, ignoreErrors=False))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/rfc1902.py", line 853, in resolveWithMib
+    self.__args[0].resolveWithMib(mibViewController)
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/rfc1902.py", line 420, in resolveWithMib
+    prefix, label, suffix = mibViewController.getNodeNameByOid(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 205, in getNodeNameByOid
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 5 more times]
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 191, in __getOidLabel
+    resLabel = label + tuple([str(x) for x in suffix])
+               ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1182, in __add__
+    return self.clone(self._value + other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/base.py", line 376, in clone
+    return self.__class__(value, **initializers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/base.py", line 267, in __init__
+    value = self.prettyIn(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1249, in prettyIn
+    raise error.PyAsn1Error(
+pyasn1.error.PyAsn1Error: Malformed Object ID (3, '6') at ObjectName: '>=' not supported between instances of 'str' and 'int'
+2026-01-25 05:16:52,981 - app.scheduler.monitor - INFO - SNMP polling completed: 2 success, 1 errors, duration: 0.36s
+2026-01-25 05:16:52,984 - app.routes.component - INFO - SNMP polling triggered after adding component 3
+2026-01-25 05:16:52,987 - app.routes.component - INFO - Component 3 (fan3) added to server 1 by admin
+2026-01-25 05:16:53,056 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:16:54,451 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:17:31,277 - apscheduler.executors.default - WARNING - Run time of job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 05:22:24 UTC)" was missed by 0:00:06.728877
+2026-01-25 05:17:31,277 - apscheduler.executors.default - WARNING - Run time of job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 05:22:24 UTC)" was missed by 0:00:06.728639
+2026-01-25 05:21:54,135 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:22:28,287 - apscheduler.executors.default - WARNING - Run time of job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 05:27:24 UTC)" was missed by 0:00:03.739137
+2026-01-25 05:22:28,287 - apscheduler.executors.default - WARNING - Run time of job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 05:27:24 UTC)" was missed by 0:00:03.739055
+2026-01-25 05:26:54,946 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:27:28,174 - apscheduler.executors.default - WARNING - Run time of job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 05:32:24 UTC)" was missed by 0:00:03.625952
+2026-01-25 05:27:28,174 - apscheduler.executors.default - WARNING - Run time of job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 05:32:24 UTC)" was missed by 0:00:03.626075
+2026-01-25 05:31:56,342 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:32:26,179 - apscheduler.executors.default - WARNING - Run time of job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 05:37:24 UTC)" was missed by 0:00:01.630521
+2026-01-25 05:32:26,179 - apscheduler.executors.default - WARNING - Run time of job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 05:37:24 UTC)" was missed by 0:00:01.630747
+2026-01-25 05:36:57,500 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:37:25,025 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 05:42:24 UTC)" (scheduled at 2026-01-25 05:37:24.548474+00:00)
+2026-01-25 05:37:25,025 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 05:42:24 UTC)" (scheduled at 2026-01-25 05:37:24.548439+00:00)
+2026-01-25 05:37:25,027 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 05:37:25,027 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 05:37:25,215 - app.scheduler.monitor - ERROR - SNMP Exception for v2/fan1: Malformed Object ID (3, '6') at ObjectName: '>=' not supported between instances of 'str' and 'int'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1246, in prettyIn
+    tupleOfInts = tuple([int(subOid) for subOid in value if subOid >= 0])
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1246, in <listcomp>
+    tupleOfInts = tuple([int(subOid) for subOid in value if subOid >= 0])
+                                                            ^^^^^^^^^^^
+TypeError: '>=' not supported between instances of 'str' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 88, in snmp_get
+    errorIndication, errorStatus, errorIndex, varBinds = next(iterator)
+                                                         ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/asyncore/sync/cmdgen.py", line 108, in getCmd
+    cmdgen.getCmd(snmpEngine, authData, transportTarget,
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/asyncore/cmdgen.py", line 130, in getCmd
+    vbProcessor.makeVarBinds(snmpEngine, varBinds), __cbFun,
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/varbinds.py", line 39, in makeVarBinds
+    __varBinds.append(varBind.resolveWithMib(mibViewController, ignoreErrors=False))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/rfc1902.py", line 853, in resolveWithMib
+    self.__args[0].resolveWithMib(mibViewController)
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/rfc1902.py", line 420, in resolveWithMib
+    prefix, label, suffix = mibViewController.getNodeNameByOid(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 205, in getNodeNameByOid
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 5 more times]
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 191, in __getOidLabel
+    resLabel = label + tuple([str(x) for x in suffix])
+               ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1182, in __add__
+    return self.clone(self._value + other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/base.py", line 376, in clone
+    return self.__class__(value, **initializers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/base.py", line 267, in __init__
+    value = self.prettyIn(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1249, in prettyIn
+    raise error.PyAsn1Error(
+pyasn1.error.PyAsn1Error: Malformed Object ID (3, '6') at ObjectName: '>=' not supported between instances of 'str' and 'int'
+2026-01-25 05:37:25,902 - app.scheduler.monitor - ERROR - SNMP Exception for v2/fan1: Malformed Object ID (3, '6') at ObjectName: '>=' not supported between instances of 'str' and 'int'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1246, in prettyIn
+    tupleOfInts = tuple([int(subOid) for subOid in value if subOid >= 0])
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1246, in <listcomp>
+    tupleOfInts = tuple([int(subOid) for subOid in value if subOid >= 0])
+                                                            ^^^^^^^^^^^
+TypeError: '>=' not supported between instances of 'str' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 88, in snmp_get
+    errorIndication, errorStatus, errorIndex, varBinds = next(iterator)
+                                                         ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/asyncore/sync/cmdgen.py", line 108, in getCmd
+    cmdgen.getCmd(snmpEngine, authData, transportTarget,
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/asyncore/cmdgen.py", line 130, in getCmd
+    vbProcessor.makeVarBinds(snmpEngine, varBinds), __cbFun,
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/varbinds.py", line 39, in makeVarBinds
+    __varBinds.append(varBind.resolveWithMib(mibViewController, ignoreErrors=False))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/rfc1902.py", line 853, in resolveWithMib
+    self.__args[0].resolveWithMib(mibViewController)
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/rfc1902.py", line 420, in resolveWithMib
+    prefix, label, suffix = mibViewController.getNodeNameByOid(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 205, in getNodeNameByOid
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 5 more times]
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 191, in __getOidLabel
+    resLabel = label + tuple([str(x) for x in suffix])
+               ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1182, in __add__
+    return self.clone(self._value + other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/base.py", line 376, in clone
+    return self.__class__(value, **initializers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/base.py", line 267, in __init__
+    value = self.prettyIn(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1249, in prettyIn
+    raise error.PyAsn1Error(
+pyasn1.error.PyAsn1Error: Malformed Object ID (3, '6') at ObjectName: '>=' not supported between instances of 'str' and 'int'
+2026-01-25 05:37:26,046 - app.scheduler.monitor - INFO - SNMP polling completed: 2 success, 1 errors, duration: 1.02s
+2026-01-25 05:37:26,046 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 05:42:24 UTC)" executed successfully
+2026-01-25 05:37:26,140 - app.scheduler.monitor - INFO - SNMP polling completed: 2 success, 1 errors, duration: 1.11s
+2026-01-25 05:37:26,140 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 05:42:24 UTC)" executed successfully
+2026-01-25 05:41:58,538 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:42:24,549 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 05:47:24 UTC)" (scheduled at 2026-01-25 05:42:24.548439+00:00)
+2026-01-25 05:42:24,549 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 05:47:24 UTC)" (scheduled at 2026-01-25 05:42:24.548474+00:00)
+2026-01-25 05:42:24,552 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 05:42:24,552 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 05:42:24,810 - app.scheduler.monitor - ERROR - SNMP Exception for v2/fan1: Malformed Object ID (3, '6') at ObjectName: '>=' not supported between instances of 'str' and 'int'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1246, in prettyIn
+    tupleOfInts = tuple([int(subOid) for subOid in value if subOid >= 0])
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1246, in <listcomp>
+    tupleOfInts = tuple([int(subOid) for subOid in value if subOid >= 0])
+                                                            ^^^^^^^^^^^
+TypeError: '>=' not supported between instances of 'str' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 88, in snmp_get
+    errorIndication, errorStatus, errorIndex, varBinds = next(iterator)
+                                                         ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/asyncore/sync/cmdgen.py", line 108, in getCmd
+    cmdgen.getCmd(snmpEngine, authData, transportTarget,
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/asyncore/cmdgen.py", line 130, in getCmd
+    vbProcessor.makeVarBinds(snmpEngine, varBinds), __cbFun,
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/varbinds.py", line 39, in makeVarBinds
+    __varBinds.append(varBind.resolveWithMib(mibViewController, ignoreErrors=False))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/rfc1902.py", line 853, in resolveWithMib
+    self.__args[0].resolveWithMib(mibViewController)
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/rfc1902.py", line 420, in resolveWithMib
+    prefix, label, suffix = mibViewController.getNodeNameByOid(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 205, in getNodeNameByOid
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 5 more times]
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 191, in __getOidLabel
+    resLabel = label + tuple([str(x) for x in suffix])
+               ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1182, in __add__
+    return self.clone(self._value + other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/base.py", line 376, in clone
+    return self.__class__(value, **initializers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/base.py", line 267, in __init__
+    value = self.prettyIn(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1249, in prettyIn
+    raise error.PyAsn1Error(
+pyasn1.error.PyAsn1Error: Malformed Object ID (3, '6') at ObjectName: '>=' not supported between instances of 'str' and 'int'
+2026-01-25 05:42:24,819 - app.scheduler.monitor - ERROR - SNMP Exception for v2/fan1: Malformed Object ID (3, '6') at ObjectName: '>=' not supported between instances of 'str' and 'int'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1246, in prettyIn
+    tupleOfInts = tuple([int(subOid) for subOid in value if subOid >= 0])
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1246, in <listcomp>
+    tupleOfInts = tuple([int(subOid) for subOid in value if subOid >= 0])
+                                                            ^^^^^^^^^^^
+TypeError: '>=' not supported between instances of 'str' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 88, in snmp_get
+    errorIndication, errorStatus, errorIndex, varBinds = next(iterator)
+                                                         ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/asyncore/sync/cmdgen.py", line 108, in getCmd
+    cmdgen.getCmd(snmpEngine, authData, transportTarget,
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/asyncore/cmdgen.py", line 130, in getCmd
+    vbProcessor.makeVarBinds(snmpEngine, varBinds), __cbFun,
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/varbinds.py", line 39, in makeVarBinds
+    __varBinds.append(varBind.resolveWithMib(mibViewController, ignoreErrors=False))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/rfc1902.py", line 853, in resolveWithMib
+    self.__args[0].resolveWithMib(mibViewController)
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/rfc1902.py", line 420, in resolveWithMib
+    prefix, label, suffix = mibViewController.getNodeNameByOid(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 205, in getNodeNameByOid
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 5 more times]
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 191, in __getOidLabel
+    resLabel = label + tuple([str(x) for x in suffix])
+               ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1182, in __add__
+    return self.clone(self._value + other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/base.py", line 376, in clone
+    return self.__class__(value, **initializers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/base.py", line 267, in __init__
+    value = self.prettyIn(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1249, in prettyIn
+    raise error.PyAsn1Error(
+pyasn1.error.PyAsn1Error: Malformed Object ID (3, '6') at ObjectName: '>=' not supported between instances of 'str' and 'int'
+2026-01-25 05:42:25,067 - app.scheduler.monitor - INFO - SNMP polling completed: 2 success, 1 errors, duration: 0.51s
+2026-01-25 05:42:25,068 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 05:47:24 UTC)" executed successfully
+2026-01-25 05:42:25,223 - app.scheduler.monitor - INFO - SNMP polling completed: 2 success, 1 errors, duration: 0.67s
+2026-01-25 05:42:25,223 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 05:47:24 UTC)" executed successfully
+2026-01-25 05:43:32,631 - app - INFO - Server Monitoring application starting...
+2026-01-25 05:43:32,631 - app - INFO - Server Monitoring application starting...
+2026-01-25 05:43:34,194 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 05:43:34,194 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 05:43:34,196 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 05:43:34,196 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 05:43:34,196 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 05:43:34,196 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 05:43:34,197 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 05:43:34,197 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 05:43:34,197 - app - INFO - Application initialized successfully
+2026-01-25 05:43:34,197 - app - INFO - Application initialized successfully
+2026-01-25 05:43:34,432 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:43:37,557 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:43:39,055 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:43:39,739 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:48:34,308 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 05:53:34 UTC)" (scheduled at 2026-01-25 05:48:34.194799+00:00)
+2026-01-25 05:48:34,310 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 05:48:34,312 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 05:53:34 UTC)" (scheduled at 2026-01-25 05:48:34.194795+00:00)
+2026-01-25 05:48:34,315 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 05:48:34,450 - app.scheduler.monitor - ERROR - SNMP Exception for v2/fan1: Malformed Object ID (3, '6') at ObjectName: '>=' not supported between instances of 'str' and 'int'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1246, in prettyIn
+    tupleOfInts = tuple([int(subOid) for subOid in value if subOid >= 0])
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1246, in <listcomp>
+    tupleOfInts = tuple([int(subOid) for subOid in value if subOid >= 0])
+                                                            ^^^^^^^^^^^
+TypeError: '>=' not supported between instances of 'str' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 89, in snmp_get
+    if not server.community:
+                             
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/asyncore/sync/cmdgen.py", line 108, in getCmd
+    cmdgen.getCmd(snmpEngine, authData, transportTarget,
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/asyncore/cmdgen.py", line 130, in getCmd
+    vbProcessor.makeVarBinds(snmpEngine, varBinds), __cbFun,
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/varbinds.py", line 39, in makeVarBinds
+    __varBinds.append(varBind.resolveWithMib(mibViewController, ignoreErrors=False))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/rfc1902.py", line 853, in resolveWithMib
+    self.__args[0].resolveWithMib(mibViewController)
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/rfc1902.py", line 420, in resolveWithMib
+    prefix, label, suffix = mibViewController.getNodeNameByOid(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 205, in getNodeNameByOid
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 5 more times]
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 191, in __getOidLabel
+    resLabel = label + tuple([str(x) for x in suffix])
+               ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1182, in __add__
+    return self.clone(self._value + other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/base.py", line 376, in clone
+    return self.__class__(value, **initializers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/base.py", line 267, in __init__
+    value = self.prettyIn(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1249, in prettyIn
+    raise error.PyAsn1Error(
+pyasn1.error.PyAsn1Error: Malformed Object ID (3, '6') at ObjectName: '>=' not supported between instances of 'str' and 'int'
+2026-01-25 05:48:34,451 - app.scheduler.monitor - ERROR - SNMP Exception for v2/fan1: Malformed Object ID (3, '6') at ObjectName: '>=' not supported between instances of 'str' and 'int'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1246, in prettyIn
+    tupleOfInts = tuple([int(subOid) for subOid in value if subOid >= 0])
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1246, in <listcomp>
+    tupleOfInts = tuple([int(subOid) for subOid in value if subOid >= 0])
+                                                            ^^^^^^^^^^^
+TypeError: '>=' not supported between instances of 'str' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 89, in snmp_get
+    if not server.community:
+                             
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/asyncore/sync/cmdgen.py", line 108, in getCmd
+    cmdgen.getCmd(snmpEngine, authData, transportTarget,
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/asyncore/cmdgen.py", line 130, in getCmd
+    vbProcessor.makeVarBinds(snmpEngine, varBinds), __cbFun,
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/varbinds.py", line 39, in makeVarBinds
+    __varBinds.append(varBind.resolveWithMib(mibViewController, ignoreErrors=False))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/rfc1902.py", line 853, in resolveWithMib
+    self.__args[0].resolveWithMib(mibViewController)
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/rfc1902.py", line 420, in resolveWithMib
+    prefix, label, suffix = mibViewController.getNodeNameByOid(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 205, in getNodeNameByOid
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 5 more times]
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 191, in __getOidLabel
+    resLabel = label + tuple([str(x) for x in suffix])
+               ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1182, in __add__
+    return self.clone(self._value + other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/base.py", line 376, in clone
+    return self.__class__(value, **initializers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/base.py", line 267, in __init__
+    value = self.prettyIn(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1249, in prettyIn
+    raise error.PyAsn1Error(
+pyasn1.error.PyAsn1Error: Malformed Object ID (3, '6') at ObjectName: '>=' not supported between instances of 'str' and 'int'
+2026-01-25 05:48:34,991 - app.scheduler.monitor - INFO - SNMP polling completed: 2 success, 1 errors, duration: 0.68s
+2026-01-25 05:48:34,991 - app.scheduler.monitor - INFO - SNMP polling completed: 2 success, 1 errors, duration: 0.68s
+2026-01-25 05:48:34,992 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 05:53:34 UTC)" executed successfully
+2026-01-25 05:48:34,992 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 05:53:34 UTC)" executed successfully
+2026-01-25 05:48:40,604 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:53:34,338 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 05:58:34 UTC)" (scheduled at 2026-01-25 05:53:34.194799+00:00)
+2026-01-25 05:53:34,340 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 05:53:34,342 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 05:58:34 UTC)" (scheduled at 2026-01-25 05:53:34.194795+00:00)
+2026-01-25 05:53:34,343 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 05:53:34,455 - app.scheduler.monitor - ERROR - SNMP Exception for v2/fan1: Malformed Object ID (3, '6') at ObjectName: '>=' not supported between instances of 'str' and 'int'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1246, in prettyIn
+    tupleOfInts = tuple([int(subOid) for subOid in value if subOid >= 0])
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1246, in <listcomp>
+    tupleOfInts = tuple([int(subOid) for subOid in value if subOid >= 0])
+                                                            ^^^^^^^^^^^
+TypeError: '>=' not supported between instances of 'str' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 89, in snmp_get
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/asyncore/sync/cmdgen.py", line 108, in getCmd
+    cmdgen.getCmd(snmpEngine, authData, transportTarget,
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/asyncore/cmdgen.py", line 130, in getCmd
+    vbProcessor.makeVarBinds(snmpEngine, varBinds), __cbFun,
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/varbinds.py", line 39, in makeVarBinds
+    __varBinds.append(varBind.resolveWithMib(mibViewController, ignoreErrors=False))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/rfc1902.py", line 853, in resolveWithMib
+    self.__args[0].resolveWithMib(mibViewController)
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/rfc1902.py", line 420, in resolveWithMib
+    prefix, label, suffix = mibViewController.getNodeNameByOid(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 205, in getNodeNameByOid
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 5 more times]
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 191, in __getOidLabel
+    resLabel = label + tuple([str(x) for x in suffix])
+               ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1182, in __add__
+    return self.clone(self._value + other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/base.py", line 376, in clone
+    return self.__class__(value, **initializers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/base.py", line 267, in __init__
+    value = self.prettyIn(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1249, in prettyIn
+    raise error.PyAsn1Error(
+pyasn1.error.PyAsn1Error: Malformed Object ID (3, '6') at ObjectName: '>=' not supported between instances of 'str' and 'int'
+2026-01-25 05:53:34,456 - app.scheduler.monitor - ERROR - SNMP Exception for v2/fan1: Malformed Object ID (3, '6') at ObjectName: '>=' not supported between instances of 'str' and 'int'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1246, in prettyIn
+    tupleOfInts = tuple([int(subOid) for subOid in value if subOid >= 0])
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1246, in <listcomp>
+    tupleOfInts = tuple([int(subOid) for subOid in value if subOid >= 0])
+                                                            ^^^^^^^^^^^
+TypeError: '>=' not supported between instances of 'str' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 89, in snmp_get
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/asyncore/sync/cmdgen.py", line 108, in getCmd
+    cmdgen.getCmd(snmpEngine, authData, transportTarget,
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/asyncore/cmdgen.py", line 130, in getCmd
+    vbProcessor.makeVarBinds(snmpEngine, varBinds), __cbFun,
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/varbinds.py", line 39, in makeVarBinds
+    __varBinds.append(varBind.resolveWithMib(mibViewController, ignoreErrors=False))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/rfc1902.py", line 853, in resolveWithMib
+    self.__args[0].resolveWithMib(mibViewController)
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/rfc1902.py", line 420, in resolveWithMib
+    prefix, label, suffix = mibViewController.getNodeNameByOid(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 205, in getNodeNameByOid
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 5 more times]
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 191, in __getOidLabel
+    resLabel = label + tuple([str(x) for x in suffix])
+               ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1182, in __add__
+    return self.clone(self._value + other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/base.py", line 376, in clone
+    return self.__class__(value, **initializers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/base.py", line 267, in __init__
+    value = self.prettyIn(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1249, in prettyIn
+    raise error.PyAsn1Error(
+pyasn1.error.PyAsn1Error: Malformed Object ID (3, '6') at ObjectName: '>=' not supported between instances of 'str' and 'int'
+2026-01-25 05:53:34,943 - app.scheduler.monitor - INFO - SNMP polling completed: 2 success, 1 errors, duration: 0.60s
+2026-01-25 05:53:34,943 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 05:58:34 UTC)" executed successfully
+2026-01-25 05:53:34,965 - app.scheduler.monitor - INFO - SNMP polling completed: 2 success, 1 errors, duration: 0.62s
+2026-01-25 05:53:34,966 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 05:58:34 UTC)" executed successfully
+2026-01-25 05:53:41,615 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:56:50,237 - app - INFO - Server Monitoring application starting...
+2026-01-25 05:56:50,237 - app - INFO - Server Monitoring application starting...
+2026-01-25 05:56:51,330 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 05:56:51,330 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 05:56:51,331 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 05:56:51,331 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 05:56:51,331 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 05:56:51,331 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 05:56:51,332 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 05:56:51,332 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 05:56:51,332 - app - INFO - Application initialized successfully
+2026-01-25 05:56:51,332 - app - INFO - Application initialized successfully
+2026-01-25 05:56:52,162 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:56:57,277 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:56:57,536 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:56:57,710 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:56:57,915 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:56:58,060 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:57:50,738 - app - INFO - Server Monitoring application starting...
+2026-01-25 05:57:50,814 - app - INFO - Server Monitoring application starting...
+2026-01-25 05:57:51,675 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 05:57:51,675 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 05:57:51,676 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 05:57:51,677 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 05:57:51,677 - app - INFO - Application initialized successfully
+2026-01-25 05:57:51,683 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 05:57:51,684 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 05:57:51,684 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 05:57:51,685 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 05:57:51,685 - app - INFO - Application initialized successfully
+2026-01-25 05:57:52,583 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:57:53,306 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:57:53,401 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:57:53,583 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:57:53,735 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:57:54,347 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:57:54,515 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:57:54,664 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:58:48,093 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:58:49,673 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:58:58,520 - app - INFO - Server Monitoring application starting...
+2026-01-25 05:58:58,548 - app - INFO - Server Monitoring application starting...
+2026-01-25 05:58:59,255 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 05:58:59,256 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 05:58:59,257 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 05:58:59,258 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 05:58:59,258 - app - INFO - Application initialized successfully
+2026-01-25 05:58:59,266 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 05:58:59,267 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 05:58:59,267 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 05:58:59,268 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 05:58:59,268 - app - INFO - Application initialized successfully
+2026-01-25 05:59:00,127 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:59:00,856 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:59:01,040 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:59:01,188 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:59:01,334 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:59:01,542 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:59:01,701 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:59:01,835 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:59:01,996 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:59:17,516 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:59:18,213 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:59:19,112 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 05:59:19,590 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:03:59,891 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 06:03:59 UTC)" (scheduled at 2026-01-25 06:03:59.255191+00:00)
+2026-01-25 06:03:59,892 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 06:03:59,902 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 06:03:59 UTC)" (scheduled at 2026-01-25 06:03:59.266111+00:00)
+2026-01-25 06:03:59,904 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 06:04:00,070 - app.scheduler.monitor - ERROR - SNMP Exception for v2/fan1: Malformed Object ID (3, '6') at ObjectName: '>=' not supported between instances of 'str' and 'int'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1246, in prettyIn
+    tupleOfInts = tuple([int(subOid) for subOid in value if subOid >= 0])
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1246, in <listcomp>
+    tupleOfInts = tuple([int(subOid) for subOid in value if subOid >= 0])
+                                                            ^^^^^^^^^^^
+TypeError: '>=' not supported between instances of 'str' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 88, in snmp_get
+    errorIndication, errorStatus, errorIndex, varBinds = next(iterator)
+                                                         ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/asyncore/sync/cmdgen.py", line 108, in getCmd
+    cmdgen.getCmd(snmpEngine, authData, transportTarget,
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/asyncore/cmdgen.py", line 130, in getCmd
+    vbProcessor.makeVarBinds(snmpEngine, varBinds), __cbFun,
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/varbinds.py", line 39, in makeVarBinds
+    __varBinds.append(varBind.resolveWithMib(mibViewController, ignoreErrors=False))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/rfc1902.py", line 853, in resolveWithMib
+    self.__args[0].resolveWithMib(mibViewController)
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/rfc1902.py", line 420, in resolveWithMib
+    prefix, label, suffix = mibViewController.getNodeNameByOid(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 205, in getNodeNameByOid
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 5 more times]
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 191, in __getOidLabel
+    resLabel = label + tuple([str(x) for x in suffix])
+               ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1182, in __add__
+    return self.clone(self._value + other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/base.py", line 376, in clone
+    return self.__class__(value, **initializers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/base.py", line 267, in __init__
+    value = self.prettyIn(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1249, in prettyIn
+    raise error.PyAsn1Error(
+pyasn1.error.PyAsn1Error: Malformed Object ID (3, '6') at ObjectName: '>=' not supported between instances of 'str' and 'int'
+2026-01-25 06:04:00,154 - app.scheduler.monitor - ERROR - SNMP Exception for v2/fan1: Malformed Object ID (3, '6') at ObjectName: '>=' not supported between instances of 'str' and 'int'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1246, in prettyIn
+    tupleOfInts = tuple([int(subOid) for subOid in value if subOid >= 0])
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1246, in <listcomp>
+    tupleOfInts = tuple([int(subOid) for subOid in value if subOid >= 0])
+                                                            ^^^^^^^^^^^
+TypeError: '>=' not supported between instances of 'str' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 88, in snmp_get
+    errorIndication, errorStatus, errorIndex, varBinds = next(iterator)
+                                                         ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/asyncore/sync/cmdgen.py", line 108, in getCmd
+    cmdgen.getCmd(snmpEngine, authData, transportTarget,
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/asyncore/cmdgen.py", line 130, in getCmd
+    vbProcessor.makeVarBinds(snmpEngine, varBinds), __cbFun,
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/varbinds.py", line 39, in makeVarBinds
+    __varBinds.append(varBind.resolveWithMib(mibViewController, ignoreErrors=False))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/rfc1902.py", line 853, in resolveWithMib
+    self.__args[0].resolveWithMib(mibViewController)
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/rfc1902.py", line 420, in resolveWithMib
+    prefix, label, suffix = mibViewController.getNodeNameByOid(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 205, in getNodeNameByOid
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 5 more times]
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 191, in __getOidLabel
+    resLabel = label + tuple([str(x) for x in suffix])
+               ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1182, in __add__
+    return self.clone(self._value + other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/base.py", line 376, in clone
+    return self.__class__(value, **initializers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/base.py", line 267, in __init__
+    value = self.prettyIn(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1249, in prettyIn
+    raise error.PyAsn1Error(
+pyasn1.error.PyAsn1Error: Malformed Object ID (3, '6') at ObjectName: '>=' not supported between instances of 'str' and 'int'
+2026-01-25 06:04:00,417 - app.scheduler.monitor - INFO - SNMP polling completed: 2 success, 1 errors, duration: 0.52s
+2026-01-25 06:04:00,417 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 06:08:59 UTC)" executed successfully
+2026-01-25 06:04:00,423 - app.scheduler.monitor - INFO - SNMP polling completed: 2 success, 1 errors, duration: 0.52s
+2026-01-25 06:04:00,423 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 06:08:59 UTC)" executed successfully
+2026-01-25 06:04:20,639 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:08:20,154 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:08:45,879 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:08:46,681 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:08:46,902 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:08:47,367 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:08:47,799 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:08:48,312 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:08:49,237 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:09:00,079 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 06:13:59 UTC)" (scheduled at 2026-01-25 06:08:59.255191+00:00)
+2026-01-25 06:09:00,080 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 06:09:00,090 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 06:13:59 UTC)" (scheduled at 2026-01-25 06:08:59.266111+00:00)
+2026-01-25 06:09:00,091 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 06:09:00,194 - app.scheduler.monitor - ERROR - SNMP Exception for v2/fan1: Malformed Object ID (3, '6') at ObjectName: '>=' not supported between instances of 'str' and 'int'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1246, in prettyIn
+    tupleOfInts = tuple([int(subOid) for subOid in value if subOid >= 0])
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1246, in <listcomp>
+    tupleOfInts = tuple([int(subOid) for subOid in value if subOid >= 0])
+                                                            ^^^^^^^^^^^
+TypeError: '>=' not supported between instances of 'str' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 88, in snmp_get
+    errorIndication, errorStatus, errorIndex, varBinds = next(iterator)
+                                                         ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/asyncore/sync/cmdgen.py", line 108, in getCmd
+    cmdgen.getCmd(snmpEngine, authData, transportTarget,
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/asyncore/cmdgen.py", line 130, in getCmd
+    vbProcessor.makeVarBinds(snmpEngine, varBinds), __cbFun,
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/varbinds.py", line 39, in makeVarBinds
+    __varBinds.append(varBind.resolveWithMib(mibViewController, ignoreErrors=False))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/rfc1902.py", line 853, in resolveWithMib
+    self.__args[0].resolveWithMib(mibViewController)
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/rfc1902.py", line 420, in resolveWithMib
+    prefix, label, suffix = mibViewController.getNodeNameByOid(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 205, in getNodeNameByOid
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 5 more times]
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 191, in __getOidLabel
+    resLabel = label + tuple([str(x) for x in suffix])
+               ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1182, in __add__
+    return self.clone(self._value + other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/base.py", line 376, in clone
+    return self.__class__(value, **initializers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/base.py", line 267, in __init__
+    value = self.prettyIn(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1249, in prettyIn
+    raise error.PyAsn1Error(
+pyasn1.error.PyAsn1Error: Malformed Object ID (3, '6') at ObjectName: '>=' not supported between instances of 'str' and 'int'
+2026-01-25 06:09:00,198 - app.scheduler.monitor - ERROR - SNMP Exception for v2/fan1: Malformed Object ID (3, '6') at ObjectName: '>=' not supported between instances of 'str' and 'int'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1246, in prettyIn
+    tupleOfInts = tuple([int(subOid) for subOid in value if subOid >= 0])
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1246, in <listcomp>
+    tupleOfInts = tuple([int(subOid) for subOid in value if subOid >= 0])
+                                                            ^^^^^^^^^^^
+TypeError: '>=' not supported between instances of 'str' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 88, in snmp_get
+    errorIndication, errorStatus, errorIndex, varBinds = next(iterator)
+                                                         ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/asyncore/sync/cmdgen.py", line 108, in getCmd
+    cmdgen.getCmd(snmpEngine, authData, transportTarget,
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/asyncore/cmdgen.py", line 130, in getCmd
+    vbProcessor.makeVarBinds(snmpEngine, varBinds), __cbFun,
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/varbinds.py", line 39, in makeVarBinds
+    __varBinds.append(varBind.resolveWithMib(mibViewController, ignoreErrors=False))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/rfc1902.py", line 853, in resolveWithMib
+    self.__args[0].resolveWithMib(mibViewController)
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/rfc1902.py", line 420, in resolveWithMib
+    prefix, label, suffix = mibViewController.getNodeNameByOid(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 205, in getNodeNameByOid
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 187, in __getOidLabel
+    oid, label, suffix = self.__getOidLabel(
+                         ^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 5 more times]
+  File "/usr/local/lib/python3.11/site-packages/pysnmp/smi/view.py", line 191, in __getOidLabel
+    resLabel = label + tuple([str(x) for x in suffix])
+               ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1182, in __add__
+    return self.clone(self._value + other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/base.py", line 376, in clone
+    return self.__class__(value, **initializers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/base.py", line 267, in __init__
+    value = self.prettyIn(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyasn1/type/univ.py", line 1249, in prettyIn
+    raise error.PyAsn1Error(
+pyasn1.error.PyAsn1Error: Malformed Object ID (3, '6') at ObjectName: '>=' not supported between instances of 'str' and 'int'
+2026-01-25 06:09:00,522 - app.scheduler.monitor - INFO - SNMP polling completed: 2 success, 1 errors, duration: 0.43s
+2026-01-25 06:09:00,522 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 06:13:59 UTC)" executed successfully
+2026-01-25 06:09:00,523 - app.scheduler.monitor - INFO - SNMP polling completed: 2 success, 1 errors, duration: 0.44s
+2026-01-25 06:09:00,524 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 06:13:59 UTC)" executed successfully
+2026-01-25 06:10:56,976 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:11:05,238 - app - INFO - Server Monitoring application starting...
+2026-01-25 06:11:05,239 - app - INFO - Server Monitoring application starting...
+2026-01-25 06:11:06,232 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 06:11:06,232 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 06:11:06,233 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 06:11:06,233 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 06:11:06,233 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 06:11:06,233 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 06:11:06,234 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 06:11:06,234 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 06:11:06,234 - app - INFO - Application initialized successfully
+2026-01-25 06:11:06,234 - app - INFO - Application initialized successfully
+2026-01-25 06:11:06,527 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:11:07,461 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:11:07,631 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:11:07,773 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:11:08,371 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:11:08,814 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:11:09,253 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:11:23,063 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:11:24,388 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:11:25,413 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:11:32,713 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:11:36,070 - app.routes.component - INFO - Component 1 (fan1) deleted by admin
+2026-01-25 06:11:36,143 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:11:38,112 - app.routes.component - INFO - Component 2 (fan2) deleted by admin
+2026-01-25 06:11:38,169 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:11:39,810 - app.routes.component - INFO - Component 3 (fan3) deleted by admin
+2026-01-25 06:11:39,881 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:11:41,221 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:12:11,230 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 06:12:11,426 - app.scheduler.monitor - INFO - SNMP polling completed: 1 success, 0 errors, duration: 0.20s
+2026-01-25 06:12:11,428 - app.routes.component - INFO - SNMP polling triggered after adding component 4
+2026-01-25 06:12:11,431 - app.routes.component - INFO - Component 4 (fan1) added to server 1 by admin
+2026-01-25 06:12:11,499 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:12:13,128 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:12:15,142 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:12:16,220 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:12:18,002 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:12:18,969 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:12:19,984 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:12:29,051 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 06:12:29,342 - app.scheduler.monitor - INFO - SNMP polling completed: 2 success, 0 errors, duration: 0.29s
+2026-01-25 06:12:29,344 - app.routes.component - INFO - SNMP polling triggered after adding component 5
+2026-01-25 06:12:29,347 - app.routes.component - INFO - Component 5 (fan2) added to server 1 by admin
+2026-01-25 06:12:29,415 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:12:31,098 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:12:36,067 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:12:37,011 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:12:40,466 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:12:41,542 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:12:43,653 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:12:46,328 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:12:47,690 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:12:54,332 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 06:12:54,782 - app.scheduler.monitor - INFO - SNMP polling completed: 3 success, 0 errors, duration: 0.45s
+2026-01-25 06:12:54,785 - app.routes.component - INFO - SNMP polling triggered after adding component 6
+2026-01-25 06:12:54,788 - app.routes.component - INFO - Component 6 (fan3) added to server 1 by admin
+2026-01-25 06:12:54,904 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:12:56,309 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:13:26,117 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:13:27,052 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:13:27,692 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:13:32,531 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:13:33,838 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:13:34,736 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:13:44,379 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 06:13:44,947 - app.scheduler.monitor - INFO - SNMP polling completed: 4 success, 0 errors, duration: 0.57s
+2026-01-25 06:13:44,951 - app.routes.component - INFO - SNMP polling triggered after adding component 7
+2026-01-25 06:13:44,955 - app.routes.component - INFO - Component 7 (fan4) added to server 1 by admin
+2026-01-25 06:13:45,073 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:13:46,406 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:15:51,751 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:15:52,778 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:15:52,978 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:15:59,709 - app - INFO - Server Monitoring application starting...
+2026-01-25 06:15:59,831 - app - INFO - Server Monitoring application starting...
+2026-01-25 06:16:00,537 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 06:16:00,538 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 06:16:00,539 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 06:16:00,540 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 06:16:00,540 - app - INFO - Application initialized successfully
+2026-01-25 06:16:00,555 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 06:16:00,556 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 06:16:00,556 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 06:16:00,557 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 06:16:00,557 - app - INFO - Application initialized successfully
+2026-01-25 06:16:01,404 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:16:01,926 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:16:02,073 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:16:02,272 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:17:42,503 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:17:43,914 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:17:45,470 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:17:46,244 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:17:47,462 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:17:51,042 - app.routes.component - INFO - Component 7 (fan4) deleted by admin
+2026-01-25 06:17:51,096 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:17:51,887 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:18:08,114 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 06:18:08,648 - app.scheduler.monitor - INFO - SNMP polling completed: 4 success, 0 errors, duration: 0.53s
+2026-01-25 06:18:08,650 - app.routes.component - INFO - SNMP polling triggered after adding component 8
+2026-01-25 06:18:08,654 - app.routes.component - INFO - Component 8 (fan4) added to server 1 by admin
+2026-01-25 06:18:08,729 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:18:10,243 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:19:44,248 - app - INFO - Server Monitoring application starting...
+2026-01-25 06:19:44,248 - app - INFO - Server Monitoring application starting...
+2026-01-25 06:19:45,187 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 06:19:45,187 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 06:19:45,190 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 06:19:45,191 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 06:19:45,191 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 06:19:45,191 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 06:19:45,191 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 06:19:45,191 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 06:19:45,191 - app - INFO - Application initialized successfully
+2026-01-25 06:19:45,192 - app - INFO - Application initialized successfully
+2026-01-25 06:19:55,840 - app - INFO - Server Monitoring application starting...
+2026-01-25 06:19:56,524 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 06:19:56,525 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 06:19:56,525 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 06:19:56,526 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 06:19:56,526 - app - INFO - Application initialized successfully
+2026-01-25 06:20:03,494 - app - INFO - Server Monitoring application starting...
+2026-01-25 06:20:04,093 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 06:20:04,095 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 06:20:04,095 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 06:20:04,096 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 06:20:04,096 - app - INFO - Application initialized successfully
+2026-01-25 06:20:07,304 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:20:09,236 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:20:10,399 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:20:10,808 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:20:11,643 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:20:24,160 - app.routes.server - INFO - Server 1 (v2) created by admin
+2026-01-25 06:20:24,224 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:20:25,799 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:20:26,794 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:20:29,946 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:20:30,155 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:20:37,487 - app.routes.server - INFO - Server 1 (v2) deleted by admin
+2026-01-25 06:20:37,580 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:20:38,100 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:20:45,226 - app.routes.server - INFO - Server 2 (v2) created by admin
+2026-01-25 06:20:45,292 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:20:47,153 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:20:48,566 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:20:55,389 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 06:20:55,625 - app.scheduler.monitor - INFO - SNMP polling completed: 1 success, 0 errors, duration: 0.23s
+2026-01-25 06:20:55,629 - app.routes.component - INFO - SNMP polling triggered after adding component 1
+2026-01-25 06:20:55,633 - app.routes.component - INFO - Component 1 (fan1) added to server 2 by admin
+2026-01-25 06:20:55,704 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:20:56,864 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:20:58,082 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:20:58,643 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:20:59,428 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:21:00,347 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:21:05,577 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:21:06,793 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:21:07,275 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:21:09,063 - app - ERROR - Exception on /admin/servers/edit/2 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/validators.py", line 126, in decorated_function
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/app/app/routes/server.py", line 66, in edit_server
+    return render_template('edit_server.html', server=server)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/jinja2/environment.py", line 771, in compile
+    self.handle_exception(source=source_hint)
+  File "/usr/local/lib/python3.11/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/app/templates/edit_server.html", line 26, in template
+    <option value="HPE" {% if server.brand="" ="HPE" %}selected{% endif %}>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of statement block', got '='
+2026-01-25 06:21:09,079 - app - ERROR - Internal server error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/validators.py", line 126, in decorated_function
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/app/app/routes/server.py", line 66, in edit_server
+    return render_template('edit_server.html', server=server)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/jinja2/environment.py", line 771, in compile
+    self.handle_exception(source=source_hint)
+  File "/usr/local/lib/python3.11/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/app/templates/edit_server.html", line 26, in template
+    <option value="HPE" {% if server.brand="" ="HPE" %}selected{% endif %}>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of statement block', got '='
+2026-01-25 06:21:09,187 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:21:13,418 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:21:14,462 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:21:18,532 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:21:19,351 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:21:26,168 - app.routes.server - WARNING - Validation error adding server: A server with IP 192.168.56.102 already exists
+2026-01-25 06:21:26,210 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:21:27,565 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:21:28,747 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:21:29,988 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:21:32,695 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:21:35,705 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:21:36,645 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:21:39,432 - app.routes.server - INFO - Server 2 (v2) deleted by admin
+2026-01-25 06:21:39,483 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:21:40,316 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:21:52,498 - app.routes.server - INFO - Server 3 (v2) created by admin
+2026-01-25 06:21:52,565 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:21:55,016 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:21:55,942 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:22:02,461 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 06:22:02,676 - app.scheduler.monitor - INFO - SNMP polling completed: 1 success, 0 errors, duration: 0.22s
+2026-01-25 06:22:02,680 - app.routes.component - INFO - SNMP polling triggered after adding component 2
+2026-01-25 06:22:02,683 - app.routes.component - INFO - Component 2 (fan1) added to server 3 by admin
+2026-01-25 06:22:02,763 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:22:03,578 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:22:05,673 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:22:08,793 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:22:09,720 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:22:18,938 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 06:22:19,161 - app.scheduler.monitor - INFO - SNMP polling completed: 2 success, 0 errors, duration: 0.22s
+2026-01-25 06:22:19,163 - app.routes.component - INFO - SNMP polling triggered after adding component 3
+2026-01-25 06:22:19,165 - app.routes.component - INFO - Component 3 (fan2) added to server 3 by admin
+2026-01-25 06:22:19,229 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:22:20,795 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:22:29,132 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 06:22:29,450 - app.scheduler.monitor - INFO - SNMP polling completed: 3 success, 0 errors, duration: 0.32s
+2026-01-25 06:22:29,453 - app.routes.component - INFO - SNMP polling triggered after adding component 4
+2026-01-25 06:22:29,456 - app.routes.component - INFO - Component 4 (fan3) added to server 3 by admin
+2026-01-25 06:22:29,525 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:22:31,118 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:22:43,331 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 06:22:43,963 - app.scheduler.monitor - INFO - SNMP polling completed: 4 success, 0 errors, duration: 0.63s
+2026-01-25 06:22:43,965 - app.routes.component - INFO - SNMP polling triggered after adding component 5
+2026-01-25 06:22:43,968 - app.routes.component - INFO - Component 5 (fan4) added to server 3 by admin
+2026-01-25 06:22:44,030 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:22:45,253 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:23:05,771 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:23:12,741 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:23:13,783 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:23:14,241 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:23:14,583 - app - ERROR - Exception on /admin/report [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/validators.py", line 126, in decorated_function
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/app/app/routes/report.py", line 90, in report
+    return render_template('report.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/jinja2/environment.py", line 771, in compile
+    self.handle_exception(source=source_hint)
+  File "/usr/local/lib/python3.11/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/app/templates/report.html", line 15, in template
+    <option value="{{ m }}" {% if month="" ="m" %}selected{% endif %}>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of statement block', got '='
+2026-01-25 06:23:14,587 - app - ERROR - Internal server error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/validators.py", line 126, in decorated_function
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/app/app/routes/report.py", line 90, in report
+    return render_template('report.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/jinja2/environment.py", line 771, in compile
+    self.handle_exception(source=source_hint)
+  File "/usr/local/lib/python3.11/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/app/templates/report.html", line 15, in template
+    <option value="{{ m }}" {% if month="" ="m" %}selected{% endif %}>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of statement block', got '='
+2026-01-25 06:23:14,677 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:23:15,161 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:23:16,159 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:23:17,947 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:23:18,403 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:23:21,106 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:23:23,099 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:23:24,064 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:23:25,123 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:23:47,070 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 06:23:47,795 - app.scheduler.monitor - INFO - SNMP polling completed: 5 success, 0 errors, duration: 0.72s
+2026-01-25 06:23:47,797 - app.routes.component - INFO - SNMP polling triggered after adding component 6
+2026-01-25 06:23:47,799 - app.routes.component - INFO - Component 6 (fan5) added to server 3 by admin
+2026-01-25 06:23:47,865 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 06:23:48,371 - app - WARNING - Page not found: http://localhost:5000/favicon.ico

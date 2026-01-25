@@ -22,30 +22,74 @@ logger = logging.getLogger(__name__)
 # SNMP value classification per brand/component
 SNMP_CLASSIFICATION = {
     'HPE': {
-        'fan': lambda v: 'OK' if v == '1' else 'Critical',
-        'PSU': lambda v: 'OK' if v == '1' else 'Critical',
-        'harddisk': lambda v: 'OK' if v == '1' else 'Warning',
-        'suhu': lambda v: 'OK' if float(v) < 50 else ('Warning' if float(v) < 60 else 'Critical'),
+        'fan': lambda v: 'Unknown' if v is None or str(v).strip() == '' else
+            ('OK' if str(v).lower() in ['ok', 'good', '1', '2']
+             else ('Warning' if str(v).lower() in ['warning', 'degraded', '3']
+                   else 'Critical')),
+        'PSU': lambda v: 'Unknown' if v is None or str(v).strip() == '' else
+            ('OK' if str(v).lower() in ['ok', 'good', '1', '2']
+             else ('Warning' if str(v).lower() in ['warning', 'degraded', '3']
+                   else 'Critical')),
+        'harddisk': lambda v: 'Unknown' if v is None or str(v).strip() == '' else
+            ('OK' if str(v).lower() in ['ok', 'good', '1', '2']
+             else ('Warning' if str(v).lower() in ['warning', 'degraded', '3']
+                   else 'Critical')),
+        'suhu': lambda v: 'Unknown' if v is None or str(v).strip() == '' else
+            ('OK' if float(v) < 50 else ('Warning' if float(v) < 60 else 'Critical')),
     },
     'Dell': {
-        'fan': lambda v: 'OK' if v == '2' else 'Critical',
-        'PSU': lambda v: 'OK' if v == '2' else 'Critical',
-        'harddisk': lambda v: 'OK' if v == '2' else 'Warning',
-        'suhu': lambda v: 'OK' if float(v) < 55 else ('Warning' if float(v) < 65 else 'Critical'),
+        'fan': lambda v: 'Unknown' if v is None or str(v).strip() == '' else
+            ('OK' if str(v).lower() in ['ok', 'good', '1', '2']
+             else ('Warning' if str(v).lower() in ['warning', 'degraded', '3']
+                   else 'Critical')),
+        'PSU': lambda v: 'Unknown' if v is None or str(v).strip() == '' else
+            ('OK' if str(v).lower() in ['ok', 'good', '1', '2']
+             else ('Warning' if str(v).lower() in ['warning', 'degraded', '3']
+                   else 'Critical')),
+        'harddisk': lambda v: 'Unknown' if v is None or str(v).strip() == '' else
+            ('OK' if str(v).lower() in ['ok', 'good', '1', '2']
+             else ('Warning' if str(v).lower() in ['warning', 'degraded', '3']
+                   else 'Critical')),
+        'suhu': lambda v: 'Unknown' if v is None or str(v).strip() == '' else
+            ('OK' if float(v) < 55 else ('Warning' if float(v) < 65 else 'Critical')),
     },
     'supermicro': {
-        'fan': lambda v: 'OK' if v == '1' else 'Critical',
-        'PSU': lambda v: 'OK' if v == '1' else 'Critical',
-        'harddisk': lambda v: 'OK' if v == '1' else 'Warning',
-        'suhu': lambda v: 'OK' if float(v) < 50 else ('Warning' if float(v) < 60 else 'Critical'),
+        'fan': lambda v: 'Unknown' if v is None or str(v).strip() == '' else
+            ('OK' if str(v).lower() in ['ok', 'good', '1', '2']
+             else ('Warning' if str(v).lower() in ['warning', 'degraded', '3']
+                   else 'Critical')),
+        'PSU': lambda v: 'Unknown' if v is None or str(v).strip() == '' else
+            ('OK' if str(v).lower() in ['ok', 'good', '1', '2']
+             else ('Warning' if str(v).lower() in ['warning', 'degraded', '3']
+                   else 'Critical')),
+        'harddisk': lambda v: 'Unknown' if v is None or str(v).strip() == '' else
+            ('OK' if str(v).lower() in ['ok', 'good', '1', '2']
+             else ('Warning' if str(v).lower() in ['warning', 'degraded', '3']
+                   else 'Critical')),
+        'suhu': lambda v: 'Unknown' if v is None or str(v).strip() == '' else
+            ('OK' if float(v) < 50 else ('Warning' if float(v) < 60 else 'Critical')),
     },
     'custom': {
-        'fan': lambda v: 'OK',
-        'PSU': lambda v: 'OK',
-        'harddisk': lambda v: 'OK',
-        'suhu': lambda v: 'OK',
+        'fan': lambda v: 'Unknown' if v is None or str(v).strip() == '' else
+            ('OK' if str(v).lower() in ['ok', 'good', '1', '2']
+             else ('Warning' if str(v).lower() in ['warning', 'degraded', '3']
+                   else 'Critical')),
+        'PSU': lambda v: 'Unknown' if v is None or str(v).strip() == '' else
+            ('OK' if str(v).lower() in ['ok', 'good', '1', '2']
+             else ('Warning' if str(v).lower() in ['warning', 'degraded', '3']
+                   else 'Critical')),
+        'harddisk': lambda v: 'Unknown' if v is None or str(v).strip() == '' else
+            ('OK' if str(v).lower() in ['ok', 'good', '1', '2']
+             else ('Warning' if str(v).lower() in ['warning', 'degraded', '3']
+                   else 'Critical')),
+        'suhu': lambda v: 'Unknown' if v is None or str(v).strip() == '' else
+            ('OK' if str(v).lower() in ['ok', 'good', '1', '2']
+             else ('Warning' if str(v).lower() in ['warning', 'degraded', '3']
+                   else 'Critical')),
     }
 }
+
+
 
 
 def snmp_get(server, component):
