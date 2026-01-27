@@ -1522,3 +1522,1534 @@ jinja2.exceptions.TemplateSyntaxError: expected token 'end of statement block', 
 2026-01-25 06:23:47,799 - app.routes.component - INFO - Component 6 (fan5) added to server 3 by admin
 2026-01-25 06:23:47,865 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
 2026-01-25 06:23:48,371 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 15:51:57,792 - app - INFO - Server Monitoring application starting...
+2026-01-25 15:51:57,793 - app - INFO - Server Monitoring application starting...
+2026-01-25 15:52:00,199 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 15:52:00,199 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 15:52:00,202 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 15:52:00,203 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 15:52:00,203 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 15:52:00,203 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 15:52:00,204 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 15:52:00,204 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 15:52:00,204 - app - INFO - Application initialized successfully
+2026-01-25 15:52:00,204 - app - INFO - Application initialized successfully
+2026-01-25 15:52:25,373 - app - INFO - Server Monitoring application starting...
+2026-01-25 15:52:26,098 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 15:52:26,099 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 15:52:26,099 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 15:52:26,100 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 15:52:26,101 - app - INFO - Application initialized successfully
+2026-01-25 15:52:59,729 - app - INFO - Server Monitoring application starting...
+2026-01-25 15:53:00,265 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 15:53:00,266 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 15:53:00,266 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 15:53:00,267 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 15:53:00,267 - app - INFO - Application initialized successfully
+2026-01-25 15:53:05,808 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 15:53:11,839 - app.routes.auth - INFO - User admin logged in successfully
+2026-01-25 15:53:12,047 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 15:57:00,223 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 16:02:00 UTC)" (scheduled at 2026-01-25 15:57:00.199162+00:00)
+2026-01-25 15:57:00,221 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 16:02:00 UTC)" (scheduled at 2026-01-25 15:57:00.199149+00:00)
+2026-01-25 15:57:00,234 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 15:57:00,234 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 15:57:00,309 - app.scheduler.monitor - INFO - No servers configured for polling
+2026-01-25 15:57:00,310 - app.scheduler.monitor - INFO - No servers configured for polling
+2026-01-25 15:57:00,312 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 16:02:00 UTC)" executed successfully
+2026-01-25 15:57:00,313 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 16:02:00 UTC)" executed successfully
+2026-01-25 15:58:12,775 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:02:00,201 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 16:07:00 UTC)" (scheduled at 2026-01-25 16:02:00.199162+00:00)
+2026-01-25 16:02:00,202 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 16:07:00 UTC)" (scheduled at 2026-01-25 16:02:00.199149+00:00)
+2026-01-25 16:02:00,204 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 16:02:00,204 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 16:02:00,230 - app.scheduler.monitor - INFO - No servers configured for polling
+2026-01-25 16:02:00,230 - app.scheduler.monitor - INFO - No servers configured for polling
+2026-01-25 16:02:00,231 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 16:07:00 UTC)" executed successfully
+2026-01-25 16:02:00,231 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 16:07:00 UTC)" executed successfully
+2026-01-25 16:03:13,714 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:07:00,206 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 16:12:00 UTC)" (scheduled at 2026-01-25 16:07:00.199149+00:00)
+2026-01-25 16:07:00,207 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 16:12:00 UTC)" (scheduled at 2026-01-25 16:07:00.199162+00:00)
+2026-01-25 16:07:00,212 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 16:07:00,212 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 16:07:00,230 - app.scheduler.monitor - INFO - No servers configured for polling
+2026-01-25 16:07:00,232 - app.scheduler.monitor - INFO - No servers configured for polling
+2026-01-25 16:07:00,232 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 16:12:00 UTC)" executed successfully
+2026-01-25 16:07:00,234 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 16:12:00 UTC)" executed successfully
+2026-01-25 16:08:14,695 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:10:11,421 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:10:12,094 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:10:47,386 - app.routes.server - INFO - Server 1 (v3) created by admin
+2026-01-25 16:10:47,536 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:10:49,264 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:10:50,522 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:11:04,834 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 16:11:05,656 - app.scheduler.monitor - WARNING - SNMP Error Indication for v3/fan1: Wrong SNMP PDU digest
+2026-01-25 16:11:05,679 - app.scheduler.monitor - INFO - SNMP polling completed: 0 success, 1 errors, duration: 0.84s
+2026-01-25 16:11:05,684 - app.routes.component - INFO - SNMP polling triggered after adding component 1
+2026-01-25 16:11:05,695 - app.routes.component - INFO - Component 1 (fan1) added to server 1 by admin
+2026-01-25 16:11:05,867 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:11:07,065 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:12:00,200 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 16:17:00 UTC)" (scheduled at 2026-01-25 16:12:00.199149+00:00)
+2026-01-25 16:12:00,200 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 16:17:00 UTC)" (scheduled at 2026-01-25 16:12:00.199162+00:00)
+2026-01-25 16:12:00,201 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 16:12:00,201 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 16:12:00,357 - app.scheduler.monitor - WARNING - SNMP Error Indication for v3/fan1: Wrong SNMP PDU digest
+2026-01-25 16:12:00,361 - app.scheduler.monitor - INFO - SNMP polling completed: 0 success, 1 errors, duration: 0.16s
+2026-01-25 16:12:00,362 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 16:17:00 UTC)" executed successfully
+2026-01-25 16:12:00,775 - app.scheduler.monitor - WARNING - SNMP Error Indication for v3/fan1: Wrong SNMP PDU digest
+2026-01-25 16:12:00,785 - app.scheduler.monitor - INFO - SNMP polling completed: 0 success, 1 errors, duration: 0.58s
+2026-01-25 16:12:00,785 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 16:17:00 UTC)" executed successfully
+2026-01-25 16:15:24,924 - app - INFO - Server Monitoring application starting...
+2026-01-25 16:15:24,924 - app - INFO - Server Monitoring application starting...
+2026-01-25 16:15:26,806 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 16:15:26,806 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 16:15:26,808 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 16:15:26,808 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 16:15:26,808 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 16:15:26,808 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 16:15:26,809 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 16:15:26,809 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 16:15:26,810 - app - INFO - Application initialized successfully
+2026-01-25 16:15:26,810 - app - INFO - Application initialized successfully
+2026-01-25 16:15:27,048 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:15:29,749 - app.routes.server - INFO - Server 1 (v3) deleted by admin
+2026-01-25 16:15:29,803 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:15:31,229 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:15:49,175 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:15:49,818 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:19:47,090 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:19:47,765 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:19:54,300 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:19:54,469 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:19:54,671 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:19:54,806 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:19:55,000 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:20:26,809 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 16:25:26 UTC)" (scheduled at 2026-01-25 16:20:26.806372+00:00)
+2026-01-25 16:20:26,809 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 16:20:26 UTC)" (scheduled at 2026-01-25 16:20:26.806402+00:00)
+2026-01-25 16:20:26,810 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 16:20:26,810 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 16:20:26,822 - app.scheduler.monitor - INFO - No servers configured for polling
+2026-01-25 16:20:26,823 - app.scheduler.monitor - INFO - No servers configured for polling
+2026-01-25 16:20:26,823 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 16:25:26 UTC)" executed successfully
+2026-01-25 16:20:26,824 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 16:25:26 UTC)" executed successfully
+2026-01-25 16:24:32,414 - app - INFO - Server Monitoring application starting...
+2026-01-25 16:24:32,415 - app - INFO - Server Monitoring application starting...
+2026-01-25 16:24:33,607 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 16:24:33,607 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 16:24:33,609 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 16:24:33,609 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 16:24:33,609 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 16:24:33,609 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 16:24:33,611 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 16:24:33,611 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 16:24:33,611 - app - INFO - Application initialized successfully
+2026-01-25 16:24:33,611 - app - INFO - Application initialized successfully
+2026-01-25 16:24:33,741 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:25:18,477 - app.routes.server - INFO - Server 2 (v3) created by admin
+2026-01-25 16:25:18,633 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:25:20,689 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:25:21,470 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:25:27,403 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 16:25:27,408 - app.scheduler.monitor - ERROR - SNMP Exception for v3/fan1: name 'usmHMAC128SHA256AuthProtocol' is not defined
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 121, in snmp_get
+    elif proto in ('SHA256', 'SHA-256') and usmHMAC128SHA256AuthProtocol is not None:
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'usmHMAC128SHA256AuthProtocol' is not defined
+2026-01-25 16:25:27,417 - app.scheduler.monitor - INFO - SNMP polling completed: 0 success, 1 errors, duration: 0.01s
+2026-01-25 16:25:27,420 - app.routes.component - INFO - SNMP polling triggered after adding component 2
+2026-01-25 16:25:27,425 - app.routes.component - INFO - Component 2 (fan1) added to server 2 by admin
+2026-01-25 16:25:27,498 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:25:28,823 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:25:33,622 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:25:35,861 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:25:43,468 - app - ERROR - Exception on /admin/server/2/components/edit/2 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/validators.py", line 126, in decorated_function
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/app/app/routes/component.py", line 192, in edit_component
+    return render_template('edit_component.html', server=server, component=component)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/jinja2/environment.py", line 771, in compile
+    self.handle_exception(source=source_hint)
+  File "/usr/local/lib/python3.11/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/app/templates/edit_component.html", line 27, in template
+    component.category=""
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of statement block', got '='
+2026-01-25 16:25:43,479 - app - ERROR - Internal server error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/validators.py", line 126, in decorated_function
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/app/app/routes/component.py", line 192, in edit_component
+    return render_template('edit_component.html', server=server, component=component)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/jinja2/environment.py", line 771, in compile
+    self.handle_exception(source=source_hint)
+  File "/usr/local/lib/python3.11/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/app/templates/edit_component.html", line 27, in template
+    component.category=""
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of statement block', got '='
+2026-01-25 16:25:43,542 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:25:46,410 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:26:39,685 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:29:33,611 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 16:29:33 UTC)" (scheduled at 2026-01-25 16:29:33.607678+00:00)
+2026-01-25 16:29:33,611 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 16:34:33 UTC)" (scheduled at 2026-01-25 16:29:33.607727+00:00)
+2026-01-25 16:29:33,614 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 16:29:33,614 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 16:29:33,626 - app.scheduler.monitor - ERROR - SNMP Exception for v3/fan1: name 'usmHMAC128SHA256AuthProtocol' is not defined
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 121, in snmp_get
+    elif proto in ('SHA256', 'SHA-256') and usmHMAC128SHA256AuthProtocol is not None:
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'usmHMAC128SHA256AuthProtocol' is not defined
+2026-01-25 16:29:33,627 - app.scheduler.monitor - ERROR - SNMP Exception for v3/fan1: name 'usmHMAC128SHA256AuthProtocol' is not defined
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 121, in snmp_get
+    elif proto in ('SHA256', 'SHA-256') and usmHMAC128SHA256AuthProtocol is not None:
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'usmHMAC128SHA256AuthProtocol' is not defined
+2026-01-25 16:29:33,638 - app.scheduler.monitor - INFO - SNMP polling completed: 0 success, 1 errors, duration: 0.02s
+2026-01-25 16:29:33,639 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 16:34:33 UTC)" executed successfully
+2026-01-25 16:29:33,643 - app.scheduler.monitor - INFO - SNMP polling completed: 0 success, 1 errors, duration: 0.03s
+2026-01-25 16:29:33,643 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 16:34:33 UTC)" executed successfully
+2026-01-25 16:29:37,417 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:29:39,213 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:29:46,709 - app.routes.server - INFO - Server 3 (v2) created by admin
+2026-01-25 16:29:46,788 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:29:49,301 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:29:50,218 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:29:55,714 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 16:29:55,719 - app.scheduler.monitor - ERROR - SNMP Exception for v3/fan1: name 'usmHMAC128SHA256AuthProtocol' is not defined
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 121, in snmp_get
+    elif proto in ('SHA256', 'SHA-256') and usmHMAC128SHA256AuthProtocol is not None:
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'usmHMAC128SHA256AuthProtocol' is not defined
+2026-01-25 16:29:56,170 - app.scheduler.monitor - INFO - SNMP polling completed: 1 success, 1 errors, duration: 0.46s
+2026-01-25 16:29:56,174 - app.routes.component - INFO - SNMP polling triggered after adding component 3
+2026-01-25 16:29:56,179 - app.routes.component - INFO - Component 3 (fan1) added to server 3 by admin
+2026-01-25 16:29:56,265 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:29:57,516 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:30:03,280 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:31:49,631 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:33:14,704 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:33:17,275 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:33:18,250 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:33:31,311 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 16:33:31,315 - app.scheduler.monitor - ERROR - SNMP Exception for v3/fan1: name 'usmHMAC128SHA256AuthProtocol' is not defined
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 121, in snmp_get
+    elif proto in ('SHA256', 'SHA-256') and usmHMAC128SHA256AuthProtocol is not None:
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'usmHMAC128SHA256AuthProtocol' is not defined
+2026-01-25 16:33:31,612 - app.scheduler.monitor - INFO - SNMP polling completed: 2 success, 1 errors, duration: 0.30s
+2026-01-25 16:33:31,615 - app.routes.component - INFO - SNMP polling triggered after adding component 4
+2026-01-25 16:33:31,618 - app.routes.component - INFO - Component 4 (fan2) added to server 3 by admin
+2026-01-25 16:33:31,697 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:33:33,241 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:33:37,283 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:33:39,291 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:33:40,468 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:33:48,916 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 16:33:48,920 - app.scheduler.monitor - ERROR - SNMP Exception for v3/fan1: name 'usmHMAC128SHA256AuthProtocol' is not defined
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 121, in snmp_get
+    elif proto in ('SHA256', 'SHA-256') and usmHMAC128SHA256AuthProtocol is not None:
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'usmHMAC128SHA256AuthProtocol' is not defined
+2026-01-25 16:33:49,476 - app.scheduler.monitor - INFO - SNMP polling completed: 3 success, 1 errors, duration: 0.56s
+2026-01-25 16:33:49,478 - app.routes.component - INFO - SNMP polling triggered after adding component 5
+2026-01-25 16:33:49,481 - app.routes.component - INFO - Component 5 (fan4) added to server 3 by admin
+2026-01-25 16:33:49,564 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:33:50,605 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:34:33,609 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 16:39:33 UTC)" (scheduled at 2026-01-25 16:34:33.607727+00:00)
+2026-01-25 16:34:33,609 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 16:39:33 UTC)" (scheduled at 2026-01-25 16:34:33.607678+00:00)
+2026-01-25 16:34:33,609 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 16:34:33,609 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 16:34:33,615 - app.scheduler.monitor - ERROR - SNMP Exception for v3/fan1: name 'usmHMAC128SHA256AuthProtocol' is not defined
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 121, in snmp_get
+    elif proto in ('SHA256', 'SHA-256') and usmHMAC128SHA256AuthProtocol is not None:
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'usmHMAC128SHA256AuthProtocol' is not defined
+2026-01-25 16:34:33,616 - app.scheduler.monitor - ERROR - SNMP Exception for v3/fan1: name 'usmHMAC128SHA256AuthProtocol' is not defined
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 121, in snmp_get
+    elif proto in ('SHA256', 'SHA-256') and usmHMAC128SHA256AuthProtocol is not None:
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'usmHMAC128SHA256AuthProtocol' is not defined
+2026-01-25 16:34:34,326 - app.scheduler.monitor - INFO - SNMP polling completed: 3 success, 1 errors, duration: 0.72s
+2026-01-25 16:34:34,326 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 16:39:33 UTC)" executed successfully
+2026-01-25 16:34:35,000 - app.scheduler.monitor - INFO - SNMP polling completed: 3 success, 1 errors, duration: 1.39s
+2026-01-25 16:34:35,001 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 16:39:33 UTC)" executed successfully
+2026-01-25 16:34:37,045 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:34:38,886 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:39:33,610 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 16:44:33 UTC)" (scheduled at 2026-01-25 16:39:33.607727+00:00)
+2026-01-25 16:39:33,612 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 16:39:33,611 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 16:44:33 UTC)" (scheduled at 2026-01-25 16:39:33.607678+00:00)
+2026-01-25 16:39:33,613 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 16:39:33,629 - app.scheduler.monitor - ERROR - SNMP Exception for v3/fan1: name 'usmHMAC128SHA256AuthProtocol' is not defined
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 121, in snmp_get
+    elif proto in ('SHA256', 'SHA-256') and usmHMAC128SHA256AuthProtocol is not None:
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'usmHMAC128SHA256AuthProtocol' is not defined
+2026-01-25 16:39:33,637 - app.scheduler.monitor - ERROR - SNMP Exception for v3/fan1: name 'usmHMAC128SHA256AuthProtocol' is not defined
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 121, in snmp_get
+    elif proto in ('SHA256', 'SHA-256') and usmHMAC128SHA256AuthProtocol is not None:
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'usmHMAC128SHA256AuthProtocol' is not defined
+2026-01-25 16:39:34,381 - app.scheduler.monitor - INFO - SNMP polling completed: 3 success, 1 errors, duration: 0.77s
+2026-01-25 16:39:34,382 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 16:44:33 UTC)" executed successfully
+2026-01-25 16:39:34,432 - app.scheduler.monitor - INFO - SNMP polling completed: 3 success, 1 errors, duration: 0.82s
+2026-01-25 16:39:34,432 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-25 16:44:33 UTC)" executed successfully
+2026-01-25 16:41:03,607 - app - INFO - Server Monitoring application starting...
+2026-01-25 16:41:03,607 - app - INFO - Server Monitoring application starting...
+2026-01-25 16:41:04,933 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 16:41:04,935 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 16:41:04,936 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 16:41:04,936 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 16:41:04,938 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 16:41:04,938 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 16:41:04,940 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 16:41:04,940 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 16:41:04,940 - app - INFO - Application initialized successfully
+2026-01-25 16:41:04,940 - app - INFO - Application initialized successfully
+2026-01-25 16:44:45,960 - app - INFO - Server Monitoring application starting...
+2026-01-25 16:44:45,971 - app - INFO - Server Monitoring application starting...
+2026-01-25 16:44:46,942 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 16:44:46,942 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 16:44:46,942 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 16:44:46,943 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 16:44:46,943 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 16:44:46,943 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 16:44:46,944 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 16:44:46,944 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 16:44:46,944 - app - INFO - Application initialized successfully
+2026-01-25 16:44:46,944 - app - INFO - Application initialized successfully
+2026-01-25 16:45:06,122 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:45:16,633 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:45:21,011 - app.routes.server - INFO - Server 2 (v3) deleted by admin
+2026-01-25 16:45:21,092 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:45:22,883 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:45:50,306 - app.routes.server - INFO - Server 4 (v3) created by admin
+2026-01-25 16:45:50,433 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:45:52,834 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:45:53,665 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:46:01,837 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 16:46:02,357 - app.scheduler.monitor - WARNING - Requested auth protocol SHA256 not available in pysnmp for v3; falling back to SHA1
+2026-01-25 16:46:02,588 - app.scheduler.monitor - WARNING - SNMP Error Indication for v3/fan1: Wrong SNMP PDU digest
+2026-01-25 16:46:02,597 - app.scheduler.monitor - INFO - SNMP polling completed: 3 success, 1 errors, duration: 0.76s
+2026-01-25 16:46:02,603 - app.routes.component - INFO - SNMP polling triggered after adding component 6
+2026-01-25 16:46:02,610 - app.routes.component - INFO - Component 6 (fan1) added to server 4 by admin
+2026-01-25 16:46:02,764 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:46:03,440 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:46:12,383 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:46:12,571 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:46:12,771 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:46:12,955 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:46:13,142 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:46:13,319 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:48:08,866 - app - INFO - Server Monitoring application starting...
+2026-01-25 16:48:08,879 - app - INFO - Server Monitoring application starting...
+2026-01-25 16:48:10,002 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 16:48:10,004 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 16:48:10,004 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 16:48:10,005 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 16:48:10,006 - app - INFO - Application initialized successfully
+2026-01-25 16:48:10,014 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 16:48:10,016 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 16:48:10,016 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 16:48:10,017 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 16:48:10,018 - app - INFO - Application initialized successfully
+2026-01-25 16:50:43,637 - app - INFO - Server Monitoring application starting...
+2026-01-25 16:50:43,670 - app - INFO - Server Monitoring application starting...
+2026-01-25 16:50:45,095 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 16:50:45,097 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 16:50:45,099 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 16:50:45,110 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 16:50:45,111 - app - INFO - Application initialized successfully
+2026-01-25 16:50:45,183 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-25 16:50:45,185 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-25 16:50:45,186 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-25 16:50:45,187 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-25 16:50:45,187 - app - INFO - Application initialized successfully
+2026-01-25 16:50:56,859 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:51:00,552 - app.routes.server - INFO - Server 4 (v3) deleted by admin
+2026-01-25 16:51:00,676 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:51:01,972 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:51:38,680 - app.routes.server - INFO - Server 5 (v3) created by admin
+2026-01-25 16:51:38,811 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:51:41,758 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:51:43,098 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:51:49,546 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-25 16:51:50,777 - app.scheduler.monitor - WARNING - SNMP Error Indication for v3/v2: Wrong SNMP PDU digest
+2026-01-25 16:51:50,786 - app.scheduler.monitor - INFO - SNMP polling completed: 3 success, 1 errors, duration: 1.24s
+2026-01-25 16:51:50,791 - app.routes.component - INFO - SNMP polling triggered after adding component 7
+2026-01-25 16:51:50,801 - app.routes.component - INFO - Component 7 (v2) added to server 5 by admin
+2026-01-25 16:51:50,930 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-25 16:51:51,482 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 04:54:57,873 - app - INFO - Server Monitoring application starting...
+2026-01-26 04:54:57,874 - app - INFO - Server Monitoring application starting...
+2026-01-26 04:56:05,656 - app - INFO - Server Monitoring application starting...
+2026-01-26 04:56:05,656 - app - INFO - Server Monitoring application starting...
+2026-01-26 05:01:57,838 - app - INFO - Server Monitoring application starting...
+2026-01-26 05:01:57,838 - app - INFO - Server Monitoring application starting...
+2026-01-26 05:01:58,798 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 05:01:58,798 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 05:01:58,802 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 05:01:58,802 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 05:01:58,802 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 05:01:58,802 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 05:01:58,803 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-26 05:01:58,803 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-26 05:01:58,803 - app - INFO - Application initialized successfully
+2026-01-26 05:01:58,803 - app - INFO - Application initialized successfully
+2026-01-26 05:02:12,733 - app - INFO - Server Monitoring application starting...
+2026-01-26 05:02:14,896 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 05:02:14,897 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 05:02:14,897 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 05:02:14,899 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-26 05:02:14,899 - app - INFO - Application initialized successfully
+2026-01-26 05:02:24,031 - app - INFO - Server Monitoring application starting...
+2026-01-26 05:02:24,659 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 05:02:24,662 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 05:02:24,662 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 05:02:24,663 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-26 05:02:24,664 - app - INFO - Application initialized successfully
+2026-01-26 05:02:27,343 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 05:02:31,981 - app.routes.auth - INFO - User admin logged in successfully
+2026-01-26 05:02:32,179 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 05:02:34,845 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 05:02:35,805 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 05:03:10,711 - app.routes.server - INFO - Server 1 (v3) created by admin
+2026-01-26 05:03:10,812 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 05:03:13,088 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 05:03:13,980 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 05:03:21,577 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 05:03:21,887 - app.scheduler.monitor - WARNING - SNMP Error Indication for v3/fan1: Wrong SNMP PDU digest
+2026-01-26 05:03:21,971 - app.scheduler.monitor - INFO - SNMP polling completed: 0 success, 1 errors, duration: 0.39s
+2026-01-26 05:03:21,974 - app.routes.component - INFO - SNMP polling triggered after adding component 1
+2026-01-26 05:03:21,978 - app.routes.component - INFO - Component 1 (fan1) added to server 1 by admin
+2026-01-26 05:03:22,081 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 05:03:23,105 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 05:07:13,779 - apscheduler.executors.default - WARNING - Run time of job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 05:11:58 UTC)" was missed by 0:00:14.981077
+2026-01-26 05:07:13,779 - apscheduler.executors.default - WARNING - Run time of job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 05:06:58 UTC)" was missed by 0:00:14.981168
+2026-01-26 05:08:23,312 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 05:12:13,772 - apscheduler.executors.default - WARNING - Run time of job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 05:16:58 UTC)" was missed by 0:00:14.974422
+2026-01-26 05:12:13,774 - apscheduler.executors.default - WARNING - Run time of job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 05:16:58 UTC)" was missed by 0:00:14.975971
+2026-01-26 05:13:25,005 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 05:17:12,638 - apscheduler.executors.default - WARNING - Run time of job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 05:21:58 UTC)" was missed by 0:00:13.840307
+2026-01-26 05:17:12,640 - apscheduler.executors.default - WARNING - Run time of job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 05:21:58 UTC)" was missed by 0:00:13.842038
+2026-01-26 05:18:25,232 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 05:22:14,267 - apscheduler.executors.default - WARNING - Run time of job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 05:26:58 UTC)" was missed by 0:00:15.468999
+2026-01-26 05:22:14,267 - apscheduler.executors.default - WARNING - Run time of job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 05:26:58 UTC)" was missed by 0:00:15.468947
+2026-01-26 05:23:26,972 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 05:25:15,171 - app - INFO - Server Monitoring application starting...
+2026-01-26 05:25:15,171 - app - INFO - Server Monitoring application starting...
+2026-01-26 10:00:59,560 - app - INFO - Server Monitoring application starting...
+2026-01-26 10:00:59,561 - app - INFO - Server Monitoring application starting...
+2026-01-26 10:03:16,907 - app - INFO - Server Monitoring application starting...
+2026-01-26 10:03:16,907 - app - INFO - Server Monitoring application starting...
+2026-01-26 10:04:39,305 - app - INFO - Server Monitoring application starting...
+2026-01-26 10:04:39,323 - app - INFO - Server Monitoring application starting...
+2026-01-26 10:07:03,115 - app - INFO - Server Monitoring application starting...
+2026-01-26 10:07:03,115 - app - INFO - Server Monitoring application starting...
+2026-01-26 10:19:31,351 - app - INFO - Server Monitoring application starting...
+2026-01-26 10:19:31,351 - app - INFO - Server Monitoring application starting...
+2026-01-26 12:26:22,701 - app - INFO - Server Monitoring application starting...
+2026-01-26 12:26:22,701 - app - INFO - Server Monitoring application starting...
+2026-01-26 12:26:23,692 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 12:26:23,692 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 12:26:23,696 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 12:26:23,696 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 12:26:23,696 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 12:26:23,697 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 12:26:23,697 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-26 12:26:23,697 - app - INFO - Application initialized successfully
+2026-01-26 12:26:23,697 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-26 12:26:23,698 - app - INFO - Application initialized successfully
+2026-01-26 12:26:48,957 - app - INFO - Server Monitoring application starting...
+2026-01-26 12:26:49,499 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 12:26:49,500 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 12:26:49,500 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 12:26:49,501 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-26 12:26:49,501 - app - INFO - Application initialized successfully
+2026-01-26 12:26:58,800 - app - INFO - Server Monitoring application starting...
+2026-01-26 12:26:59,455 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 12:26:59,455 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 12:26:59,455 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 12:26:59,456 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-26 12:26:59,457 - app - INFO - Application initialized successfully
+2026-01-26 12:27:06,673 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:27:07,536 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:27:08,803 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:27:10,098 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:27:42,428 - app.routes.server - INFO - Server 1 (v3) created by admin
+2026-01-26 12:27:42,527 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:27:44,809 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:27:45,612 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:27:52,140 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 12:27:52,381 - app.scheduler.monitor - WARNING - SNMP Error Indication for v3/fan1: Wrong SNMP PDU digest
+2026-01-26 12:27:52,394 - app.scheduler.monitor - INFO - SNMP polling completed: 0 success, 1 errors, duration: 0.25s
+2026-01-26 12:27:52,399 - app.routes.component - INFO - SNMP polling triggered after adding component 1
+2026-01-26 12:27:52,404 - app.routes.component - INFO - Component 1 (fan1) added to server 1 by admin
+2026-01-26 12:27:52,539 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:27:53,594 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:31:23,719 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 12:36:23 UTC)" (scheduled at 2026-01-26 12:31:23.692561+00:00)
+2026-01-26 12:31:23,719 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 12:36:23 UTC)" (scheduled at 2026-01-26 12:31:23.692771+00:00)
+2026-01-26 12:31:23,730 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 12:31:23,730 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 12:31:24,149 - app.scheduler.monitor - WARNING - SNMP Error Indication for v3/fan1: Wrong SNMP PDU digest
+2026-01-26 12:31:24,726 - app.scheduler.monitor - WARNING - SNMP Error Indication for v3/fan1: Wrong SNMP PDU digest
+2026-01-26 12:31:24,744 - app.scheduler.monitor - INFO - SNMP polling completed: 0 success, 1 errors, duration: 1.01s
+2026-01-26 12:31:24,744 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 12:36:23 UTC)" executed successfully
+2026-01-26 12:31:24,752 - app.scheduler.monitor - INFO - SNMP polling completed: 0 success, 1 errors, duration: 1.02s
+2026-01-26 12:31:24,753 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 12:36:23 UTC)" executed successfully
+2026-01-26 12:32:54,597 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:33:51,753 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:33:53,437 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:33:54,289 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:34:34,292 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 12:34:34,612 - app.scheduler.monitor - WARNING - SNMP Error Indication for v3/fan1: Wrong SNMP PDU digest
+2026-01-26 12:34:34,767 - app.scheduler.monitor - WARNING - SNMP Error Indication for v3/fan1: Wrong SNMP PDU digest
+2026-01-26 12:34:34,799 - app.scheduler.monitor - INFO - SNMP polling completed: 0 success, 2 errors, duration: 0.50s
+2026-01-26 12:34:34,802 - app.routes.component - INFO - SNMP polling triggered after adding component 2
+2026-01-26 12:34:34,806 - app.routes.component - INFO - Component 2 (fan1) added to server 1 by admin
+2026-01-26 12:34:34,892 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:34:37,098 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:36:24,127 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 12:41:23 UTC)" (scheduled at 2026-01-26 12:36:23.692561+00:00)
+2026-01-26 12:36:24,130 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 12:36:24,135 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 12:41:23 UTC)" (scheduled at 2026-01-26 12:36:23.692771+00:00)
+2026-01-26 12:36:24,141 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 12:36:24,479 - app.scheduler.monitor - WARNING - SNMP Error Indication for v3/fan1: Wrong SNMP PDU digest
+2026-01-26 12:36:24,624 - app.scheduler.monitor - WARNING - SNMP Error Indication for v3/fan1: Wrong SNMP PDU digest
+2026-01-26 12:36:24,662 - app.scheduler.monitor - INFO - SNMP polling completed: 0 success, 2 errors, duration: 0.52s
+2026-01-26 12:36:24,663 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 12:41:23 UTC)" executed successfully
+2026-01-26 12:36:25,095 - app.scheduler.monitor - WARNING - SNMP Error Indication for v3/fan1: Wrong SNMP PDU digest
+2026-01-26 12:36:25,235 - app.scheduler.monitor - WARNING - SNMP Error Indication for v3/fan1: Wrong SNMP PDU digest
+2026-01-26 12:36:25,243 - app.scheduler.monitor - INFO - SNMP polling completed: 0 success, 2 errors, duration: 1.11s
+2026-01-26 12:36:25,243 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 12:41:23 UTC)" executed successfully
+2026-01-26 12:39:37,577 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:39:48,010 - app - INFO - Server Monitoring application starting...
+2026-01-26 12:39:48,010 - app - INFO - Server Monitoring application starting...
+2026-01-26 12:39:49,652 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 12:39:49,652 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 12:39:49,654 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 12:39:49,654 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 12:39:49,655 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 12:39:49,655 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 12:39:49,656 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-26 12:39:49,656 - app - INFO - Application initialized successfully
+2026-01-26 12:39:49,656 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-26 12:39:49,656 - app - INFO - Application initialized successfully
+2026-01-26 12:40:15,779 - app - INFO - Server Monitoring application starting...
+2026-01-26 12:40:15,781 - app - INFO - Server Monitoring application starting...
+2026-01-26 12:40:16,749 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 12:40:16,749 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 12:40:16,752 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 12:40:16,752 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 12:40:16,753 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 12:40:16,753 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 12:40:16,753 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-26 12:40:16,753 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-26 12:40:16,753 - app - INFO - Application initialized successfully
+2026-01-26 12:40:16,754 - app - INFO - Application initialized successfully
+2026-01-26 12:40:16,809 - app.routes.auth - ERROR - Error loading user 1: (psycopg2.errors.UndefinedTable) relation "user" does not exist
+LINE 2: FROM "user" 
+             ^
+
+[SQL: SELECT "user".id AS user_id, "user".username AS user_username, "user".password_hash AS user_password_hash, "user".role AS user_role 
+FROM "user" 
+WHERE "user".id = %(pk_1)s]
+[parameters: {'pk_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-01-26 12:40:16,852 - app.routes.auth - ERROR - Error loading user 1: (psycopg2.errors.UndefinedTable) relation "user" does not exist
+LINE 2: FROM "user" 
+             ^
+
+[SQL: SELECT "user".id AS user_id, "user".username AS user_username, "user".password_hash AS user_password_hash, "user".role AS user_role 
+FROM "user" 
+WHERE "user".id = %(pk_1)s]
+[parameters: {'pk_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-01-26 12:40:16,945 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:40:16,959 - app.routes.auth - ERROR - Error loading user 1: (psycopg2.errors.UndefinedTable) relation "user" does not exist
+LINE 2: FROM "user" 
+             ^
+
+[SQL: SELECT "user".id AS user_id, "user".username AS user_username, "user".password_hash AS user_password_hash, "user".role AS user_role 
+FROM "user" 
+WHERE "user".id = %(pk_1)s]
+[parameters: {'pk_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-01-26 12:40:16,974 - app.routes.auth - ERROR - Error loading user 1: (psycopg2.errors.UndefinedTable) relation "user" does not exist
+LINE 2: FROM "user" 
+             ^
+
+[SQL: SELECT "user".id AS user_id, "user".username AS user_username, "user".password_hash AS user_password_hash, "user".role AS user_role 
+FROM "user" 
+WHERE "user".id = %(pk_1)s]
+[parameters: {'pk_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-01-26 12:40:25,877 - app - INFO - Server Monitoring application starting...
+2026-01-26 12:40:26,504 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 12:40:26,505 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 12:40:26,505 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 12:40:26,506 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-26 12:40:26,506 - app - INFO - Application initialized successfully
+2026-01-26 12:40:32,216 - app - INFO - Server Monitoring application starting...
+2026-01-26 12:40:32,782 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 12:40:32,783 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 12:40:32,783 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 12:40:32,784 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-26 12:40:32,784 - app - INFO - Application initialized successfully
+2026-01-26 12:40:39,544 - app - INFO - Server Monitoring application starting...
+2026-01-26 12:40:40,101 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 12:40:40,102 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 12:40:40,102 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 12:40:40,103 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-26 12:40:40,103 - app - INFO - Application initialized successfully
+2026-01-26 12:40:45,692 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:40:49,413 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:40:50,153 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:40:58,540 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:40:59,662 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:41:00,376 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:41:32,280 - app.routes.server - INFO - Server 1 (v3) created by admin
+2026-01-26 12:41:32,373 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:41:34,035 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:41:34,757 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:41:44,315 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 12:41:44,323 - app.scheduler.monitor - ERROR - SNMP Exception for v3/fan1 OID 1.3.6.1.2.1.2.2.1.1.1: cannot import name 'usmHMACSHA2AuthProtocol' from 'pysnmp.hlapi' (/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/__init__.py)
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 114, in snmp_get
+    from pysnmp.hlapi import usmHMACSHA2AuthProtocol, usmAesCfb128Protocol
+ImportError: cannot import name 'usmHMACSHA2AuthProtocol' from 'pysnmp.hlapi' (/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/__init__.py)
+2026-01-26 12:41:44,344 - app.scheduler.monitor - INFO - SNMP polling completed: 0 success, 1 errors, duration: 0.03s
+2026-01-26 12:41:44,349 - app.routes.component - INFO - SNMP polling triggered after adding component 1
+2026-01-26 12:41:44,353 - app.routes.component - INFO - Component 1 (fan1) added to server 1 by admin
+2026-01-26 12:41:44,442 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:41:45,818 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:41:57,826 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:41:59,190 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:42:00,250 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:42:13,175 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 12:42:13,178 - app.scheduler.monitor - ERROR - SNMP Exception for v3/fan1 OID 1.3.6.1.2.1.2.2.1.1.1: cannot import name 'usmHMACSHA2AuthProtocol' from 'pysnmp.hlapi' (/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/__init__.py)
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 114, in snmp_get
+    from pysnmp.hlapi import usmHMACSHA2AuthProtocol, usmAesCfb128Protocol
+ImportError: cannot import name 'usmHMACSHA2AuthProtocol' from 'pysnmp.hlapi' (/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/__init__.py)
+2026-01-26 12:42:13,180 - app.scheduler.monitor - ERROR - SNMP Exception for v3/v2 OID 1.3.6.1.2.1.1.7.0: cannot import name 'usmHMACSHA2AuthProtocol' from 'pysnmp.hlapi' (/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/__init__.py)
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 114, in snmp_get
+    from pysnmp.hlapi import usmHMACSHA2AuthProtocol, usmAesCfb128Protocol
+ImportError: cannot import name 'usmHMACSHA2AuthProtocol' from 'pysnmp.hlapi' (/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/__init__.py)
+2026-01-26 12:42:13,187 - app.scheduler.monitor - INFO - SNMP polling completed: 0 success, 2 errors, duration: 0.01s
+2026-01-26 12:42:13,189 - app.routes.component - INFO - SNMP polling triggered after adding component 2
+2026-01-26 12:42:13,192 - app.routes.component - INFO - Component 2 (v2) added to server 1 by admin
+2026-01-26 12:42:13,268 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:42:15,376 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:42:16,326 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:42:16,513 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:42:16,656 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:42:16,844 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:42:17,008 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:42:17,144 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:45:17,240 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 12:50:16 UTC)" (scheduled at 2026-01-26 12:45:16.749716+00:00)
+2026-01-26 12:45:17,239 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 12:50:16 UTC)" (scheduled at 2026-01-26 12:45:16.749751+00:00)
+2026-01-26 12:45:17,253 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 12:45:17,254 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 12:45:17,320 - app.scheduler.monitor - ERROR - SNMP Exception for v3/fan1 OID 1.3.6.1.2.1.2.2.1.1.1: cannot import name 'usmHMACSHA2AuthProtocol' from 'pysnmp.hlapi' (/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/__init__.py)
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 114, in snmp_get
+    from pysnmp.hlapi import usmHMACSHA2AuthProtocol, usmAesCfb128Protocol
+ImportError: cannot import name 'usmHMACSHA2AuthProtocol' from 'pysnmp.hlapi' (/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/__init__.py)
+2026-01-26 12:45:17,333 - app.scheduler.monitor - ERROR - SNMP Exception for v3/v2 OID 1.3.6.1.2.1.1.7.0: cannot import name 'usmHMACSHA2AuthProtocol' from 'pysnmp.hlapi' (/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/__init__.py)
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 114, in snmp_get
+    from pysnmp.hlapi import usmHMACSHA2AuthProtocol, usmAesCfb128Protocol
+ImportError: cannot import name 'usmHMACSHA2AuthProtocol' from 'pysnmp.hlapi' (/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/__init__.py)
+2026-01-26 12:45:17,328 - app.scheduler.monitor - ERROR - SNMP Exception for v3/fan1 OID 1.3.6.1.2.1.2.2.1.1.1: cannot import name 'usmHMACSHA2AuthProtocol' from 'pysnmp.hlapi' (/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/__init__.py)
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 114, in snmp_get
+    from pysnmp.hlapi import usmHMACSHA2AuthProtocol, usmAesCfb128Protocol
+ImportError: cannot import name 'usmHMACSHA2AuthProtocol' from 'pysnmp.hlapi' (/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/__init__.py)
+2026-01-26 12:45:17,349 - app.scheduler.monitor - ERROR - SNMP Exception for v3/v2 OID 1.3.6.1.2.1.1.7.0: cannot import name 'usmHMACSHA2AuthProtocol' from 'pysnmp.hlapi' (/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/__init__.py)
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 114, in snmp_get
+    from pysnmp.hlapi import usmHMACSHA2AuthProtocol, usmAesCfb128Protocol
+ImportError: cannot import name 'usmHMACSHA2AuthProtocol' from 'pysnmp.hlapi' (/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/__init__.py)
+2026-01-26 12:45:17,363 - app.scheduler.monitor - INFO - SNMP polling completed: 0 success, 2 errors, duration: 0.11s
+2026-01-26 12:45:17,365 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 12:50:16 UTC)" executed successfully
+2026-01-26 12:45:17,422 - app.scheduler.monitor - INFO - SNMP polling completed: 0 success, 2 errors, duration: 0.17s
+2026-01-26 12:45:17,423 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 12:50:16 UTC)" executed successfully
+2026-01-26 12:45:53,112 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:45:53,767 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:45:55,259 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:45:58,080 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:45:59,596 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:46:06,454 - app.routes.component - INFO - Component 1 (fan1) deleted by admin
+2026-01-26 12:46:06,577 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:46:07,842 - app.routes.component - INFO - Component 2 (v2) deleted by admin
+2026-01-26 12:46:07,942 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:46:08,748 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:46:14,613 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 12:46:14,619 - app.scheduler.monitor - ERROR - SNMP Exception for v3/fan1 OID 1.3.6.1.2.1.2.2.1.1.1: cannot import name 'usmHMACSHA2AuthProtocol' from 'pysnmp.hlapi' (/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/__init__.py)
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 114, in snmp_get
+    from pysnmp.hlapi import usmHMACSHA2AuthProtocol, usmAesCfb128Protocol
+ImportError: cannot import name 'usmHMACSHA2AuthProtocol' from 'pysnmp.hlapi' (/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/__init__.py)
+2026-01-26 12:46:14,626 - app.scheduler.monitor - INFO - SNMP polling completed: 0 success, 1 errors, duration: 0.01s
+2026-01-26 12:46:14,629 - app.routes.component - INFO - SNMP polling triggered after adding component 3
+2026-01-26 12:46:14,637 - app.routes.component - INFO - Component 3 (fan1) added to server 1 by admin
+2026-01-26 12:46:14,745 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:46:15,766 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:47:45,513 - app - INFO - Server Monitoring application starting...
+2026-01-26 12:47:45,513 - app - INFO - Server Monitoring application starting...
+2026-01-26 12:47:46,606 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 12:47:46,606 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 12:47:46,609 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 12:47:46,609 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 12:47:46,609 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 12:47:46,609 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 12:47:46,610 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-26 12:47:46,610 - app - INFO - Application initialized successfully
+2026-01-26 12:47:46,610 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-26 12:47:46,611 - app - INFO - Application initialized successfully
+2026-01-26 12:47:50,500 - app - INFO - Server Monitoring application starting...
+2026-01-26 12:47:51,086 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 12:47:51,086 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 12:47:51,086 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 12:47:51,087 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-26 12:47:51,087 - app - INFO - Application initialized successfully
+2026-01-26 12:47:58,683 - app - INFO - Server Monitoring application starting...
+2026-01-26 12:47:59,215 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 12:47:59,216 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 12:47:59,216 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 12:47:59,216 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-26 12:47:59,217 - app - INFO - Application initialized successfully
+2026-01-26 12:48:02,764 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:48:03,903 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:48:04,699 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:48:40,170 - app.routes.server - INFO - Server 1 (v3) created by admin
+2026-01-26 12:48:40,256 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:48:41,628 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:48:42,300 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:48:47,641 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 12:48:47,650 - app.scheduler.monitor - ERROR - SNMP Exception for v3/fan1 OID 1.3.6.1.2.1.2.2.1.1.1: cannot import name 'usmHMACSHA2AuthProtocol' from 'pysnmp.hlapi' (/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/__init__.py)
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 114, in snmp_get
+    from pysnmp.hlapi import usmHMACSHA2AuthProtocol, usmAesCfb128Protocol, usmHMACMD5AuthProtocol, usmHMACSHAAuthProtocol, usmDESPrivProtocol
+ImportError: cannot import name 'usmHMACSHA2AuthProtocol' from 'pysnmp.hlapi' (/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/__init__.py)
+2026-01-26 12:48:47,662 - app.scheduler.monitor - INFO - SNMP polling completed: 0 success, 1 errors, duration: 0.02s
+2026-01-26 12:48:47,667 - app.routes.component - INFO - SNMP polling triggered after adding component 1
+2026-01-26 12:48:47,674 - app.routes.component - INFO - Component 1 (fan1) added to server 1 by admin
+2026-01-26 12:48:47,810 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:48:48,927 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 12:52:47,102 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 12:52:46 UTC)" (scheduled at 2026-01-26 12:52:46.606110+00:00)
+2026-01-26 12:52:47,102 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 12:57:46 UTC)" (scheduled at 2026-01-26 12:52:46.606110+00:00)
+2026-01-26 12:52:47,107 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 12:52:47,107 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 12:52:47,133 - app.scheduler.monitor - ERROR - SNMP Exception for v3/fan1 OID 1.3.6.1.2.1.2.2.1.1.1: cannot import name 'usmHMACSHA2AuthProtocol' from 'pysnmp.hlapi' (/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/__init__.py)
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 114, in snmp_get
+    from pysnmp.hlapi import usmHMACSHA2AuthProtocol, usmAesCfb128Protocol, usmHMACMD5AuthProtocol, usmHMACSHAAuthProtocol, usmDESPrivProtocol
+ImportError: cannot import name 'usmHMACSHA2AuthProtocol' from 'pysnmp.hlapi' (/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/__init__.py)
+2026-01-26 12:52:47,133 - app.scheduler.monitor - ERROR - SNMP Exception for v3/fan1 OID 1.3.6.1.2.1.2.2.1.1.1: cannot import name 'usmHMACSHA2AuthProtocol' from 'pysnmp.hlapi' (/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/__init__.py)
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 114, in snmp_get
+    from pysnmp.hlapi import usmHMACSHA2AuthProtocol, usmAesCfb128Protocol, usmHMACMD5AuthProtocol, usmHMACSHAAuthProtocol, usmDESPrivProtocol
+ImportError: cannot import name 'usmHMACSHA2AuthProtocol' from 'pysnmp.hlapi' (/usr/local/lib/python3.11/site-packages/pysnmp/hlapi/__init__.py)
+2026-01-26 12:52:47,146 - app.scheduler.monitor - INFO - SNMP polling completed: 0 success, 1 errors, duration: 0.04s
+2026-01-26 12:52:47,147 - app.scheduler.monitor - INFO - SNMP polling completed: 0 success, 1 errors, duration: 0.04s
+2026-01-26 12:52:47,147 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 12:57:46 UTC)" executed successfully
+2026-01-26 12:52:47,148 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 12:57:46 UTC)" executed successfully
+2026-01-26 12:56:18,038 - app - INFO - Server Monitoring application starting...
+2026-01-26 12:56:18,038 - app - INFO - Server Monitoring application starting...
+2026-01-26 13:17:02,185 - app - INFO - Server Monitoring application starting...
+2026-01-26 13:17:02,191 - app - INFO - Server Monitoring application starting...
+2026-01-26 13:26:56,414 - app - INFO - Server Monitoring application starting...
+2026-01-26 13:26:56,414 - app - INFO - Server Monitoring application starting...
+2026-01-26 13:30:28,696 - app - INFO - Server Monitoring application starting...
+2026-01-26 13:30:28,696 - app - INFO - Server Monitoring application starting...
+2026-01-26 13:38:25,345 - app - INFO - Server Monitoring application starting...
+2026-01-26 13:38:25,345 - app - INFO - Server Monitoring application starting...
+2026-01-26 13:39:25,662 - app - INFO - Server Monitoring application starting...
+2026-01-26 13:39:25,670 - app - INFO - Server Monitoring application starting...
+2026-01-26 13:39:46,804 - app - INFO - Server Monitoring application starting...
+2026-01-26 13:39:46,805 - app - INFO - Server Monitoring application starting...
+2026-01-26 15:34:42,087 - app - INFO - Server Monitoring application starting...
+2026-01-26 15:34:42,088 - app - INFO - Server Monitoring application starting...
+2026-01-26 15:34:43,517 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 15:34:43,517 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 15:34:43,523 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 15:34:43,523 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 15:34:43,523 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 15:34:43,523 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 15:34:43,524 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-26 15:34:43,524 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-26 15:34:43,524 - app - INFO - Application initialized successfully
+2026-01-26 15:34:43,525 - app - INFO - Application initialized successfully
+2026-01-26 15:34:58,567 - app.routes.auth - ERROR - Error loading user 1: (psycopg2.errors.UndefinedTable) relation "user" does not exist
+LINE 2: FROM "user" 
+             ^
+
+[SQL: SELECT "user".id AS user_id, "user".username AS user_username, "user".password_hash AS user_password_hash, "user".role AS user_role 
+FROM "user" 
+WHERE "user".id = %(pk_1)s]
+[parameters: {'pk_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-01-26 15:34:58,601 - app.routes.auth - ERROR - Error loading user 1: (psycopg2.errors.UndefinedTable) relation "user" does not exist
+LINE 2: FROM "user" 
+             ^
+
+[SQL: SELECT "user".id AS user_id, "user".username AS user_username, "user".password_hash AS user_password_hash, "user".role AS user_role 
+FROM "user" 
+WHERE "user".id = %(pk_1)s]
+[parameters: {'pk_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-01-26 15:34:59,172 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 15:34:59,192 - app.routes.auth - ERROR - Error loading user 1: (psycopg2.errors.UndefinedTable) relation "user" does not exist
+LINE 2: FROM "user" 
+             ^
+
+[SQL: SELECT "user".id AS user_id, "user".username AS user_username, "user".password_hash AS user_password_hash, "user".role AS user_role 
+FROM "user" 
+WHERE "user".id = %(pk_1)s]
+[parameters: {'pk_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-01-26 15:34:59,209 - app.routes.auth - ERROR - Error loading user 1: (psycopg2.errors.UndefinedTable) relation "user" does not exist
+LINE 2: FROM "user" 
+             ^
+
+[SQL: SELECT "user".id AS user_id, "user".username AS user_username, "user".password_hash AS user_password_hash, "user".role AS user_role 
+FROM "user" 
+WHERE "user".id = %(pk_1)s]
+[parameters: {'pk_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-01-26 15:35:37,260 - app - INFO - Server Monitoring application starting...
+2026-01-26 15:35:38,334 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 15:35:38,335 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 15:35:38,336 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 15:35:38,337 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-26 15:35:38,337 - app - INFO - Application initialized successfully
+2026-01-26 15:35:46,951 - app - INFO - Server Monitoring application starting...
+2026-01-26 15:35:47,803 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 15:35:47,804 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 15:35:47,806 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 15:35:47,807 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-26 15:35:47,808 - app - INFO - Application initialized successfully
+2026-01-26 15:35:54,776 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 15:35:56,866 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 15:35:58,076 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 15:38:05,475 - app - INFO - Server Monitoring application starting...
+2026-01-26 15:38:05,625 - app - INFO - Server Monitoring application starting...
+2026-01-26 15:38:06,690 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 15:38:06,692 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 15:38:06,692 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 15:38:06,693 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-26 15:38:06,694 - app - INFO - Application initialized successfully
+2026-01-26 15:38:06,786 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 15:38:06,787 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 15:38:06,788 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 15:38:06,789 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-26 15:38:06,789 - app - INFO - Application initialized successfully
+2026-01-26 15:38:06,860 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 15:38:35,069 - app.routes.server - INFO - Server 1 (fan1) created by admin
+2026-01-26 15:38:35,197 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 15:38:37,144 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 15:38:38,550 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 15:38:47,356 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 15:38:47,359 - app.scheduler.monitor - ERROR - SNMP Exception for fan1/fan1: name 'usmHMACSHAAuthProtocol' is not defined
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 124, in snmp_get
+    auth_proto = usmHMACSHAAuthProtocol # Default SHA-1
+                 ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'usmHMACSHAAuthProtocol' is not defined
+2026-01-26 15:38:47,370 - app.scheduler.monitor - INFO - SNMP polling completed: 0 success, 1 errors, duration: 0.01s
+2026-01-26 15:38:47,373 - app.routes.component - INFO - SNMP polling triggered after adding component 1
+2026-01-26 15:38:47,378 - app.routes.component - INFO - Component 1 (fan1) added to server 1 by admin
+2026-01-26 15:38:47,469 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 15:38:49,002 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 15:43:07,039 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 15:43:06 UTC)" (scheduled at 2026-01-26 15:43:06.690161+00:00)
+2026-01-26 15:43:07,041 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 15:43:07,048 - app.scheduler.monitor - ERROR - SNMP Exception for fan1/fan1: name 'usmHMACSHAAuthProtocol' is not defined
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 124, in snmp_get
+    auth_proto = usmHMACSHAAuthProtocol # Default SHA-1
+                 ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'usmHMACSHAAuthProtocol' is not defined
+2026-01-26 15:43:07,057 - app.scheduler.monitor - INFO - SNMP polling completed: 0 success, 1 errors, duration: 0.02s
+2026-01-26 15:43:07,058 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 15:48:06 UTC)" executed successfully
+2026-01-26 15:43:07,135 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 15:43:06 UTC)" (scheduled at 2026-01-26 15:43:06.786489+00:00)
+2026-01-26 15:43:07,136 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 15:43:07,142 - app.scheduler.monitor - ERROR - SNMP Exception for fan1/fan1: name 'usmHMACSHAAuthProtocol' is not defined
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 124, in snmp_get
+    auth_proto = usmHMACSHAAuthProtocol # Default SHA-1
+                 ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'usmHMACSHAAuthProtocol' is not defined
+2026-01-26 15:43:07,148 - app.scheduler.monitor - INFO - SNMP polling completed: 0 success, 1 errors, duration: 0.01s
+2026-01-26 15:43:07,149 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 15:48:06 UTC)" executed successfully
+2026-01-26 15:43:49,089 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 15:48:07,045 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 15:53:06 UTC)" (scheduled at 2026-01-26 15:48:06.690161+00:00)
+2026-01-26 15:48:07,047 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 15:48:07,060 - app.scheduler.monitor - ERROR - SNMP Exception for fan1/fan1: name 'usmHMACSHAAuthProtocol' is not defined
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 124, in snmp_get
+    auth_proto = usmHMACSHAAuthProtocol # Default SHA-1
+                 ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'usmHMACSHAAuthProtocol' is not defined
+2026-01-26 15:48:07,076 - app.scheduler.monitor - INFO - SNMP polling completed: 0 success, 1 errors, duration: 0.03s
+2026-01-26 15:48:07,077 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 15:53:06 UTC)" executed successfully
+2026-01-26 15:48:07,141 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 15:53:06 UTC)" (scheduled at 2026-01-26 15:48:06.786489+00:00)
+2026-01-26 15:48:07,141 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 15:48:07,146 - app.scheduler.monitor - ERROR - SNMP Exception for fan1/fan1: name 'usmHMACSHAAuthProtocol' is not defined
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 124, in snmp_get
+    auth_proto = usmHMACSHAAuthProtocol # Default SHA-1
+                 ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'usmHMACSHAAuthProtocol' is not defined
+2026-01-26 15:48:07,154 - app.scheduler.monitor - INFO - SNMP polling completed: 0 success, 1 errors, duration: 0.01s
+2026-01-26 15:48:07,155 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 15:53:06 UTC)" executed successfully
+2026-01-26 15:48:49,148 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 15:49:42,975 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 15:49:43,527 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 15:49:44,288 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 15:49:52,427 - app.routes.server - INFO - Server 2 (v2) created by admin
+2026-01-26 15:49:52,536 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 15:49:54,836 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 15:49:56,006 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 15:50:01,765 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 15:50:01,768 - app.scheduler.monitor - ERROR - SNMP Exception for fan1/fan1: name 'usmHMACSHAAuthProtocol' is not defined
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 124, in snmp_get
+    auth_proto = usmHMACSHAAuthProtocol # Default SHA-1
+                 ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'usmHMACSHAAuthProtocol' is not defined
+2026-01-26 15:50:02,233 - app.scheduler.monitor - INFO - SNMP polling completed: 1 success, 1 errors, duration: 0.47s
+2026-01-26 15:50:02,236 - app.routes.component - INFO - SNMP polling triggered after adding component 2
+2026-01-26 15:50:02,239 - app.routes.component - INFO - Component 2 (fan1) added to server 2 by admin
+2026-01-26 15:50:02,339 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 15:50:02,780 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 15:53:07,058 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 15:58:06 UTC)" (scheduled at 2026-01-26 15:53:06.690161+00:00)
+2026-01-26 15:53:07,062 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 15:53:07,074 - app.scheduler.monitor - ERROR - SNMP Exception for fan1/fan1: name 'usmHMACSHAAuthProtocol' is not defined
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 124, in snmp_get
+    auth_proto = usmHMACSHAAuthProtocol # Default SHA-1
+                 ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'usmHMACSHAAuthProtocol' is not defined
+2026-01-26 15:53:07,154 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 15:58:06 UTC)" (scheduled at 2026-01-26 15:53:06.786489+00:00)
+2026-01-26 15:53:07,156 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 15:53:07,170 - app.scheduler.monitor - ERROR - SNMP Exception for fan1/fan1: name 'usmHMACSHAAuthProtocol' is not defined
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 124, in snmp_get
+    auth_proto = usmHMACSHAAuthProtocol # Default SHA-1
+                 ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'usmHMACSHAAuthProtocol' is not defined
+2026-01-26 15:53:07,490 - app.scheduler.monitor - INFO - SNMP polling completed: 1 success, 1 errors, duration: 0.33s
+2026-01-26 15:53:07,491 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 15:58:06 UTC)" executed successfully
+2026-01-26 15:53:07,738 - app.scheduler.monitor - INFO - SNMP polling completed: 1 success, 1 errors, duration: 0.68s
+2026-01-26 15:53:07,738 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 15:58:06 UTC)" executed successfully
+2026-01-26 15:55:03,546 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 15:58:07,655 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 16:03:06 UTC)" (scheduled at 2026-01-26 15:58:06.690161+00:00)
+2026-01-26 15:58:07,661 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 15:58:07,667 - app.scheduler.monitor - ERROR - SNMP Exception for fan1/fan1: name 'usmHMACSHAAuthProtocol' is not defined
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 124, in snmp_get
+    auth_proto = usmHMACSHAAuthProtocol # Default SHA-1
+                 ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'usmHMACSHAAuthProtocol' is not defined
+2026-01-26 15:58:07,752 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 16:03:06 UTC)" (scheduled at 2026-01-26 15:58:06.786489+00:00)
+2026-01-26 15:58:07,753 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 15:58:07,759 - app.scheduler.monitor - ERROR - SNMP Exception for fan1/fan1: name 'usmHMACSHAAuthProtocol' is not defined
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 124, in snmp_get
+    auth_proto = usmHMACSHAAuthProtocol # Default SHA-1
+                 ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'usmHMACSHAAuthProtocol' is not defined
+2026-01-26 15:58:08,100 - app.scheduler.monitor - INFO - SNMP polling completed: 1 success, 1 errors, duration: 0.44s
+2026-01-26 15:58:08,101 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 16:03:06 UTC)" executed successfully
+2026-01-26 15:58:08,157 - app.scheduler.monitor - INFO - SNMP polling completed: 1 success, 1 errors, duration: 0.40s
+2026-01-26 15:58:08,157 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 16:03:06 UTC)" executed successfully
+2026-01-26 16:00:03,862 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 16:03:07,091 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 16:08:06 UTC)" (scheduled at 2026-01-26 16:03:06.690161+00:00)
+2026-01-26 16:03:07,092 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 16:03:07,102 - app.scheduler.monitor - ERROR - SNMP Exception for fan1/fan1: name 'usmHMACSHAAuthProtocol' is not defined
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 124, in snmp_get
+    auth_proto = usmHMACSHAAuthProtocol # Default SHA-1
+                 ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'usmHMACSHAAuthProtocol' is not defined
+2026-01-26 16:03:07,188 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 16:08:06 UTC)" (scheduled at 2026-01-26 16:03:06.786489+00:00)
+2026-01-26 16:03:07,189 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 16:03:07,194 - app.scheduler.monitor - ERROR - SNMP Exception for fan1/fan1: name 'usmHMACSHAAuthProtocol' is not defined
+Traceback (most recent call last):
+  File "/app/app/scheduler/monitor.py", line 124, in snmp_get
+    auth_proto = usmHMACSHAAuthProtocol # Default SHA-1
+                 ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'usmHMACSHAAuthProtocol' is not defined
+2026-01-26 16:03:07,256 - app.scheduler.monitor - INFO - SNMP polling completed: 1 success, 1 errors, duration: 0.16s
+2026-01-26 16:03:07,256 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 16:08:06 UTC)" executed successfully
+2026-01-26 16:03:07,343 - app.scheduler.monitor - INFO - SNMP polling completed: 1 success, 1 errors, duration: 0.15s
+2026-01-26 16:03:07,343 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 16:08:06 UTC)" executed successfully
+2026-01-26 16:05:04,192 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 16:16:50,406 - app - INFO - Server Monitoring application starting...
+2026-01-26 16:16:50,406 - app - INFO - Server Monitoring application starting...
+2026-01-26 16:26:16,387 - app - INFO - Server Monitoring application starting...
+2026-01-26 16:26:16,388 - app - INFO - Server Monitoring application starting...
+2026-01-26 16:28:05,820 - app - INFO - Server Monitoring application starting...
+2026-01-26 16:28:05,820 - app - INFO - Server Monitoring application starting...
+2026-01-26 16:28:08,105 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 16:28:08,105 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 16:28:08,111 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 16:28:08,112 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 16:28:08,113 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-26 16:28:08,113 - app - INFO - Application initialized successfully
+2026-01-26 16:28:08,114 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 16:28:08,114 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 16:28:08,117 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-26 16:28:08,118 - app - INFO - Application initialized successfully
+2026-01-26 16:28:22,335 - app - INFO - Server Monitoring application starting...
+2026-01-26 16:28:23,402 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 16:28:23,404 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 16:28:23,404 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 16:28:23,406 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-26 16:28:23,407 - app - INFO - Application initialized successfully
+2026-01-26 16:28:29,370 - app - INFO - Server Monitoring application starting...
+2026-01-26 16:28:30,395 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 16:28:30,397 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 16:28:30,397 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 16:28:30,398 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-26 16:28:30,398 - app - INFO - Application initialized successfully
+2026-01-26 16:28:52,423 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 16:28:53,728 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 16:28:54,539 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 16:28:55,031 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 16:33:08,772 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 16:38:08 UTC)" (scheduled at 2026-01-26 16:33:08.104850+00:00)
+2026-01-26 16:33:08,771 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 16:38:08 UTC)" (scheduled at 2026-01-26 16:33:08.104793+00:00)
+2026-01-26 16:33:08,792 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 16:33:08,794 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 16:33:09,008 - app.scheduler.monitor - INFO - No servers configured for polling
+2026-01-26 16:33:09,009 - app.scheduler.monitor - INFO - No servers configured for polling
+2026-01-26 16:33:09,016 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 16:38:08 UTC)" executed successfully
+2026-01-26 16:33:09,018 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 16:38:08 UTC)" executed successfully
+2026-01-26 16:33:44,617 - app - INFO - Server Monitoring application starting...
+2026-01-26 16:33:44,618 - app - INFO - Server Monitoring application starting...
+2026-01-26 16:34:44,168 - app - INFO - Server Monitoring application starting...
+2026-01-26 16:34:44,168 - app - INFO - Server Monitoring application starting...
+2026-01-26 16:37:28,161 - app - INFO - Server Monitoring application starting...
+2026-01-26 16:37:28,162 - app - INFO - Server Monitoring application starting...
+2026-01-26 16:37:29,955 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 16:37:29,955 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 16:37:29,962 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 16:37:29,962 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 16:37:29,963 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 16:37:29,963 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 16:37:29,964 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-26 16:37:29,964 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-26 16:37:29,964 - app - INFO - Application initialized successfully
+2026-01-26 16:37:29,964 - app - INFO - Application initialized successfully
+2026-01-26 16:37:38,947 - app.routes.auth - ERROR - Error loading user 1: (psycopg2.errors.UndefinedTable) relation "user" does not exist
+LINE 2: FROM "user" 
+             ^
+
+[SQL: SELECT "user".id AS user_id, "user".username AS user_username, "user".password_hash AS user_password_hash, "user".role AS user_role 
+FROM "user" 
+WHERE "user".id = %(pk_1)s]
+[parameters: {'pk_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-01-26 16:37:39,043 - app.routes.auth - ERROR - Error loading user 1: (psycopg2.errors.UndefinedTable) relation "user" does not exist
+LINE 2: FROM "user" 
+             ^
+
+[SQL: SELECT "user".id AS user_id, "user".username AS user_username, "user".password_hash AS user_password_hash, "user".role AS user_role 
+FROM "user" 
+WHERE "user".id = %(pk_1)s]
+[parameters: {'pk_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-01-26 16:37:39,347 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 16:37:39,367 - app.routes.auth - ERROR - Error loading user 1: (psycopg2.errors.UndefinedTable) relation "user" does not exist
+LINE 2: FROM "user" 
+             ^
+
+[SQL: SELECT "user".id AS user_id, "user".username AS user_username, "user".password_hash AS user_password_hash, "user".role AS user_role 
+FROM "user" 
+WHERE "user".id = %(pk_1)s]
+[parameters: {'pk_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-01-26 16:37:39,387 - app.routes.auth - ERROR - Error loading user 1: (psycopg2.errors.UndefinedTable) relation "user" does not exist
+LINE 2: FROM "user" 
+             ^
+
+[SQL: SELECT "user".id AS user_id, "user".username AS user_username, "user".password_hash AS user_password_hash, "user".role AS user_role 
+FROM "user" 
+WHERE "user".id = %(pk_1)s]
+[parameters: {'pk_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-01-26 16:37:52,190 - app - INFO - Server Monitoring application starting...
+2026-01-26 16:37:53,280 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 16:37:53,282 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 16:37:53,283 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 16:37:53,284 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-26 16:37:53,284 - app - INFO - Application initialized successfully
+2026-01-26 16:38:00,888 - app - INFO - Server Monitoring application starting...
+2026-01-26 16:38:01,470 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 16:38:01,471 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 16:38:01,471 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 16:38:01,474 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-26 16:38:01,474 - app - INFO - Application initialized successfully
+2026-01-26 16:39:19,048 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 16:39:22,177 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 16:39:23,075 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 16:39:50,352 - app.routes.server - INFO - Server 1 (v3) created by admin
+2026-01-26 16:39:50,467 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 16:39:52,034 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 16:39:52,803 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 16:39:58,135 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 16:39:58,138 - app.scheduler.monitor - ERROR - Unsupported or unavailable SNMPv3 auth protocol: SHA256
+2026-01-26 16:39:58,148 - app.scheduler.monitor - INFO - SNMP polling completed: 0 success, 1 errors, duration: 0.01s
+2026-01-26 16:39:58,152 - app.routes.component - INFO - SNMP polling triggered after adding component 1
+2026-01-26 16:39:58,156 - app.routes.component - INFO - Component 1 (fan1) added to server 1 by admin
+2026-01-26 16:39:58,257 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 16:39:59,400 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 16:42:30,589 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 16:47:29 UTC)" (scheduled at 2026-01-26 16:42:29.955448+00:00)
+2026-01-26 16:42:30,589 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 16:47:29 UTC)" (scheduled at 2026-01-26 16:42:29.955429+00:00)
+2026-01-26 16:42:30,607 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 16:42:30,607 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 16:42:30,722 - app.scheduler.monitor - ERROR - Unsupported or unavailable SNMPv3 auth protocol: SHA256
+2026-01-26 16:42:30,724 - app.scheduler.monitor - ERROR - Unsupported or unavailable SNMPv3 auth protocol: SHA256
+2026-01-26 16:42:30,753 - app.scheduler.monitor - INFO - SNMP polling completed: 0 success, 1 errors, duration: 0.15s
+2026-01-26 16:42:30,754 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 16:47:29 UTC)" executed successfully
+2026-01-26 16:42:30,791 - app.scheduler.monitor - INFO - SNMP polling completed: 0 success, 1 errors, duration: 0.18s
+2026-01-26 16:42:30,792 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 16:47:29 UTC)" executed successfully
+2026-01-26 16:45:00,129 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 16:47:40,208 - app - INFO - Server Monitoring application starting...
+2026-01-26 16:47:40,209 - app - INFO - Server Monitoring application starting...
+2026-01-26 16:48:47,524 - app - INFO - Server Monitoring application starting...
+2026-01-26 16:48:47,525 - app - INFO - Server Monitoring application starting...
+2026-01-26 16:49:51,644 - app - INFO - Server Monitoring application starting...
+2026-01-26 16:49:51,647 - app - INFO - Server Monitoring application starting...
+2026-01-26 16:53:34,619 - app - INFO - Server Monitoring application starting...
+2026-01-26 16:53:34,619 - app - INFO - Server Monitoring application starting...
+2026-01-26 16:55:22,041 - app - INFO - Server Monitoring application starting...
+2026-01-26 16:55:22,041 - app - INFO - Server Monitoring application starting...
+2026-01-26 16:55:24,067 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 16:55:24,067 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 16:55:24,075 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 16:55:24,075 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 16:55:24,075 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 16:55:24,076 - app.scheduler.monitor - INFO - SNMP polling scheduler started (Interval: 5m)
+2026-01-26 16:55:24,076 - app - INFO - Application initialized successfully
+2026-01-26 16:55:24,075 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 16:55:24,080 - app.scheduler.monitor - INFO - SNMP polling scheduler started (Interval: 5m)
+2026-01-26 16:55:24,081 - app - INFO - Application initialized successfully
+2026-01-26 16:55:53,725 - app.routes.auth - ERROR - Error loading user 1: (psycopg2.errors.UndefinedTable) relation "user" does not exist
+LINE 2: FROM "user" 
+             ^
+
+[SQL: SELECT "user".id AS user_id, "user".username AS user_username, "user".password_hash AS user_password_hash, "user".role AS user_role 
+FROM "user" 
+WHERE "user".id = %(pk_1)s]
+[parameters: {'pk_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-01-26 16:55:53,809 - app.routes.auth - ERROR - Error loading user 1: (psycopg2.errors.UndefinedTable) relation "user" does not exist
+LINE 2: FROM "user" 
+             ^
+
+[SQL: SELECT "user".id AS user_id, "user".username AS user_username, "user".password_hash AS user_password_hash, "user".role AS user_role 
+FROM "user" 
+WHERE "user".id = %(pk_1)s]
+[parameters: {'pk_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-01-26 16:55:54,108 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 16:55:54,125 - app.routes.auth - ERROR - Error loading user 1: (psycopg2.errors.UndefinedTable) relation "user" does not exist
+LINE 2: FROM "user" 
+             ^
+
+[SQL: SELECT "user".id AS user_id, "user".username AS user_username, "user".password_hash AS user_password_hash, "user".role AS user_role 
+FROM "user" 
+WHERE "user".id = %(pk_1)s]
+[parameters: {'pk_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-01-26 16:55:54,148 - app.routes.auth - ERROR - Error loading user 1: (psycopg2.errors.UndefinedTable) relation "user" does not exist
+LINE 2: FROM "user" 
+             ^
+
+[SQL: SELECT "user".id AS user_id, "user".username AS user_username, "user".password_hash AS user_password_hash, "user".role AS user_role 
+FROM "user" 
+WHERE "user".id = %(pk_1)s]
+[parameters: {'pk_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-01-26 16:56:30,956 - app - INFO - Server Monitoring application starting...
+2026-01-26 16:56:31,813 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 16:56:31,814 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 16:56:31,814 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 16:56:31,815 - app.scheduler.monitor - INFO - SNMP polling scheduler started (Interval: 5m)
+2026-01-26 16:56:31,828 - app - INFO - Application initialized successfully
+2026-01-26 16:56:38,357 - app - INFO - Server Monitoring application starting...
+2026-01-26 16:56:39,126 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 16:56:39,127 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 16:56:39,127 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 16:56:39,128 - app.scheduler.monitor - INFO - SNMP polling scheduler started (Interval: 5m)
+2026-01-26 16:56:39,129 - app - INFO - Application initialized successfully
+2026-01-26 16:56:43,369 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 16:56:45,408 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 16:56:48,755 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 16:56:56,042 - app.routes.server - INFO - Server 1 (v2) created by admin
+2026-01-26 16:56:56,160 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 16:56:57,880 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 16:56:58,634 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 16:57:04,452 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 16:57:04,671 - app.scheduler.monitor - INFO - SNMP polling completed: 1 success, 0 errors, duration: 0.22s
+2026-01-26 16:57:04,675 - app.routes.component - INFO - SNMP polling triggered after adding component 1
+2026-01-26 16:57:04,682 - app.routes.component - INFO - Component 1 (fan1) added to server 1 by admin
+2026-01-26 16:57:04,774 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 16:57:05,751 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 16:57:07,020 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 16:57:07,681 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 16:57:28,247 - app.routes.server - INFO - Server 2 (v3) created by admin
+2026-01-26 16:57:28,340 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 16:57:30,668 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 16:57:31,642 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 16:57:36,547 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 16:57:36,679 - app.scheduler.monitor - ERROR - SHA256 is not supported by the current pysnmp installation
+2026-01-26 16:57:36,682 - app.scheduler.monitor - INFO - SNMP polling completed: 1 success, 1 errors, duration: 0.13s
+2026-01-26 16:57:36,685 - app.routes.component - INFO - SNMP polling triggered after adding component 2
+2026-01-26 16:57:36,688 - app.routes.component - INFO - Component 2 (fan1) added to server 2 by admin
+2026-01-26 16:57:36,763 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 16:57:37,585 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 17:00:24,544 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 17:05:24 UTC)" (scheduled at 2026-01-26 17:00:24.067729+00:00)
+2026-01-26 17:00:24,546 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 17:00:24,545 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 17:00:24 UTC)" (scheduled at 2026-01-26 17:00:24.067729+00:00)
+2026-01-26 17:00:24,550 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 17:00:24,760 - app.scheduler.monitor - ERROR - SHA256 is not supported by the current pysnmp installation
+2026-01-26 17:00:24,765 - app.scheduler.monitor - INFO - SNMP polling completed: 1 success, 1 errors, duration: 0.22s
+2026-01-26 17:00:24,766 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 17:05:24 UTC)" executed successfully
+2026-01-26 17:00:25,058 - app.scheduler.monitor - ERROR - SHA256 is not supported by the current pysnmp installation
+2026-01-26 17:00:25,063 - app.scheduler.monitor - INFO - SNMP polling completed: 1 success, 1 errors, duration: 0.51s
+2026-01-26 17:00:25,063 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 17:05:24 UTC)" executed successfully
+2026-01-26 17:02:37,857 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 17:05:24,875 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 17:10:24 UTC)" (scheduled at 2026-01-26 17:05:24.067729+00:00)
+2026-01-26 17:05:24,877 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 17:05:24,874 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 17:10:24 UTC)" (scheduled at 2026-01-26 17:05:24.067729+00:00)
+2026-01-26 17:05:24,881 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 17:05:25,156 - app.scheduler.monitor - ERROR - SHA256 is not supported by the current pysnmp installation
+2026-01-26 17:05:25,163 - app.scheduler.monitor - ERROR - SHA256 is not supported by the current pysnmp installation
+2026-01-26 17:05:25,163 - app.scheduler.monitor - INFO - SNMP polling completed: 1 success, 1 errors, duration: 0.29s
+2026-01-26 17:05:25,164 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 17:10:24 UTC)" executed successfully
+2026-01-26 17:05:25,169 - app.scheduler.monitor - INFO - SNMP polling completed: 1 success, 1 errors, duration: 0.29s
+2026-01-26 17:05:25,170 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 17:10:24 UTC)" executed successfully
+2026-01-26 17:10:54,505 - app - INFO - Server Monitoring application starting...
+2026-01-26 17:10:54,505 - app - INFO - Server Monitoring application starting...
+2026-01-26 17:10:57,656 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 17:10:57,656 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 17:10:57,675 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 17:10:57,675 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 17:10:57,685 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 17:10:57,685 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 17:10:57,687 - app.scheduler.monitor - INFO - SNMP polling scheduler started (Interval: 5m)
+2026-01-26 17:10:57,687 - app - INFO - Application initialized successfully
+2026-01-26 17:10:57,690 - app.scheduler.monitor - INFO - SNMP polling scheduler started (Interval: 5m)
+2026-01-26 17:10:57,690 - app - INFO - Application initialized successfully
+2026-01-26 17:11:38,893 - app.routes.auth - ERROR - Error loading user 1: (psycopg2.errors.UndefinedTable) relation "user" does not exist
+LINE 2: FROM "user" 
+             ^
+
+[SQL: SELECT "user".id AS user_id, "user".username AS user_username, "user".password_hash AS user_password_hash, "user".role AS user_role 
+FROM "user" 
+WHERE "user".id = %(pk_1)s]
+[parameters: {'pk_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-01-26 17:11:39,062 - app.routes.auth - ERROR - Error loading user 1: (psycopg2.errors.UndefinedTable) relation "user" does not exist
+LINE 2: FROM "user" 
+             ^
+
+[SQL: SELECT "user".id AS user_id, "user".username AS user_username, "user".password_hash AS user_password_hash, "user".role AS user_role 
+FROM "user" 
+WHERE "user".id = %(pk_1)s]
+[parameters: {'pk_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-01-26 17:11:39,365 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 17:11:39,383 - app.routes.auth - ERROR - Error loading user 1: (psycopg2.errors.UndefinedTable) relation "user" does not exist
+LINE 2: FROM "user" 
+             ^
+
+[SQL: SELECT "user".id AS user_id, "user".username AS user_username, "user".password_hash AS user_password_hash, "user".role AS user_role 
+FROM "user" 
+WHERE "user".id = %(pk_1)s]
+[parameters: {'pk_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-01-26 17:11:39,416 - app.routes.auth - ERROR - Error loading user 1: (psycopg2.errors.UndefinedTable) relation "user" does not exist
+LINE 2: FROM "user" 
+             ^
+
+[SQL: SELECT "user".id AS user_id, "user".username AS user_username, "user".password_hash AS user_password_hash, "user".role AS user_role 
+FROM "user" 
+WHERE "user".id = %(pk_1)s]
+[parameters: {'pk_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-01-26 17:12:21,462 - app - INFO - Server Monitoring application starting...
+2026-01-26 17:12:22,651 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 17:12:22,652 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 17:12:22,653 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 17:12:22,653 - app.scheduler.monitor - INFO - SNMP polling scheduler started (Interval: 5m)
+2026-01-26 17:12:22,654 - app - INFO - Application initialized successfully
+2026-01-26 17:12:29,322 - app - INFO - Server Monitoring application starting...
+2026-01-26 17:12:30,260 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 17:12:30,261 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 17:12:30,262 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 17:12:30,263 - app.scheduler.monitor - INFO - SNMP polling scheduler started (Interval: 5m)
+2026-01-26 17:12:30,263 - app - INFO - Application initialized successfully
+2026-01-26 17:12:36,796 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 17:12:37,986 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 17:12:38,803 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 17:12:46,275 - app.routes.server - INFO - Server 1 (v2) created by admin
+2026-01-26 17:12:46,395 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 17:12:48,087 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 17:12:48,856 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 17:12:54,045 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 17:12:54,597 - app.scheduler.monitor - INFO - SNMP polling completed: 1 success, 0 errors, duration: 0.55s
+2026-01-26 17:12:54,602 - app.routes.component - INFO - SNMP polling triggered after adding component 1
+2026-01-26 17:12:54,605 - app.routes.component - INFO - Component 1 (fan1) added to server 1 by admin
+2026-01-26 17:12:54,773 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 17:12:55,245 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 17:12:56,212 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 17:12:56,833 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 17:13:16,978 - app.routes.server - INFO - Server 2 (v3) created by admin
+2026-01-26 17:13:17,089 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 17:13:18,888 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 17:13:19,539 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 17:13:26,416 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 17:13:27,091 - app.scheduler.monitor - ERROR - SHA256 is not supported by the current pysnmp installation
+2026-01-26 17:13:27,096 - app.scheduler.monitor - INFO - SNMP polling completed: 1 success, 1 errors, duration: 0.68s
+2026-01-26 17:13:27,101 - app.routes.component - INFO - SNMP polling triggered after adding component 2
+2026-01-26 17:13:27,104 - app.routes.component - INFO - Component 2 (fan1) added to server 2 by admin
+2026-01-26 17:13:27,237 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 17:13:27,977 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 17:13:29,572 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 17:13:30,031 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 23:29:56,257 - app - INFO - Server Monitoring application starting...
+2026-01-26 23:29:56,257 - app - INFO - Server Monitoring application starting...
+2026-01-26 23:37:33,181 - app - INFO - Server Monitoring application starting...
+2026-01-26 23:37:33,181 - app - INFO - Server Monitoring application starting...
+2026-01-26 23:46:32,297 - app - INFO - Server Monitoring application starting...
+2026-01-26 23:46:32,298 - app - INFO - Server Monitoring application starting...
+2026-01-26 23:53:32,605 - app - INFO - Server Monitoring application starting...
+2026-01-26 23:53:32,605 - app - INFO - Server Monitoring application starting...
+2026-01-26 23:53:33,565 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 23:53:33,565 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 23:53:33,569 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 23:53:33,570 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 23:53:33,570 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 23:53:33,570 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 23:53:33,571 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-26 23:53:33,571 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-26 23:53:33,571 - app - INFO - Application initialized successfully
+2026-01-26 23:53:33,571 - app - INFO - Application initialized successfully
+2026-01-26 23:54:42,508 - app - INFO - Server Monitoring application starting...
+2026-01-26 23:54:44,441 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 23:54:44,443 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 23:54:44,443 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 23:54:44,446 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-26 23:54:44,447 - app - INFO - Application initialized successfully
+2026-01-26 23:54:50,874 - app - INFO - Server Monitoring application starting...
+2026-01-26 23:54:52,065 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-26 23:54:52,066 - apscheduler.scheduler - INFO - Added job "start_scheduler.<locals>.<lambda>" to job store "default"
+2026-01-26 23:54:52,067 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-26 23:54:52,069 - app.scheduler.monitor - INFO - SNMP polling scheduler started with 5 minute interval
+2026-01-26 23:54:52,069 - app - INFO - Application initialized successfully
+2026-01-26 23:54:56,772 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 23:55:02,546 - app.routes.auth - INFO - User admin logged in successfully
+2026-01-26 23:55:02,909 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-26 23:58:33,616 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 23:58:33 UTC)" (scheduled at 2026-01-26 23:58:33.564867+00:00)
+2026-01-26 23:58:33,616 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-26 23:58:33 UTC)" (scheduled at 2026-01-26 23:58:33.564817+00:00)
+2026-01-26 23:58:33,619 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 23:58:33,625 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-26 23:58:33,647 - app.scheduler.monitor - INFO - No servers configured for polling
+2026-01-26 23:58:33,652 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-27 00:03:33 UTC)" executed successfully
+2026-01-26 23:58:33,659 - app.scheduler.monitor - INFO - No servers configured for polling
+2026-01-26 23:58:33,665 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-27 00:03:33 UTC)" executed successfully
+2026-01-27 00:00:03,634 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:03:33,570 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-27 00:08:33 UTC)" (scheduled at 2026-01-27 00:03:33.564867+00:00)
+2026-01-27 00:03:33,571 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-27 00:03:33,571 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-27 00:08:33 UTC)" (scheduled at 2026-01-27 00:03:33.564817+00:00)
+2026-01-27 00:03:33,572 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-27 00:03:33,577 - app.scheduler.monitor - INFO - No servers configured for polling
+2026-01-27 00:03:33,577 - app.scheduler.monitor - INFO - No servers configured for polling
+2026-01-27 00:03:33,579 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-27 00:08:33 UTC)" executed successfully
+2026-01-27 00:03:33,579 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-27 00:08:33 UTC)" executed successfully
+2026-01-27 00:05:04,385 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:05:34,159 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:05:35,036 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:05:45,552 - app.routes.server - INFO - Server 1 (v2) created by admin
+2026-01-27 00:05:45,768 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:05:47,239 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:05:48,296 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:05:54,646 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-27 00:05:55,336 - app.scheduler.monitor - INFO - SNMP polling completed: 1 success, 0 errors, duration: 0.69s
+2026-01-27 00:05:55,341 - app.routes.component - INFO - SNMP polling triggered after adding component 1
+2026-01-27 00:05:55,347 - app.routes.component - INFO - Component 1 (fan1) added to server 1 by admin
+2026-01-27 00:05:55,529 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:05:56,121 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:05:57,460 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:05:58,303 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:06:26,270 - app.routes.server - INFO - Server 2 (v3) created by admin
+2026-01-27 00:06:26,423 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:06:28,817 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:06:29,777 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:06:35,424 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-27 00:06:36,190 - app.scheduler.monitor - INFO - SNMP polling completed: 2 success, 0 errors, duration: 0.77s
+2026-01-27 00:06:36,195 - app.routes.component - INFO - SNMP polling triggered after adding component 2
+2026-01-27 00:06:36,201 - app.routes.component - INFO - Component 2 (fan1) added to server 2 by admin
+2026-01-27 00:06:36,332 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:06:37,632 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:06:53,239 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:08:25,895 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:08:32,404 - app.routes.server - INFO - Server 2 (v3) deleted by admin
+2026-01-27 00:08:32,516 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:08:33,578 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-27 00:13:33 UTC)" (scheduled at 2026-01-27 00:08:33.564817+00:00)
+2026-01-27 00:08:33,579 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-27 00:08:33,580 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-27 00:13:33 UTC)" (scheduled at 2026-01-27 00:08:33.564867+00:00)
+2026-01-27 00:08:33,581 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-27 00:08:33,835 - app.scheduler.monitor - INFO - SNMP polling completed: 1 success, 0 errors, duration: 0.26s
+2026-01-27 00:08:33,836 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-27 00:13:33 UTC)" executed successfully
+2026-01-27 00:08:34,056 - app.scheduler.monitor - INFO - SNMP polling completed: 1 success, 0 errors, duration: 0.47s
+2026-01-27 00:08:34,057 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-27 00:13:33 UTC)" executed successfully
+2026-01-27 00:08:34,233 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:08:53,176 - app.routes.server - INFO - Server 3 (v3) created by admin
+2026-01-27 00:08:53,314 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:08:55,875 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:08:56,621 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:09:00,999 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-27 00:09:01,706 - app.scheduler.monitor - WARNING - SNMP Error Indication for v3/fan1: Wrong SNMP PDU digest
+2026-01-27 00:09:01,713 - app.scheduler.monitor - INFO - SNMP polling completed: 1 success, 1 errors, duration: 0.71s
+2026-01-27 00:09:01,728 - app.routes.component - INFO - SNMP polling triggered after adding component 3
+2026-01-27 00:09:01,740 - app.routes.component - INFO - Component 3 (fan1) added to server 3 by admin
+2026-01-27 00:09:01,843 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:09:02,484 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:09:07,516 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:09:11,751 - app.routes.server - INFO - Server 1 (v2) deleted by admin
+2026-01-27 00:09:11,853 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:09:13,759 - app.routes.server - INFO - Server 3 (v3) deleted by admin
+2026-01-27 00:09:13,860 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:09:15,203 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:09:23,177 - app.routes.server - INFO - Server 4 (v2) created by admin
+2026-01-27 00:09:23,315 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:09:29,142 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:09:29,992 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:09:35,392 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-27 00:09:37,844 - app.scheduler.monitor - WARNING - SNMP Error Indication for v2/fan1: No SNMP response received before timeout
+2026-01-27 00:09:37,854 - app.scheduler.monitor - INFO - SNMP polling completed: 0 success, 1 errors, duration: 2.46s
+2026-01-27 00:09:37,859 - app.routes.component - INFO - SNMP polling triggered after adding component 4
+2026-01-27 00:09:37,864 - app.routes.component - INFO - Component 4 (fan1) added to server 4 by admin
+2026-01-27 00:09:38,027 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:09:38,761 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:09:40,333 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:09:41,544 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:10:01,891 - app.routes.server - INFO - Server 5 (v3) created by admin
+2026-01-27 00:10:02,018 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:10:04,858 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:10:05,682 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:10:10,713 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-27 00:10:12,947 - app.scheduler.monitor - WARNING - SNMP Error Indication for v2/fan1: No SNMP response received before timeout
+2026-01-27 00:10:13,317 - app.scheduler.monitor - INFO - SNMP polling completed: 1 success, 1 errors, duration: 2.60s
+2026-01-27 00:10:13,321 - app.routes.component - INFO - SNMP polling triggered after adding component 5
+2026-01-27 00:10:13,327 - app.routes.component - INFO - Component 5 (fan1) added to server 5 by admin
+2026-01-27 00:10:13,462 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:10:14,395 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:10:15,650 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:10:16,798 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:10:18,358 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:10:20,825 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:10:23,391 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:13:33,638 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-27 00:18:33 UTC)" (scheduled at 2026-01-27 00:13:33.564867+00:00)
+2026-01-27 00:13:33,638 - apscheduler.executors.default - INFO - Running job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-27 00:18:33 UTC)" (scheduled at 2026-01-27 00:13:33.564817+00:00)
+2026-01-27 00:13:33,639 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-27 00:13:33,639 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-27 00:13:35,839 - app.scheduler.monitor - WARNING - SNMP Error Indication for v2/fan1: No SNMP response received before timeout
+2026-01-27 00:13:35,950 - app.scheduler.monitor - WARNING - SNMP Error Indication for v2/fan1: No SNMP response received before timeout
+2026-01-27 00:13:36,242 - app.scheduler.monitor - INFO - SNMP polling completed: 1 success, 1 errors, duration: 2.60s
+2026-01-27 00:13:36,242 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-27 00:18:33 UTC)" executed successfully
+2026-01-27 00:13:36,273 - app.scheduler.monitor - INFO - SNMP polling completed: 1 success, 1 errors, duration: 2.63s
+2026-01-27 00:13:36,274 - apscheduler.executors.default - INFO - Job "start_scheduler.<locals>.<lambda> (trigger: interval[0:05:00], next run at: 2026-01-27 00:18:33 UTC)" executed successfully
+2026-01-27 00:17:27,366 - app.scheduler.monitor - INFO - Starting SNMP polling for all servers/components
+2026-01-27 00:17:29,662 - app.scheduler.monitor - WARNING - SNMP Error Indication for v2/fan1: No SNMP response received before timeout
+2026-01-27 00:17:30,625 - app.scheduler.monitor - INFO - SNMP polling completed: 2 success, 1 errors, duration: 3.26s
+2026-01-27 00:17:30,630 - app.routes.component - INFO - SNMP polling triggered after adding component 6
+2026-01-27 00:17:30,636 - app.routes.component - INFO - Component 6 (fan2) added to server 5 by admin
+2026-01-27 00:17:30,871 - app - WARNING - Page not found: http://localhost:5000/favicon.ico
+2026-01-27 00:17:31,605 - app - WARNING - Page not found: http://localhost:5000/favicon.ico

@@ -7,8 +7,9 @@ Flask-Cors
 Flask-WTF
 gunicorn
 psycopg2-binary
-pysnmp==4.4.12
-pyasn1==0.4.8
+pysnmp-lextudio==5.0.34
+pyasn1==0.6.0
+pycryptodomex==3.20.0
 APScheduler
 pandas
 openpyxl
