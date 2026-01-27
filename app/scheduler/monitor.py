@@ -10,13 +10,17 @@ def wib_now():
     utc_now = datetime.now(timezone.utc)
     wib_time = utc_now + timedelta(hours=7)
     return wib_time.replace(tzinfo=None)  # Remove timezone info for PostgreSQL
+
 from flask import current_app
 from pysnmp.hlapi import (
-    getCmd, SnmpEngine, CommunityData, UdpTransportTarget, ContextData, ObjectType, ObjectIdentity,
-    UsmUserData, usmHMACMD5AuthProtocol, usmHMACSHAAuthProtocol, usmDESPrivProtocol, usmAesCfb128Protocol
+    getCmd, SnmpEngine, CommunityData, UdpTransportTarget, ContextData, 
+    ObjectType, ObjectIdentity, UsmUserData, 
+    usmHMACMD5AuthProtocol, usmHMACSHAAuthProtocol, 
+    usmHMAC128SHA224AuthProtocol, usmHMAC192SHA256AuthProtocol,
+    usmDESPrivProtocol, usmAesCfb128Protocol
 )
-import logging
 
+import logging
 logger = logging.getLogger(__name__)
 
 # SNMP value classification per brand/component
@@ -89,9 +93,6 @@ SNMP_CLASSIFICATION = {
     }
 }
 
-
-
-
 def snmp_get(server, component):
     """Perform SNMP GET operation for a component on a server."""
     logger.debug(f"SNMP GET: server={server.name} ip={server.ip} oid={component.oid} v={server.snmp_version}")
@@ -112,7 +113,16 @@ def snmp_get(server, component):
                 logger.error(f"SNMP v3 requires auth credentials for server {server.name}")
                 return None
             
-            auth_proto = usmHMACMD5AuthProtocol if server.snmp_auth_proto == 'MD5' else usmHMACSHAAuthProtocol
+            # Map auth protocol
+            auth_proto_map = {
+                'MD5': usmHMACMD5AuthProtocol,
+                'SHA': usmHMACSHAAuthProtocol,
+                'SHA-224': usmHMAC128SHA224AuthProtocol,
+                'SHA-256': usmHMAC192SHA256AuthProtocol
+            }
+            auth_proto = auth_proto_map.get(server.snmp_auth_proto, usmHMACMD5AuthProtocol)
+            
+            # Map priv protocol
             priv_proto = usmDESPrivProtocol if server.snmp_priv_proto == 'DES' else usmAesCfb128Protocol
             
             iterator = getCmd(
@@ -149,7 +159,6 @@ def snmp_get(server, component):
     
     return None
 
-
 def classify_value(server, component, value):
     """Classify SNMP value based on brand and component category."""
     try:
@@ -159,7 +168,6 @@ def classify_value(server, component, value):
     except (ValueError, TypeError) as e:
         logger.warning(f"Classification error for {server.name}/{component.name}: {e}")
         return 'Critical'
-
 
 def poll_all():
     """Poll all servers and components for SNMP metrics."""
@@ -221,7 +229,6 @@ def poll_all():
         db.session.rollback()
         logger.error(f"Critical error during SNMP polling: {e}", exc_info=True)
 
-
 def poll_all_with_context(app):
     """Run poll_all within application context."""
     try:
@@ -229,7 +236,6 @@ def poll_all_with_context(app):
             poll_all()
     except Exception as e:
         logger.error(f"Error running poll_all_with_context: {e}", exc_info=True)
-
 
 def start_scheduler(app):
     """Start the background scheduler for periodic SNMP polling."""
