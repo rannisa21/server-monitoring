@@ -62,8 +62,14 @@ def create_app(config_name=None):
     # Initialize logging
     setup_logging(app)
     
+    # Additional configuration for cross-origin cookie support
+    # This allows the app to work with both localhost and IP addresses
+    app.config['SESSION_COOKIE_SAMESITE'] = None
+    app.config['SESSION_COOKIE_DOMAIN'] = None
+    
     # Initialize CORS with security settings
-    CORS(app, resources={r"/api/*": {"origins": os.environ.get('CORS_ORIGINS', '*')}})
+    CORS(app, resources={r"/api/*": {"origins": os.environ.get('CORS_ORIGINS', '*')}}, 
+         supports_credentials=True)
 
     # Initialize extensions
     db.init_app(app)
