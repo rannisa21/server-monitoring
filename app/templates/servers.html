@@ -8,7 +8,8 @@
 <table class="server-table">
   <thead>
     <tr>
-      <th>Name</th>
+      <th>NO</th>
+      <th>Server</th>
       <th>IP</th>
       <th>Brand</th>
       <th>SNMP Version</th>
@@ -19,6 +20,7 @@
   <tbody>
     {% for server in servers %}
     <tr>
+      <td>{{ loop.index }}</td>
       <td>{{ server.name }}</td>
       <td>{{ server.ip }}</td>
       <td>{{ server.brand }}</td>

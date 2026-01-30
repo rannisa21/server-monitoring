@@ -24,10 +24,12 @@
   <thead>
     <tr>
       <th>No</th>
-      <th>Name</th>
-      <th>OID</th>
+      <th>Component</th>
       <th>Category</th>
-      <th>Brand</th>
+      <th>OID</th>
+      <th>Value</th>
+      <th>Timestamp</th>
+      <th>Status</th>
       <th>Actions</th>
     </tr>
   </thead>
@@ -39,11 +41,34 @@
         pagination else loop.index }}
       </td>
       <td>{{ c.name }}</td>
-      <td><code>{{ c.oid }}</code></td>
       <td>
         <span class="category-badge {{ c.category }}">{{ c.category }}</span>
       </td>
-      <td>{{ c.brand }}</td>
+      <td><code>{{ c.oid }}</code></td>
+      <td>
+        {% set metric = c.metrics|selectattr('timestamp')|first %}
+        {% if metric %}
+        {{ metric.value }}
+        {% else %}
+        -
+        {% endif %}
+      </td>
+      <td>
+        {% set metric = c.metrics|selectattr('timestamp')|first %}
+        {% if metric %}
+        {{ metric.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}
+        {% else %}
+        -
+        {% endif %}
+      </td>
+      <td>
+        {% set metric = c.metrics|selectattr('timestamp')|first %}
+        {% if metric %}
+        <span class="status-badge status-{{ metric.status|lower }}">{{ metric.status }}</span>
+        {% else %}
+        <span class="status-badge status-unknown">No Data</span>
+        {% endif %}
+      </td>
       <td>
         <a
           href="{{ url_for('component.edit_component', server_id=server.id, component_id=c.id) }}"

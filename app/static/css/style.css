@@ -422,10 +422,11 @@ button[type="submit"]:active,
 .role-badge,
 .filter-badge {
   display: inline-block;
-  padding: 0.2rem 0.5rem;
+  padding: 0.12rem 0.3rem;
   border-radius: 3px;
-  font-size: 0.7rem;
+  font-size: 0.55rem;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .status-badge.ok,
@@ -617,8 +618,8 @@ code {
 }
 
 .category-badge.fan {
-  background: #e8f5e9;
-  color: #2e7d32;
+  background: #e0f2f1;
+  color: #00796b;
 }
 
 /* ===== No Data Message ===== */
@@ -934,6 +935,8 @@ code {
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
+  min-width: 5rem;
+  text-align: center;
 }
 
 .status-badge.status-ok {
@@ -1123,4 +1126,167 @@ code {
 
 .btn-success:hover {
   background: #218838;
+}
+/* ===== View Toggle Buttons ===== */
+.view-toggle {
+  display: flex;
+  gap: 0.5rem;
+  border-radius: 4px;
+  background: #e9ecef;
+  padding: 0.25rem;
+}
+
+.btn-view {
+  padding: 0.5rem 0.875rem;
+  border: none;
+  border-radius: 3px;
+  background: transparent;
+  color: #666;
+  font-size: 0.875rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 500;
+}
+
+.btn-view:hover {
+  background: #dde0e3;
+  color: #333;
+}
+
+.btn-view.active {
+  background: #2c3e50;
+  color: #fff;
+}
+
+/* ===== Card View ===== */
+.dashboard-cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 0.3rem;
+  margin-top: 1rem;
+}
+
+.server-card {
+  background: #fff;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s;
+}
+
+.server-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  border-color: #d0d8e0;
+}
+
+.server-card .card-header {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: #fff;
+  padding: 0.35rem 0.5rem;
+  border-bottom: 2px solid #1a252f;
+  display: block;
+  text-align: center;
+}
+
+.server-card .card-header h3 {
+  margin: 0;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: #fff;
+  word-break: break-word;
+}
+
+.card-body {
+  padding: 0.35rem;
+}
+
+.components-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.component-item {
+  padding: 0.2rem 0.4rem;
+  background: #f8f9fa;
+  border-left: 3px solid #e9ecef;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.component-item:hover {
+  background: #f0f2f5;
+  border-left-color: #2c3e50;
+}
+
+.component-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.component-name {
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: #333;
+  flex: 1;
+  word-break: break-word;
+  line-height: 1.1;
+}
+
+.no-components {
+  text-align: center;
+  color: #999;
+  font-size: 0.85rem;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+/* ===== Card Status Badge ===== */
+.card-body .status-badge {
+  font-size: 0.65rem;
+  padding: 0.15rem 0.3rem;
+  min-width: 1.8rem;
+  text-align: center;
+  display: inline-block;
+  background: transparent !important;
+  font-weight: 700;
+}
+
+.card-body .status-badge.status-ok {
+  color: #28a745;
+}
+
+.card-body .status-badge.status-warning {
+  color: #ffc107;
+}
+
+.card-body .status-badge.status-critical {
+  color: #dc3545;
+}
+
+.card-body .status-badge.status-unknown {
+  color: #6c757d;
+}
+
+/* ===== Dashboard Empty State ===== */
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  color: #6c757d;
+}
+
+.empty-state p {
+  margin: 0;
+  font-size: 1rem;
 }

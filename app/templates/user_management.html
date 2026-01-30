@@ -2,7 +2,9 @@
 {% block content %}
 <div class="page-header">
     <h2>User Management</h2>
-    <button type="button" class="btn btn-primary" onclick="toggleAddForm()">+ Add User</button>
+    <div class="header-actions">
+        <button type="button" class="btn btn-primary" onclick="toggleAddForm()">+ Add User</button>
+    </div>
 </div>
 
 <!-- Add User Form (Collapsible) -->
@@ -38,33 +40,35 @@
 </div>
 
 <!-- Toolbar: Search, Filter, Sort -->
-<div class="toolbar">
-    <form method="get" action="{{ url_for('user_management.user_management') }}" class="toolbar-form" id="userForm">
-        <div class="toolbar-group">
-            <input type="text" name="search" id="search" value="{{ search_query }}" placeholder="Search username...">
-            <button type="submit" class="btn btn-sm">Search</button>
-            {% if search_query or role_filter %}
-            <a href="{{ url_for('user_management.user_management') }}" class="btn btn-sm btn-secondary">Clear</a>
-            {% endif %}
-        </div>
-        <div class="toolbar-group">
-            <label for="role_filter">Role:</label>
-            <select name="role" id="role_filter" onchange="document.getElementById('userForm').submit()">
-                <option value="">All Roles</option>
-                <option value="admin" {% if role_filter == 'admin' %}selected{% endif %}>Admin</option>
-                <option value="user" {% if role_filter == 'user' %}selected{% endif %}>User</option>
-            </select>
-        </div>
-        <div class="toolbar-group">
-            <label for="sort">Sort:</label>
-            <select name="sort" id="sort" onchange="document.getElementById('userForm').submit()">
-                <option value="username" {% if sort_by == 'username' %}selected{% endif %}>Username</option>
-                <option value="role" {% if sort_by == 'role' %}selected{% endif %}>Role</option>
-            </select>
-            <select name="order" id="order" onchange="document.getElementById('userForm').submit()">
-                <option value="asc" {% if sort_order == 'asc' %}selected{% endif %}>Asc</option>
-                <option value="desc" {% if sort_order == 'desc' %}selected{% endif %}>Desc</option>
-            </select>
+<div class="dashboard-toolbar">
+    <form method="get" action="{{ url_for('user_management.user_management') }}" class="filter-form" id="userForm">
+        <div class="filter-row">
+            <div class="filter-item">
+                <input type="text" name="search" id="search" value="{{ search_query }}" placeholder="Search username...">
+            </div>
+            <div class="filter-item">
+                <select name="role" id="role_filter" onchange="document.getElementById('userForm').submit()">
+                    <option value="">All Roles</option>
+                    <option value="admin" {% if role_filter == 'admin' %}selected{% endif %}>Admin</option>
+                    <option value="user" {% if role_filter == 'user' %}selected{% endif %}>User</option>
+                </select>
+            </div>
+            <div class="filter-item sort-group">
+                <select name="sort" id="sort" onchange="document.getElementById('userForm').submit()">
+                    <option value="username" {% if sort_by == 'username' %}selected{% endif %}>Username</option>
+                    <option value="role" {% if sort_by == 'role' %}selected{% endif %}>Role</option>
+                </select>
+                <select name="order" id="order" onchange="document.getElementById('userForm').submit()">
+                    <option value="asc" {% if sort_order == 'asc' %}selected{% endif %}>↑ Asc</option>
+                    <option value="desc" {% if sort_order == 'desc' %}selected{% endif %}>↓ Desc</option>
+                </select>
+            </div>
+            <div class="filter-actions">
+                <button type="submit" class="btn btn-primary btn-sm">Apply</button>
+                {% if search_query or role_filter %}
+                <a href="{{ url_for('user_management.user_management') }}" class="btn btn-secondary btn-sm">Clear</a>
+                {% endif %}
+            </div>
         </div>
     </form>
 </div>
@@ -74,6 +78,7 @@
 <table class="data-table">
     <thead>
         <tr>
+            <th>No</th>
             <th>Username</th>
             <th>Role</th>
             <th>Actions</th>
@@ -82,6 +87,7 @@
     <tbody>
         {% for user in users %}
         <tr>
+            <td>{{ loop.index }}</td>
             <td><strong>{{ user.username }}</strong></td>
             <td><span class="role-badge role-{{ user.role.value }}">{{ user.role.value|upper }}</span></td>
             <td class="actions">

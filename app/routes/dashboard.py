@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, current_app, send_file, flash
+from flask import Blueprint, render_template, request, current_app, send_file, flash, session
 from flask_login import login_required, current_user
 from app.models.server import Server, Component
 from app.models.metric import Metric
@@ -22,6 +22,10 @@ def dashboard():
         category_filter = request.args.get('category', '')
         status_filter = request.args.get('status', '')
         search_query = request.args.get('search', '').strip()
+        
+        # Get view type (table or card), default to table
+        view_type = request.args.get('view', session.get('dashboard_view', 'table'))
+        session['dashboard_view'] = view_type
         
         # Get sort parameters
         sort_by = request.args.get('sort', 'server')  # Default sort by server
@@ -93,11 +97,25 @@ def dashboard():
         
         total_items = len(dashboard_data)
         
-        logger.debug(f'Dashboard loaded: {total_items} items')
+        # For card view, group by server
+        card_data = {}
+        if view_type == 'card':
+            for item in dashboard_data:
+                server_id = item['server'].id
+                if server_id not in card_data:
+                    card_data[server_id] = {
+                        'server': item['server'],
+                        'components': []
+                    }
+                card_data[server_id]['components'].append(item)
+        
+        logger.debug(f'Dashboard loaded: {total_items} items, view: {view_type}')
         
         return render_template(
             'dashboard.html',
             dashboard_data=dashboard_data,
+            card_data=card_data,
+            view_type=view_type,
             servers=all_servers,
             server_filter=server_filter,
             category_filter=category_filter,
@@ -114,6 +132,8 @@ def dashboard():
         return render_template(
             'dashboard.html',
             dashboard_data=[],
+            card_data={},
+            view_type='table',
             servers=[],
             server_filter=[],
             category_filter='',

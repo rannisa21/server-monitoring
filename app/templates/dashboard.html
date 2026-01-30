@@ -4,6 +4,13 @@
     <h2>Dashboard</h2>
     <div class="header-actions">
         <span class="total-info">{{ total_items }} items</span>
+        <!-- View Type Toggle Buttons -->
+        <div class="view-toggle">
+            <a href="{{ url_for('dashboard.dashboard', view='table', search=search_query, category=category_filter, status=status_filter, sort=sort_by, order=sort_order, **{'server_id': server_filter}) }}" 
+               class="btn-view {% if view_type == 'table' %}active{% endif %}">📊 Table View</a>
+            <a href="{{ url_for('dashboard.dashboard', view='card', search=search_query, category=category_filter, status=status_filter, sort=sort_by, order=sort_order, **{'server_id': server_filter}) }}" 
+               class="btn-view {% if view_type == 'card' %}active{% endif %}">🗂️ Card View</a>
+        </div>
         <button type="button" class="btn btn-success" onclick="openReportModal()">
             <span>📥</span> Download Report
         </button>
@@ -136,6 +143,8 @@
 <div class="flash flash-danger">{{ error }}</div>
 {% endif %}
 
+{% if view_type == 'table' %}
+<!-- TABLE VIEW -->
 <div class="dashboard-table-wrapper">
     <table class="data-table" id="dashboardTable">
         <thead>
@@ -145,9 +154,9 @@
                 <th>Category</th>
                 <th>OID</th>
                 <th>Brand</th>
-                <th>Status</th>
                 <th>Value</th>
                 <th>Timestamp</th>
+                <th>Status</th>
             </tr>
         </thead>
         <tbody>
@@ -158,15 +167,15 @@
                 <td><span class="category-badge {{ item.component.category }}">{{ item.component.category }}</span></td>
                 <td><code>{{ item.component.oid }}</code></td>
                 <td>{{ item.server.brand }}</td>
-                <td>
+                <td>{{ item.metric.value if item.metric else '-' }}</td>
+                <td>{{ item.metric.timestamp.strftime('%Y-%m-%d %H:%M:%S') if item.metric else '-' }}</td>
+                            <td>
                     {% if item.metric %}
                     <span class="status-badge status-{{ item.metric.status|lower }}">{{ item.metric.status }}</span>
                     {% else %}
                     <span class="status-badge status-unknown">No Data</span>
                     {% endif %}
                 </td>
-                <td>{{ item.metric.value if item.metric else '-' }}</td>
-                <td>{{ item.metric.timestamp.strftime('%Y-%m-%d %H:%M:%S') if item.metric else '-' }}</td>
             </tr>
             {% else %}
             <tr>
@@ -176,6 +185,50 @@
         </tbody>
     </table>
 </div>
+
+{% elif view_type == 'card' %}
+<!-- CARD VIEW -->
+<div class="dashboard-cards-wrapper">
+    {% if card_data %}
+        {% for server_id, card_item in card_data.items() %}
+        <div class="server-card">
+            <div class="card-header">
+                <h3>{{ card_item.server.name }}</h3>
+            </div>
+            <div class="card-body">
+                {% if card_item.components %}
+                    <div class="components-list">
+                        {% for component_item in card_item.components %}
+                        <div class="component-item">
+                            <div class="component-header">
+                                <span class="component-name">{{ component_item.component.name }}</span>
+                                <span class="status-badge status-{% if component_item.metric %}{{ component_item.metric.status|lower }}{% else %}unknown{% endif %}">
+                                    {% if component_item.metric %}
+                                        {% if component_item.metric.status == 'OK' %}🟢
+                                        {% elif component_item.metric.status == 'Warning' %}🟡
+                                        {% elif component_item.metric.status == 'Critical' %}🔴
+                                        {% else %}?
+                                        {% endif %}
+                                    {% else %}—{% endif %}
+                                </span>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <p class="no-components">No components</p>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    {% else %}
+        <div class="empty-state">
+            <p>No data available</p>
+        </div>
+    {% endif %}
+</div>
+
+{% endif %}
 
 <script>
 function toggleDropdown(id) {
