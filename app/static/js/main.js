@@ -98,29 +98,24 @@ function initDeleteConfirmation() {
 }
 
 /**
- * Auto-refresh dashboard every 5 minutes
+ * Auto-refresh dashboard - handled in dashboard.html template
+ * This function is kept for backward compatibility but does nothing
+ * The actual auto-refresh is now done via AJAX in the dashboard template
  */
 function initDashboardAutoRefresh() {
-  const dashboard = document.querySelector(".dashboard-table, .server-section");
-  if (dashboard && window.location.pathname.includes("dashboard")) {
-    // Refresh every 5 minutes (300000ms)
-    setInterval(function () {
-      location.reload();
-    }, 300000);
-
-    // Show last refresh time
-    updateRefreshTime();
-  }
+  // Auto-refresh is now handled in dashboard.html with AJAX
+  // This function is kept for backward compatibility
+  console.log('Dashboard auto-refresh is handled via AJAX in dashboard template');
 }
 
 /**
  * Update refresh time display
  */
 function updateRefreshTime() {
-  const refreshInfo = document.getElementById("last-refresh");
+  const refreshInfo = document.getElementById("last-refresh-time");
   if (refreshInfo) {
     const now = new Date();
-    refreshInfo.textContent = "Last refresh: " + now.toLocaleTimeString();
+    refreshInfo.textContent = "Updated: " + now.toLocaleTimeString('id-ID');
   }
 }
 

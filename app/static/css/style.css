@@ -1290,3 +1290,71 @@ code {
   margin: 0;
   font-size: 1rem;
 }
+
+/* ===== Auto-Refresh Indicator ===== */
+.refresh-info {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: #6c757d;
+  background: #f8f9fa;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  margin-right: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.refresh-dot {
+  width: 8px;
+  height: 8px;
+  background: #28a745;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+/* .refresh-info.refreshing .refresh-dot {
+  background: #28a745;
+  animation: spin 1s linear infinite;
+} */
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#last-refresh-time {
+  white-space: nowrap;
+}
+
+/* ===== Header Actions Spacing ===== */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.total-info {
+  font-size: 0.85rem;
+  color: #6c757d;
+  background: #e9ecef;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-weight: 500;
+}

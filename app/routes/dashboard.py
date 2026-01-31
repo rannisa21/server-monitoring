@@ -147,6 +147,110 @@ def dashboard():
         )
 
 
+@dashboard_bp.route('/api/data')
+@login_required
+def api_dashboard_data():
+    """API endpoint untuk mendapatkan data dashboard terbaru (JSON)."""
+    try:
+        from flask import jsonify
+        
+        # Get filter parameters
+        server_filter = request.args.getlist('server_id', type=int)
+        category_filter = request.args.get('category', '')
+        status_filter = request.args.get('status', '')
+        search_query = request.args.get('search', '').strip()
+        sort_by = request.args.get('sort', 'server')
+        sort_order = request.args.get('order', 'asc')
+        
+        # Get all servers
+        all_servers = Server.query.order_by(Server.name).all()
+        
+        # Build servers query
+        if server_filter:
+            servers = Server.query.filter(Server.id.in_(server_filter)).all()
+        else:
+            servers = all_servers
+        
+        # Build data for dashboard with latest metrics
+        dashboard_data = []
+        for server in servers:
+            for component in server.components:
+                metric = Metric.query.filter_by(
+                    server_id=server.id,
+                    component_id=component.id
+                ).order_by(desc(Metric.timestamp)).first()
+                
+                # Apply category filter
+                if category_filter and component.category != category_filter:
+                    continue
+                
+                # Apply status filter
+                if status_filter:
+                    if status_filter == 'no_data' and metric:
+                        continue
+                    elif status_filter != 'no_data' and (not metric or metric.status != status_filter):
+                        continue
+                
+                # Apply search filter
+                if search_query:
+                    search_lower = search_query.lower()
+                    if not (search_lower in server.name.lower() or 
+                            search_lower in component.name.lower() or
+                            search_lower in server.ip.lower() or
+                            search_lower in component.oid.lower()):
+                        continue
+                
+                dashboard_data.append({
+                    'server_id': server.id,
+                    'server_name': server.name,
+                    'server_ip': server.ip,
+                    'server_brand': server.brand,
+                    'component_id': component.id,
+                    'component_name': component.name,
+                    'component_oid': component.oid,
+                    'category': component.category,
+                    'metric_value': metric.value if metric else None,
+                    'metric_status': metric.status if metric else None,
+                    'metric_timestamp': metric.timestamp.strftime('%Y-%m-%d %H:%M:%S') if metric else None
+                })
+        
+        # Sort data
+        def get_sort_key(item):
+            if sort_by == 'server':
+                return item['server_name'].lower()
+            elif sort_by == 'component':
+                return item['component_name'].lower()
+            elif sort_by == 'category':
+                return item['category'].lower()
+            elif sort_by == 'status':
+                return item['metric_status'] if item['metric_status'] else 'zzz'
+            elif sort_by == 'timestamp':
+                return item['metric_timestamp'] if item['metric_timestamp'] else ''
+            return item['server_name'].lower()
+        
+        dashboard_data.sort(key=get_sort_key, reverse=(sort_order == 'desc'))
+        
+        # Get last update time from newest metric
+        latest_metric = Metric.query.order_by(desc(Metric.timestamp)).first()
+        last_update = latest_metric.timestamp.strftime('%Y-%m-%d %H:%M:%S') if latest_metric else None
+        
+        return jsonify({
+            'success': True,
+            'data': dashboard_data,
+            'total_items': len(dashboard_data),
+            'last_update': last_update
+        })
+        
+    except Exception as e:
+        logger.error(f'API Dashboard error: {e}', exc_info=True)
+        return jsonify({
+            'success': False,
+            'error': str(e),
+            'data': [],
+            'total_items': 0
+        }), 500
+
+
 @dashboard_bp.route('/download-report', methods=['POST'])
 @login_required
 def download_report():

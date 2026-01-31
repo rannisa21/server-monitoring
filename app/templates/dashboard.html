@@ -3,7 +3,11 @@
 <div class="page-header">
     <h2>Dashboard</h2>
     <div class="header-actions">
-        <span class="total-info">{{ total_items }} items</span>
+        <span class="total-info" id="total-items">{{ total_items }} items</span>
+        <span class="refresh-info" id="last-refresh-info">
+            <span class="refresh-dot"></span>
+            <span id="last-refresh-time">Loading...</span>
+        </span>
         <!-- View Type Toggle Buttons -->
         <div class="view-toggle">
             <a href="{{ url_for('dashboard.dashboard', view='table', search=search_query, category=category_filter, status=status_filter, sort=sort_by, order=sort_order, **{'server_id': server_filter}) }}" 
@@ -231,6 +235,11 @@
 {% endif %}
 
 <script>
+// Dashboard Auto-Refresh Configuration
+const REFRESH_INTERVAL = 1000; // 1sec
+let refreshTimer = null;
+let isRefreshing = false;
+
 function toggleDropdown(id) {
     var dropdown = document.getElementById(id);
     dropdown.classList.toggle('show');
@@ -270,10 +279,257 @@ document.addEventListener('click', function(e) {
     }
 });
 
-// Auto-refresh every 5 minutes
-setTimeout(function() {
-    window.location.reload();
-}, 5 * 60 * 1000);
+// Get current filter parameters from URL
+function getCurrentFilters() {
+    const params = new URLSearchParams(window.location.search);
+    return {
+        server_id: params.getAll('server_id'),
+        category: params.get('category') || '',
+        status: params.get('status') || '',
+        search: params.get('search') || '',
+        sort: params.get('sort') || 'server',
+        order: params.get('order') || 'asc'
+    };
+}
+
+// Build query string from filters
+function buildQueryString(filters) {
+    const params = new URLSearchParams();
+    if (filters.server_id && filters.server_id.length > 0) {
+        filters.server_id.forEach(id => params.append('server_id', id));
+    }
+    if (filters.category) params.append('category', filters.category);
+    if (filters.status) params.append('status', filters.status);
+    if (filters.search) params.append('search', filters.search);
+    if (filters.sort) params.append('sort', filters.sort);
+    if (filters.order) params.append('order', filters.order);
+    return params.toString();
+}
+
+// Get status badge HTML
+function getStatusBadge(status) {
+    if (!status) {
+        return '<span class="status-badge status-unknown">No Data</span>';
+    }
+    return `<span class="status-badge status-${status.toLowerCase()}">${status}</span>`;
+}
+
+// Get status emoji for card view
+function getStatusEmoji(status) {
+    if (!status) return '—';
+    switch(status) {
+        case 'OK': return '🟢';
+        case 'Warning': return '🟡';
+        case 'Critical': return '🔴';
+        default: return '?';
+    }
+}
+
+// Get row class based on status
+function getRowClass(status) {
+    if (!status) return 'status-row-unknown';
+    return `status-row-${status.toLowerCase()}`;
+}
+
+// Update table view with new data
+function updateTableView(data) {
+    const tbody = document.querySelector('#dashboardTable tbody');
+    if (!tbody) return;
+    
+    if (data.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="8" class="text-center">No data available</td></tr>';
+        return;
+    }
+    
+    tbody.innerHTML = data.map(item => `
+        <tr class="${getRowClass(item.metric_status)}">
+            <td><strong>${escapeHtml(item.server_name)}</strong></td>
+            <td>${escapeHtml(item.component_name)}</td>
+            <td><span class="category-badge ${item.category}">${escapeHtml(item.category)}</span></td>
+            <td><code>${escapeHtml(item.component_oid)}</code></td>
+            <td>${escapeHtml(item.server_brand || '')}</td>
+            <td>${item.metric_value !== null ? escapeHtml(item.metric_value) : '-'}</td>
+            <td>${item.metric_timestamp || '-'}</td>
+            <td>${getStatusBadge(item.metric_status)}</td>
+        </tr>
+    `).join('');
+}
+
+// Update card view with new data
+function updateCardView(data) {
+    const wrapper = document.querySelector('.dashboard-cards-wrapper');
+    if (!wrapper) return;
+    
+    if (data.length === 0) {
+        wrapper.innerHTML = '<div class="empty-state"><p>No data available</p></div>';
+        return;
+    }
+    
+    // Group data by server
+    const cardData = {};
+    data.forEach(item => {
+        if (!cardData[item.server_id]) {
+            cardData[item.server_id] = {
+                server_name: item.server_name,
+                components: []
+            };
+        }
+        cardData[item.server_id].components.push(item);
+    });
+    
+    wrapper.innerHTML = Object.values(cardData).map(card => `
+        <div class="server-card">
+            <div class="card-header">
+                <h3>${escapeHtml(card.server_name)}</h3>
+            </div>
+            <div class="card-body">
+                <div class="components-list">
+                    ${card.components.map(comp => `
+                        <div class="component-item">
+                            <div class="component-header">
+                                <span class="component-name">${escapeHtml(comp.component_name)}</span>
+                                <span class="status-badge status-${comp.metric_status ? comp.metric_status.toLowerCase() : 'unknown'}">
+                                    ${getStatusEmoji(comp.metric_status)}
+                                </span>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        </div>
+    `).join('');
+}
+
+// Escape HTML to prevent XSS
+function escapeHtml(text) {
+    if (text === null || text === undefined) return '';
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
+
+// Update refresh time display
+function updateRefreshTimeDisplay() {
+    const refreshTime = document.getElementById('last-refresh-time');
+    if (refreshTime) {
+        const now = new Date();
+        refreshTime.textContent = 'Updated: ' + now.toLocaleTimeString('id-ID');
+    }
+}
+
+// Show loading indicator
+function showLoadingIndicator(show) {
+    const refreshInfo = document.getElementById('last-refresh-info');
+    if (refreshInfo) {
+        if (show) {
+            refreshInfo.classList.add('refreshing');
+        } else {
+            refreshInfo.classList.remove('refreshing');
+        }
+    }
+}
+
+// Fetch and update dashboard data
+async function refreshDashboardData() {
+    if (isRefreshing) return;
+    isRefreshing = true;
+    showLoadingIndicator(true);
+    
+    try {
+        const filters = getCurrentFilters();
+        const queryString = buildQueryString(filters);
+        const url = `{{ url_for('dashboard.api_dashboard_data') }}?${queryString}`;
+        
+        const response = await fetch(url, {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'X-Requested-With': 'XMLHttpRequest'
+            },
+            credentials: 'same-origin'
+        });
+        
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        const result = await response.json();
+        
+        if (result.success) {
+            // Determine current view type
+            const viewType = '{{ view_type }}';
+            
+            if (viewType === 'table') {
+                updateTableView(result.data);
+            } else if (viewType === 'card') {
+                updateCardView(result.data);
+            }
+            
+            // Update total items count
+            const totalInfo = document.getElementById('total-items');
+            if (totalInfo) {
+                totalInfo.textContent = result.total_items + ' items';
+            }
+            
+            // Update refresh time
+            updateRefreshTimeDisplay();
+            
+            console.log(`Dashboard refreshed: ${result.total_items} items`);
+        } else {
+            console.error('Dashboard refresh failed:', result.error);
+        }
+    } catch (error) {
+        console.error('Error refreshing dashboard:', error);
+    } finally {
+        isRefreshing = false;
+        showLoadingIndicator(false);
+    }
+}
+
+// Start auto-refresh
+function startAutoRefresh() {
+    // Initial refresh time display
+    updateRefreshTimeDisplay();
+    
+    // Clear any existing timer
+    if (refreshTimer) {
+        clearInterval(refreshTimer);
+    }
+    
+    // Set up periodic refresh
+    refreshTimer = setInterval(refreshDashboardData, REFRESH_INTERVAL);
+    
+    console.log(`Auto-refresh started: every ${REFRESH_INTERVAL/1000} seconds`);
+}
+
+// Stop auto-refresh (useful when page is hidden)
+function stopAutoRefresh() {
+    if (refreshTimer) {
+        clearInterval(refreshTimer);
+        refreshTimer = null;
+    }
+}
+
+// Handle page visibility changes
+document.addEventListener('visibilitychange', function() {
+    if (document.hidden) {
+        stopAutoRefresh();
+    } else {
+        // Refresh immediately when page becomes visible
+        refreshDashboardData();
+        startAutoRefresh();
+    }
+});
+
+// Initialize auto-refresh on page load
+document.addEventListener('DOMContentLoaded', function() {
+    startAutoRefresh();
+});
+
+// Manual refresh button (optional - can be triggered by user)
+function manualRefresh() {
+    refreshDashboardData();
+}
 
 // Report Modal Functions
 function openReportModal() {
