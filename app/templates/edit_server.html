@@ -110,21 +110,31 @@
     </div>
     <div class="form-group">
       <label for="snmp_auth_pass">Auth Password</label>
-      <input
-        type="password"
-        name="snmp_auth_pass"
-        id="snmp_auth_pass"
-        value="{{ server.snmp_auth_pass or '' }}"
-      />
+      <div class="password-wrapper">
+        <input
+          type="password"
+          name="snmp_auth_pass"
+          id="snmp_auth_pass"
+          value="{{ server.snmp_auth_pass or '' }}"
+        />
+        <button type="button" class="toggle-password" onclick="togglePassword('snmp_auth_pass')" title="Show/Hide Password">
+          <span class="eye-icon">⌣</span>
+        </button>
+      </div>
     </div>
     <div class="form-group">
       <label for="snmp_priv_pass">Priv Password</label>
-      <input
-        type="password"
-        name="snmp_priv_pass"
-        id="snmp_priv_pass"
-        value="{{ server.snmp_priv_pass or '' }}"
-      />
+      <div class="password-wrapper">
+        <input
+          type="password"
+          name="snmp_priv_pass"
+          id="snmp_priv_pass"
+          value="{{ server.snmp_priv_pass or '' }}"
+        />
+        <button type="button" class="toggle-password" onclick="togglePassword('snmp_priv_pass')" title="Show/Hide Password">
+          <span class="eye-icon">⌣</span>
+        </button>
+      </div>
     </div>
     <div class="form-group">
       <label for="snmp_auth_proto">Auth Protocol</label>

@@ -1,5 +1,23 @@
 // ===== Server Monitoring - Main JavaScript =====
 
+/**
+ * Toggle password visibility
+ */
+function togglePassword(inputId) {
+  const input = document.getElementById(inputId);
+  const button = input.parentElement.querySelector('.toggle-password');
+  
+  if (input.type === 'password') {
+    input.type = 'text';
+    button.classList.add('active');
+    button.querySelector('.eye-icon').textContent = '👁';
+  } else {
+    input.type = 'password';
+    button.classList.remove('active');
+    button.querySelector('.eye-icon').textContent = '⌣';
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   // Auto-submit filters when select changes
   initAutoSubmitFilters();

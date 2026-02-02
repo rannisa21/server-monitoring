@@ -20,16 +20,16 @@
   <div class="form-group">
     <label for="category">Category</label>
     <select name="category" id="category" required>
-      <option value="">-- Select Category --</option>
+      <option value="">- Select Category -</option>
       <option value="PSU">PSU (Power Supply Unit)</option>
       <option value="harddisk">Harddisk</option>
       <option value="suhu">Suhu (Temperature)</option>
       <option value="fan">Fan</option>
     </select>
-    <small class="help-text"
+    <!-- <small class="help-text"
       >Component status will be classified based on server brand ({{
       server.brand }})</small
-    >
+    > -->
   </div>
 
   <div class="form-group">
@@ -39,7 +39,7 @@
       name="name"
       id="name"
       required
-      placeholder="e.g., PSU 1, Fan CPU, HDD Bay 1"
+      placeholder=""
     />
   </div>
 
@@ -50,9 +50,9 @@
       name="oid"
       id="oid"
       required
-      placeholder="e.g., 1.3.6.1.4.1.232.6.2.6.7.1.9.0.1"
+      placeholder=""
     />
-    <small class="help-text">SNMP OID to monitor this component</small>
+    <!-- <small class="help-text">SNMP OID to monitor this component</small> -->
   </div>
 
   <div class="form-actions">

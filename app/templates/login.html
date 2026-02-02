@@ -9,12 +9,14 @@
     </div>
     <div class="form-group">
       <label for="password">Password</label>
-      <input type="password" name="password" id="password" required />
+      <div class="password-wrapper">
+        <input type="password" name="password" id="password" required />
+        <button type="button" class="toggle-password" onclick="togglePassword('password')" title="Show/Hide Password">
+          <span class="eye-icon">⌣</span>
+        </button>
+      </div>
     </div>
     <button type="submit">Login</button>
-    {% with messages = get_flashed_messages() %} {% if messages %}
-    <div class="flash">{{ messages[0] }}</div>
-    {% endif %} {% endwith %}
   </form>
 </div>
 {% endblock %}

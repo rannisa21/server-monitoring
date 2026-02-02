@@ -3,19 +3,32 @@
 <a href="{{ url_for('server.servers') }}" class="btn btn-secondary"
   >&laquo; Back to Servers</a
 >
-<form method="post" class="form-add-server">
+<form method="post" class="form-add-server" style="margin-top: 1rem">
   <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
   <div class="form-group">
     <label for="name">Server Name</label>
-    <input type="text" name="name" id="name" required />
+    <input
+      type="text"
+      name="name"
+      id="name"
+      required
+      placeholder=""
+    />
   </div>
   <div class="form-group">
     <label for="ip">IP Address</label>
-    <input type="text" name="ip" id="ip" required />
+    <input
+      type="text"
+      name="ip"
+      id="ip"
+      required
+      placeholder=""
+    />
   </div>
   <div class="form-group">
     <label for="brand">Brand</label>
     <select name="brand" id="brand" required>
+      <option value="">- Select Brand -</option>
       <option value="HPE">HPE</option>
       <option value="Dell">Dell</option>
       <option value="supermicro">Supermicro</option>
@@ -30,13 +43,20 @@
       required
       onchange="toggleSnmpFields()"
     >
+      <option value="">- Select SNMP Version-</option>
       <option value="v2c">v2c</option>
       <option value="v3">v3</option>
     </select>
   </div>
-  <div class="form-group" id="community-group">
+  <div class="form-group" id="community-group" style="display: none">
     <label for="community">Community</label>
-    <input type="text" name="community" id="community" />
+    <input
+      type="text"
+      name="community"
+      id="community"
+      placeholder=""
+    />
+    <!-- <small class="help-text">Required for SNMP v2c</small> -->
   </div>
   <div id="snmpv3-fields" style="display: none">
     <div class="form-group">
@@ -45,30 +65,45 @@
     </div>
     <div class="form-group">
       <label for="snmp_auth_pass">Auth Password</label>
-      <input type="password" name="snmp_auth_pass" id="snmp_auth_pass" />
+      <div class="password-wrapper">
+        <input type="password" name="snmp_auth_pass" id="snmp_auth_pass" />
+        <button type="button" class="toggle-password" onclick="togglePassword('snmp_auth_pass')" title="Show/Hide Password">
+          <span class="eye-icon">⌣</span>
+        </button>
+      </div>
     </div>
     <div class="form-group">
       <label for="snmp_priv_pass">Priv Password</label>
-      <input type="password" name="snmp_priv_pass" id="snmp_priv_pass" />
+      <div class="password-wrapper">
+        <input type="password" name="snmp_priv_pass" id="snmp_priv_pass" />
+        <button type="button" class="toggle-password" onclick="togglePassword('snmp_priv_pass')" title="Show/Hide Password">
+          <span class="eye-icon">⌣</span>
+        </button>
+      </div>
     </div>
     <div class="form-group">
       <label for="snmp_auth_proto">Auth Protocol</label>
       <select name="snmp_auth_proto" id="snmp_auth_proto">
-        <option value="MD5">MD5</option>
+        <!-- <option value="MD5">MD5</option>
         <option value="SHA">SHA-1</option>
-        <option value="SHA-224">SHA-224</option>
+        <option value="SHA-224">SHA-224</option> -->
         <option value="SHA-256">SHA-256</option>
       </select>
     </div>    
     <div class="form-group">
       <label for="snmp_priv_proto">Priv Protocol</label>
       <select name="snmp_priv_proto" id="snmp_priv_proto">
-        <option value="DES">DES</option>
+        <!-- <option value="DES">DES</option> -->
         <option value="AES">AES</option>
       </select>
     </div>
   </div>
-  <button type="submit">Save</button>
+  <div class="form-actions">
+    <button type="submit" class="btn">Save Server</button>
+    <a href="{{ url_for('server.servers') }}" class="btn btn-secondary"
+      >Cancel</a
+    >
+  </div>
 </form>
 <script>
   function toggleSnmpFields() {
@@ -78,9 +113,12 @@
     if (version === "v3") {
       v3Fields.style.display = "block";
       communityGroup.style.display = "none";
-    } else {
+    } else if (version === "v2c") {
       v3Fields.style.display = "none";
       communityGroup.style.display = "block";
+    } else {
+      v3Fields.style.display = "none";
+      communityGroup.style.display = "none";
     }
   }
   document.addEventListener("DOMContentLoaded", toggleSnmpFields);

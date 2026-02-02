@@ -39,6 +39,11 @@
   </tbody>
 </table>
 {% else %}
-<p class="no-data">No servers found. <a href="{{ url_for('server.add_server') }}">Add a server</a></p>
+<div class="no-data">
+  <p>No servers found.</p>
+  <p>
+    <a href="{{ url_for('server.add_server') }}" class="btn">+ Add your first server</a>
+  </p>
+</div>
 {% endif %}
 {% endblock %}
