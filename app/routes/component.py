@@ -2,10 +2,12 @@ from flask import Blueprint, render_template, request, redirect, url_for, flash,
 from flask_login import login_required, current_user
 from app import db
 from app.models.server import Server, Component
+from app.models.metric import Metric
 from app.validators import (
     admin_required, validate_required, validate_oid, 
     validate_category, ValidationError
 )
+from sqlalchemy import desc
 import logging
 
 logger = logging.getLogger(__name__)
@@ -83,10 +85,23 @@ def components(server_id):
         )
         components = pagination.items
         
+        # Get latest metrics for each component (like dashboard)
+        components_data = []
+        for component in components:
+            latest_metric = Metric.query.filter_by(
+                server_id=server_id,
+                component_id=component.id
+            ).order_by(desc(Metric.timestamp)).first()
+            
+            components_data.append({
+                'component': component,
+                'metric': latest_metric
+            })
+        
         return render_template(
             'components.html',
             server=server,
-            components=components,
+            components_data=components_data,
             pagination=pagination
         )
     except Exception as e:

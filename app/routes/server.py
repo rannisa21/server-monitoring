@@ -27,6 +27,16 @@ def edit_server(server_id):
             brand = validate_brand(request.form.get('brand'))
             snmp_version = validate_snmp_version(request.form.get('snmp_version'))
             
+            # Check for duplicate server name (exclude current server)
+            existing_name = Server.query.filter(Server.name.ilike(name), Server.id != server.id).first()
+            if existing_name:
+                raise ValidationError(f'A server with name "{name}" already exists', 'name')
+            
+            # Check for duplicate IP (exclude current server)
+            existing_ip = Server.query.filter(Server.ip == ip, Server.id != server.id).first()
+            if existing_ip:
+                raise ValidationError(f'A server with IP {ip} already exists', 'ip')
+            
             # SNMP v2c requires community string
             community = request.form.get('community', '').strip()
             if snmp_version == 'v2c' and not community:
@@ -165,6 +175,11 @@ def add_server():
             ip = validate_ip_address(request.form.get('ip'))
             brand = validate_brand(request.form.get('brand'))
             snmp_version = validate_snmp_version(request.form.get('snmp_version'))
+            
+            # Check for duplicate server name
+            existing_name = Server.query.filter(Server.name.ilike(name)).first()
+            if existing_name:
+                raise ValidationError(f'A server with name "{name}" already exists', 'name')
             
             # Check for duplicate IP
             existing_server = Server.query.filter_by(ip=ip).first()

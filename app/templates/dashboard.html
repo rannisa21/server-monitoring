@@ -153,11 +153,13 @@
     <table class="data-table" id="dashboardTable">
         <thead>
             <tr>
+                <th>No</th>
                 <th>Server</th>
+                <th>IP</th>
+                <th>Brand</th>
                 <th>Component</th>
                 <th>Category</th>
                 <th>OID</th>
-                <th>Brand</th>
                 <th>Value</th>
                 <th>Timestamp</th>
                 <th>Status</th>
@@ -166,11 +168,13 @@
         <tbody>
             {% for item in dashboard_data %}
             <tr class="{% if item.metric %}status-row-{{ item.metric.status|lower }}{% else %}status-row-unknown{% endif %}">
+                <td>{{ loop.index }}</td>
                 <td><strong>{{ item.server.name }}</strong></td>
+                <td>{{ item.server.ip }}</td>
+                <td>{{ item.server.brand }}</td>
                 <td>{{ item.component.name }}</td>
                 <td><span class="category-badge {{ item.component.category }}">{{ item.component.category }}</span></td>
                 <td><code>{{ item.component.oid }}</code></td>
-                <td>{{ item.server.brand }}</td>
                 <td>{{ item.metric.value if item.metric else '-' }}</td>
                 <td>{{ item.metric.timestamp.strftime('%Y-%m-%d %H:%M:%S') if item.metric else '-' }}</td>
                             <td>
@@ -183,7 +187,7 @@
             </tr>
             {% else %}
             <tr>
-                <td colspan="8" class="text-center">No data available</td>
+                <td colspan="10" class="text-center">No data available</td>
             </tr>
             {% endfor %}
         </tbody>
@@ -337,17 +341,19 @@ function updateTableView(data) {
     if (!tbody) return;
     
     if (data.length === 0) {
-        tbody.innerHTML = '<tr><td colspan="8" class="text-center">No data available</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="10" class="text-center">No data available</td></tr>';
         return;
     }
     
-    tbody.innerHTML = data.map(item => `
+    tbody.innerHTML = data.map((item, index) => `
         <tr class="${getRowClass(item.metric_status)}">
+            <td>${index + 1}</td>
             <td><strong>${escapeHtml(item.server_name)}</strong></td>
+            <td>${escapeHtml(item.server_ip || '')}</td>
+            <td>${escapeHtml(item.server_brand || '')}</td>
             <td>${escapeHtml(item.component_name)}</td>
             <td><span class="category-badge ${item.category}">${escapeHtml(item.category)}</span></td>
             <td><code>${escapeHtml(item.component_oid)}</code></td>
-            <td>${escapeHtml(item.server_brand || '')}</td>
             <td>${item.metric_value !== null ? escapeHtml(item.metric_value) : '-'}</td>
             <td>${item.metric_timestamp || '-'}</td>
             <td>${getStatusBadge(item.metric_status)}</td>
