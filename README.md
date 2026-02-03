@@ -62,7 +62,7 @@ A centralized web-based server monitoring system using Flask, Postgres, SNMP (v2
 
 4. Default admin credentials (change after first login):
    - Username: `admin`
-   - Password: `admin123`
+   - Password: `admin1234`
 
 ## Environment Variables
 

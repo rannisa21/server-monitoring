@@ -32,7 +32,7 @@ def init_database():
         admin = User.query.filter_by(role=RoleEnum.admin).first()
         if not admin:
             print("\n👤 Membuat admin user default...")
-            password_hash = bcrypt.generate_password_hash('admin123').decode('utf-8')
+            password_hash = bcrypt.generate_password_hash('admin1234').decode('utf-8')
             admin = User(
                 username='admin',
                 password_hash=password_hash,
@@ -42,7 +42,7 @@ def init_database():
             db.session.commit()
             print("✅ Admin default dibuat:")
             print("   Username: admin")
-            print("   Password: admin123")
+            print("   Password: admin1234")
             print("   ⚠️  PENTING: Ganti password setelah login pertama!")
         else:
             print(f"\n✅ Admin user sudah ada: {admin.username}")

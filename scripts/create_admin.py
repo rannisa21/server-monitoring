@@ -61,8 +61,8 @@ def main():
     # Get password
     import getpass
     password = getpass.getpass("Masukkan password: ")
-    if len(password) < 6:
-        print("❌ Password minimal 6 karakter!")
+    if len(password) < 8:
+        print("❌ Password minimal 8 karakter!")
         sys.exit(1)
     
     password_confirm = getpass.getpass("Konfirmasi password: ")

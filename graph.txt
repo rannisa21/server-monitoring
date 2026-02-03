@@ -1,1 +1,139 @@
 git log --all --decorate --oneline --graph
+
+# README
+
+Dokumen ini merangkum pembahasan di chatroom terkait **Git** dan **Docker Compose**, ditujukan sebagai panduan cepat (cheat sheet + workflow) untuk kebutuhan development harian.
+
+---
+
+## 1. Git – Perintah yang Paling Sering Digunakan
+
+### Perintah Dasar
+
+* `git init` → Inisialisasi repository Git baru
+* `git clone <url>` → Clone repository dari remote
+* `git status` → Cek status file (modified, staged, untracked)
+* `git add . / <file>` → Menambahkan file ke staging area
+* `git commit -m "message"` → Menyimpan perubahan ke repository lokal
+
+### Branching & Merge
+
+* `git branch` → Lihat / buat / hapus branch
+* `git checkout <branch>` / `git switch <branch>` → Pindah branch
+* `git merge <branch>` → Menggabungkan branch ke branch aktif
+
+### Remote Repository
+
+* `git remote -v` → Cek remote repository
+* `git pull origin <branch>` → Ambil + merge perubahan dari remote
+* `git push origin <branch>` → Kirim commit ke remote
+
+### Tracking & History
+
+* `git log --oneline` → Lihat riwayat commit singkat
+* `git diff` → Lihat perbedaan perubahan kode
+
+### Undo & Recovery
+
+* `git reset` → Membatalkan staging / commit (berisiko)
+* `git revert <commit>` → Membatalkan commit dengan aman
+* `git stash` → Simpan perubahan sementara
+
+---
+
+## 2. Git Fetch – Konsep Penting
+
+`git fetch` digunakan untuk **mengambil update dari remote TANPA mengubah kode lokal**.
+
+* Aman dipakai kapan saja
+* Tidak melakukan merge otomatis
+
+Perbandingan:
+
+* `git fetch` → Ambil info saja
+* `git pull` → Fetch + merge (langsung ubah kode)
+
+Contoh:
+
+```bash
+git fetch origin
+git diff main origin/main
+```
+
+---
+
+## 3. Merge Branch `host` ke `main`
+
+### Langkah Standar
+
+```bash
+git switch main
+git pull origin main
+git merge host
+git push origin main
+```
+
+Jika terjadi conflict:
+
+1. Cek file conflict (`git status`)
+2. Perbaiki manual
+3. `git add .`
+4. `git commit`
+5. `git push`
+
+---
+
+## 4. Docker Compose – Hapus Semua Resource
+
+### Reset Project Docker Compose (Umum & Aman)
+
+```bash
+docker compose down -v
+```
+
+Menghapus container, network, dan volume (data DB ikut terhapus).
+
+### Reset + Hapus Image
+
+```bash
+docker compose down -v --rmi all
+```
+
+### Bersih Total Docker (Global – Hati-hati)
+
+```bash
+docker system prune -a --volumes
+```
+
+Menghapus semua container, image, network, dan volume yang tidak terpakai.
+
+### Workflow Umum Reset Project
+
+```bash
+docker compose down -v
+docker compose up --build -d
+```
+
+---
+
+## 5. Workflow Rekomendasi Harian
+
+### Git
+
+1. `git status`
+2. `git add .`
+3. `git commit`
+4. `git fetch` (cek update)
+5. `git merge` / `git pull`
+6. `git push`
+
+### Docker
+
+* Gunakan `docker compose down -v` saat butuh reset
+* Gunakan `--build` saat ada perubahan code atau dependency
+
+---
+
+## Catatan Akhir
+
+Dokumen ini cocok digunakan sebagai **README internal / catatan pribadi developer**, terutama untuk workflow Git dan Docker Compose pada project backend / monitoring system.

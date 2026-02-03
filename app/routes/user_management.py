@@ -43,7 +43,7 @@ def edit_user(user_id):
             
             # Only update password if provided
             if password:
-                validate_password(password, min_length=6)
+                validate_password(password)  # Uses default min_length=8
                 from app import bcrypt
                 user.password_hash = bcrypt.generate_password_hash(password).decode('utf-8')
             
@@ -103,7 +103,7 @@ def user_management():
     if request.method == 'POST':
         try:
             username = validate_username(request.form.get('username'))
-            password = validate_password(request.form.get('password'), min_length=6)
+            password = validate_password(request.form.get('password'))  # Uses default min_length=8
             role = validate_role(request.form.get('role'))
             
             # Check for duplicate username
