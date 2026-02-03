@@ -8,6 +8,7 @@ from datetime import datetime
 from app import db
 from app.validators import admin_required, validate_month_year, ValidationError
 from sqlalchemy import extract
+from openpyxl.utils import get_column_letter
 import logging
 
 logger = logging.getLogger(__name__)
@@ -66,7 +67,8 @@ def report():
                         df[col].astype(str).map(len).max(),
                         len(col)
                     ) + 2
-                    worksheet.column_dimensions[chr(65 + idx)].width = min(max_length, 50)
+                    column_letter = get_column_letter(idx + 1)  # get_column_letter is 1-indexed
+                    worksheet.column_dimensions[column_letter].width = min(max_length, 50)
             
             output.seek(0)
             filename = f"report_{year}_{month:02d}.xlsx"
