@@ -26,8 +26,8 @@ def upgrade():
     sa.Column('brand', sa.String(length=64), nullable=False),
     sa.Column('snmp_version', sa.String(length=8), nullable=False),
     sa.Column('snmp_auth_user', sa.String(length=128), nullable=True),
-    sa.Column('snmp_auth_pass', sa.String(length=128), nullable=True),
-    sa.Column('snmp_priv_pass', sa.String(length=128), nullable=True),
+    sa.Column('snmp_auth_pass', sa.String(length=256), nullable=True),
+    sa.Column('snmp_priv_pass', sa.String(length=256), nullable=True),
     sa.Column('snmp_auth_proto', sa.String(length=16), nullable=True),
     sa.Column('snmp_priv_proto', sa.String(length=16), nullable=True),
     sa.PrimaryKeyConstraint('id')
