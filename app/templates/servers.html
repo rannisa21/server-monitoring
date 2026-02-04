@@ -1,49 +1,148 @@
 ﻿{% extends 'base.html' %}
 {% block content %}
-<h2>Server Management</h2>
+<div class="page-header">
+  <h2>Server Management</h2>
+  <div class="header-actions">
+    <span class="total-info">{{ pagination.total if pagination else servers|length }} servers</span>
+    <a href="{{ url_for('server.add_server') }}" class="btn btn-success">Add Server</a>
+  </div>
+</div>
 
-<a href="{{ url_for('server.add_server') }}" class="btn" style="margin-bottom: 1rem;">+ Add Server</a>
+<!-- Filter, Search, and Sort Section -->
+<div class="dashboard-toolbar">
+  <form method="get" action="{{ url_for('server.servers') }}" class="filter-form" id="serverForm">
+    <div class="filter-row">
+      <!-- Search -->
+      <div class="filter-item">
+        <input type="text" name="search" id="search" value="{{ search_query }}" placeholder="Search server name or IP...">
+      </div>
+
+      <!-- Brand Filter -->
+      <div class="filter-item">
+        <select name="brand" id="brand" onchange="this.form.submit()">
+          <option value="">All Brands</option>
+          {% for brand in brands %}
+          <option value="{{ brand }}" {% if brand_filter == brand %}selected{% endif %}>{{ brand }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <!-- SNMP Version Filter -->
+      <div class="filter-item">
+        <select name="snmp_version" id="snmp_version" onchange="this.form.submit()">
+          <option value="">All SNMP Versions</option>
+          <option value="v2c" {% if snmp_filter == 'v2c' %}selected{% endif %}>SNMP v2c</option>
+          <option value="v3" {% if snmp_filter == 'v3' %}selected{% endif %}>SNMP v3</option>
+        </select>
+      </div>
+
+      <!-- Sort -->
+      <div class="filter-item sort-group">
+        <select name="sort" id="sort" onchange="this.form.submit()">
+          <option value="name" {% if sort_by == 'name' %}selected{% endif %}>Server Name</option>
+          <option value="ip" {% if sort_by == 'ip' %}selected{% endif %}>IP Address</option>
+          <option value="brand" {% if sort_by == 'brand' %}selected{% endif %}>Brand</option>
+          <option value="snmp_version" {% if sort_by == 'snmp_version' %}selected{% endif %}>SNMP Version</option>
+        </select>
+        <select name="order" id="order" onchange="this.form.submit()">
+          <option value="asc" {% if sort_order == 'asc' %}selected{% endif %}>↑ Asc</option>
+          <option value="desc" {% if sort_order == 'desc' %}selected{% endif %}>↓ Desc</option>
+        </select>
+      </div>
+
+      <!-- Actions -->
+      <div class="filter-item filter-actions">
+        <button type="submit" class="btn btn-primary btn-sm">Apply</button>
+        {% if search_query or brand_filter or snmp_filter %}
+        <a href="{{ url_for('server.servers') }}" class="btn btn-secondary btn-sm">Clear</a>
+        {% endif %}
+      </div>
+    </div>
+  </form>
+</div>
 
 {% if servers %}
-<table class="server-table">
-  <thead>
-    <tr>
-      <th>NO</th>
-      <th>Server</th>
-      <th>IP</th>
-      <th>Brand</th>
-      <th>SNMP Version</th>
-      <th>Components</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for server in servers %}
-    <tr>
-      <td>{{ loop.index }}</td>
-      <td>{{ server.name }}</td>
-      <td>{{ server.ip }}</td>
-      <td>{{ server.brand }}</td>
-      <td>{{ server.snmp_version }}</td>
-      <td><span class="badge">{{ server.components|length }}</span></td>
-      <td>
-        <a href="{{ url_for('component.components', server_id=server.id) }}" class="btn btn-sm btn-primary">View</a>
-        <!-- <a href="{{ url_for('server.edit_server', server_id=server.id) }}" class="btn btn-sm">Edit</a> -->
-        <form action="{{ url_for('server.delete_server', server_id=server.id) }}" method="post" style="display: inline" onsubmit="return confirm('Delete this server?');">
-          <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-          <button type="submit" class="btn btn-sm btn-danger">Delete</button>
-        </form>
-      </td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
+<div class="dashboard-table-wrapper">
+  <table class="data-table" id="serverTable">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>
+          <a href="{{ url_for('server.servers', search=search_query, brand=brand_filter, snmp_version=snmp_filter, sort='name', order='desc' if sort_by == 'name' and sort_order == 'asc' else 'asc') }}" class="sort-link {% if sort_by == 'name' %}active{% endif %}">
+            Server {% if sort_by == 'name' %}{{ '↑' if sort_order == 'asc' else '↓' }}{% endif %}
+          </a>
+        </th>
+        <th>
+          <a href="{{ url_for('server.servers', search=search_query, brand=brand_filter, snmp_version=snmp_filter, sort='ip', order='desc' if sort_by == 'ip' and sort_order == 'asc' else 'asc') }}" class="sort-link {% if sort_by == 'ip' %}active{% endif %}">
+            IP {% if sort_by == 'ip' %}{{ '↑' if sort_order == 'asc' else '↓' }}{% endif %}
+          </a>
+        </th>
+        <th>
+          <a href="{{ url_for('server.servers', search=search_query, brand=brand_filter, snmp_version=snmp_filter, sort='brand', order='desc' if sort_by == 'brand' and sort_order == 'asc' else 'asc') }}" class="sort-link {% if sort_by == 'brand' %}active{% endif %}">
+            Brand {% if sort_by == 'brand' %}{{ '↑' if sort_order == 'asc' else '↓' }}{% endif %}
+          </a>
+        </th>
+        <th>
+          <a href="{{ url_for('server.servers', search=search_query, brand=brand_filter, snmp_version=snmp_filter, sort='snmp_version', order='desc' if sort_by == 'snmp_version' and sort_order == 'asc' else 'asc') }}" class="sort-link {% if sort_by == 'snmp_version' %}active{% endif %}">
+            SNMP Version {% if sort_by == 'snmp_version' %}{{ '↑' if sort_order == 'asc' else '↓' }}{% endif %}
+          </a>
+        </th>
+        <th>Components</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for server in servers %}
+      <tr>
+        <td>{{ (pagination.page - 1) * pagination.per_page + loop.index if pagination else loop.index }}</td>
+        <td><strong>{{ server.name }}</strong></td>
+        <td>{{ server.ip }}</td>
+        <td>{{ server.brand }}</td>
+        <td>{{ server.snmp_version }}</td>
+        <td><span class="badge">{{ server.components|length }}</span></td>
+        <td class="actions">
+          <a href="{{ url_for('component.components', server_id=server.id) }}" class="btn btn-sm btn-primary">View</a>
+          <!-- <a href="{{ url_for('server.edit_server', server_id=server.id) }}" class="btn btn-sm">Edit</a> -->
+          <form action="{{ url_for('server.delete_server', server_id=server.id) }}" method="post" style="display: inline" onsubmit="return confirm('Delete this server and all its components?');">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+          </form>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<!-- Pagination -->
+{% if pagination and pagination.pages > 1 %}
+<div class="pagination">
+  {% if pagination.has_prev %}
+  <a href="{{ url_for('server.servers', page=pagination.prev_num, search=search_query, brand=brand_filter, snmp_version=snmp_filter, sort=sort_by, order=sort_order) }}" class="btn btn-sm">&laquo; Prev</a>
+  {% endif %}
+
+  <span class="page-info">Page {{ pagination.page }} of {{ pagination.pages }} ({{ pagination.total }} total)</span>
+
+  {% if pagination.has_next %}
+  <a href="{{ url_for('server.servers', page=pagination.next_num, search=search_query, brand=brand_filter, snmp_version=snmp_filter, sort=sort_by, order=sort_order) }}" class="btn btn-sm">Next &raquo;</a>
+  {% endif %}
+</div>
+{% endif %}
+
 {% else %}
 <div class="no-data">
+  {% if search_query or brand_filter or snmp_filter %}
+  <p>No servers found matching your criteria.</p>
+  <p>
+    <a href="{{ url_for('server.servers') }}" class="btn btn-secondary">Clear Filters</a>
+    <a href="{{ url_for('server.add_server') }}" class="btn">Add Server</a>
+  </p>
+  {% else %}
   <p>No servers found.</p>
   <p>
     <a href="{{ url_for('server.add_server') }}" class="btn">+ Add your first server</a>
   </p>
+  {% endif %}
 </div>
 {% endif %}
 {% endblock %}

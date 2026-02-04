@@ -80,9 +80,45 @@ def components(server_id):
         page = request.args.get('page', 1, type=int)
         per_page = current_app.config.get('ITEMS_PER_PAGE', 20)
         
-        pagination = Component.query.filter_by(server_id=server_id).paginate(
-            page=page, per_page=per_page, error_out=False
-        )
+        # Get filter/search parameters
+        search_query = request.args.get('search', '').strip()
+        category_filter = request.args.get('category', '')
+        status_filter = request.args.get('status', '')
+        sort_by = request.args.get('sort', 'name')
+        sort_order = request.args.get('order', 'asc')
+        
+        # Build query
+        query = Component.query.filter_by(server_id=server_id)
+        
+        # Apply search
+        if search_query:
+            query = query.filter(
+                db.or_(
+                    Component.name.ilike(f'%{search_query}%'),
+                    Component.oid.ilike(f'%{search_query}%')
+                )
+            )
+        
+        # Apply category filter
+        if category_filter:
+            query = query.filter(Component.category == category_filter)
+        
+        # Apply sorting
+        if sort_by == 'name':
+            sort_column = Component.name
+        elif sort_by == 'category':
+            sort_column = Component.category
+        elif sort_by == 'oid':
+            sort_column = Component.oid
+        else:
+            sort_column = Component.name
+        
+        if sort_order == 'desc':
+            query = query.order_by(sort_column.desc())
+        else:
+            query = query.order_by(sort_column.asc())
+        
+        pagination = query.paginate(page=page, per_page=per_page, error_out=False)
         components = pagination.items
         
         # Get latest metrics for each component (like dashboard)
@@ -98,11 +134,30 @@ def components(server_id):
                 'metric': latest_metric
             })
         
+        # Filter by status (after getting metrics)
+        if status_filter:
+            if status_filter == 'no_data':
+                components_data = [item for item in components_data if item['metric'] is None]
+            else:
+                components_data = [item for item in components_data if item['metric'] and item['metric'].status == status_filter]
+        
+        # Get unique categories for filter dropdown
+        categories = db.session.query(Component.category).filter(
+            Component.server_id == server_id
+        ).distinct().all()
+        categories = [c[0] for c in categories]
+        
         return render_template(
             'components.html',
             server=server,
             components_data=components_data,
-            pagination=pagination
+            pagination=pagination,
+            search_query=search_query,
+            category_filter=category_filter,
+            status_filter=status_filter,
+            sort_by=sort_by,
+            sort_order=sort_order,
+            categories=categories
         )
     except Exception as e:
         logger.error(f'Error loading components for server {server_id}: {e}', exc_info=True)

@@ -11,12 +11,12 @@
         <!-- View Type Toggle Buttons -->
         <div class="view-toggle">
             <a href="{{ url_for('dashboard.dashboard', view='table', search=search_query, category=category_filter, status=status_filter, sort=sort_by, order=sort_order, **{'server_id': server_filter}) }}" 
-               class="btn-view {% if view_type == 'table' %}active{% endif %}">📊 Table View</a>
+               class="btn-view {% if view_type == 'table' %}active{% endif %}">☰</a>
             <a href="{{ url_for('dashboard.dashboard', view='card', search=search_query, category=category_filter, status=status_filter, sort=sort_by, order=sort_order, **{'server_id': server_filter}) }}" 
-               class="btn-view {% if view_type == 'card' %}active{% endif %}">🗂️ Card View</a>
+               class="btn-view {% if view_type == 'card' %}active{% endif %}">▦</a>
         </div>
         <button type="button" class="btn btn-success" onclick="openReportModal()">
-            <span>📥</span> Download Report
+            Download Report
         </button>
     </div>
 </div>

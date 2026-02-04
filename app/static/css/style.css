@@ -1174,7 +1174,7 @@ code {
 }
 
 .btn-view {
-  padding: 0.5rem 0.875rem;
+  padding: 0.25rem 0.50rem;
   border: none;
   border-radius: 3px;
   background: transparent;
@@ -1377,6 +1377,90 @@ code {
 
 #last-refresh-time {
   white-space: nowrap;
+}
+
+/* ===== Sort Links in Table Headers ===== */
+.sort-link {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: color 0.15s;
+}
+
+.sort-link:hover {
+  color: #fff;
+}
+
+.sort-link.active {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ===== Brand Badges ===== */
+.brand-badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.brand-badge.hp,
+.brand-badge.hpe {
+  background: #e3f2fd;
+  color: #0d47a1;
+}
+
+.brand-badge.dell {
+  background: #e8f5e9;
+  color: #1b5e20;
+}
+
+.brand-badge.lenovo {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.brand-badge.ibm {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.brand-badge.cisco {
+  background: #e0f2f1;
+  color: #00695c;
+}
+
+.brand-badge.supermicro {
+  background: #fce4ec;
+  color: #880e4f;
+}
+
+.brand-badge.huawei {
+  background: #ffebee;
+  color: #c62828;
+}
+
+/* ===== SNMP Badges ===== */
+.snmp-badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.snmp-badge.v2c {
+  background: #e8eaf6;
+  color: #3949ab;
+}
+
+.snmp-badge.v3 {
+  background: #e0f7fa;
+  color: #00838f;
 }
 
 /* ===== Header Actions Spacing ===== */
