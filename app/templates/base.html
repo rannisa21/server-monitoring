@@ -41,8 +41,17 @@
           {% endif %}
         </nav>
         <div class="sidebar-user">
-          <span>{{ current_user.username }}</span>
-          <a href="{{ url_for('auth.logout') }}">Logout</a>
+          <a
+            href="{{ url_for('user.profile') }}"
+            class="sidebar-user-link {% if request.endpoint == 'user.profile' %}active{% endif %}"
+          >
+            <span class="sidebar-icon">👤</span>
+            <span>{{ current_user.username }}</span>
+          </a>
+          <a href="{{ url_for('auth.logout') }}" class="sidebar-user-link logout-link">
+            <span class="sidebar-icon">⏻</span>
+            <span>Logout</span>
+          </a>
         </div>
       </aside>
       <main class="main-content">

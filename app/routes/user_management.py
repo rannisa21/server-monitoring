@@ -29,6 +29,7 @@ def edit_user(user_id):
             username = validate_username(request.form.get('username'))
             role = validate_role(request.form.get('role'))
             password = request.form.get('password', '').strip()
+            confirm_password = request.form.get('confirm_password', '').strip()
             
             # Check for duplicate username (excluding current user)
             existing = User.query.filter(
@@ -43,6 +44,8 @@ def edit_user(user_id):
             
             # Only update password if provided
             if password:
+                if password != confirm_password:
+                    raise ValidationError('Password dan konfirmasi password tidak sama', 'password')
                 validate_password(password)  # Uses default min_length=8
                 from app import bcrypt
                 user.password_hash = bcrypt.generate_password_hash(password).decode('utf-8')
