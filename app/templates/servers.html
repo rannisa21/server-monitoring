@@ -4,7 +4,7 @@
   <h2>Server Management</h2>
   <div class="header-actions">
     <span class="total-info">{{ pagination.total if pagination else servers|length }} servers</span>
-    <a href="{{ url_for('server.add_server') }}" class="btn btn-success">Add Server</a>
+    <button type="button" class="btn btn-success" onclick="window.location.href='{{ url_for('server.add_server') }}'">Add Server</button>
   </div>
 </div>
 
