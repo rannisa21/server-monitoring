@@ -99,6 +99,45 @@ def delete_user(user_id):
     return redirect(url_for('user_management.user_management'))
 
 
+@user_management_bp.route('/admin/users/add', methods=['GET', 'POST'], endpoint='add_user')
+@login_required
+@admin_required
+def add_user():
+    if request.method == 'POST':
+        try:
+            username = validate_username(request.form.get('username'))
+            password = validate_password(request.form.get('password'))
+            confirm_password = request.form.get('confirm_password', '').strip()
+            role = validate_role(request.form.get('role'))
+            
+            if password != confirm_password:
+                raise ValidationError('Password dan konfirmasi password tidak sama', 'password')
+            
+            # Check for duplicate username
+            if User.query.filter_by(username=username).first():
+                raise ValidationError('Username sudah terdaftar!', 'username')
+            
+            from app import bcrypt
+            password_hash = bcrypt.generate_password_hash(password).decode('utf-8')
+            user = User(username=username, password_hash=password_hash, role=RoleEnum(role))
+            db.session.add(user)
+            db.session.commit()
+            
+            logger.info(f'User {user.id} ({user.username}) created by {current_user.username}')
+            flash('User berhasil ditambahkan!', 'success')
+            return redirect(url_for('user_management.user_management'))
+            
+        except ValidationError as e:
+            flash(e.message, 'danger')
+            logger.warning(f'Validation error adding user: {e.message}')
+        except Exception as e:
+            db.session.rollback()
+            logger.error(f'Error adding user: {e}', exc_info=True)
+            flash('An error occurred while adding the user.', 'danger')
+    
+    return render_template('add_user.html')
+
+
 @user_management_bp.route('/admin/users', methods=['GET', 'POST'])
 @login_required
 @admin_required

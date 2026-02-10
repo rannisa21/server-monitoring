@@ -1,100 +1,98 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="page-header">
-    <h2>Profil Saya</h2>
+    <h2>Edit Profile</h2>
 </div>
 
-<div class="profile-container" style="display: flex; gap: 2rem; flex-wrap: wrap;">
-    <!-- Username Section -->
-    <div class="card" style="flex: 1; min-width: 300px; max-width: 450px;">
-        <div class="card-header">
-            <h3>Ubah Username</h3>
-        </div>
-        <form method="post" class="card-body">
-            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
-            <input type="hidden" name="action" value="update_username" />
-            
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input
-                    type="text"
-                    name="username"
-                    id="username"
-                    value="{{ current_user.username }}"
-                    required
-                    minlength="3"
-                    maxlength="64"
-                    pattern="[a-zA-Z0-9_]+"
-                    title="Hanya huruf, angka, dan underscore"
-                />
-                <small style="color: #888;">Hanya huruf, angka, dan underscore yang diperbolehkan</small>
-            </div>
-            
-            <div class="form-actions">
-                <button type="submit" class="btn btn-primary">Ubah Username</button>
-            </div>
-        </form>
+<!-- Username Section -->
+<div class="card" style="max-width: 500px;">
+    <div class="card-header">
+        <h3>Ubah Username</h3>
     </div>
-    
-    <!-- Password Section -->
-    <div class="card" style="flex: 1; min-width: 300px; max-width: 450px;">
-        <div class="card-header">
-            <h3>Ubah Password</h3>
+    <form method="post" class="card-body">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+        <input type="hidden" name="action" value="update_username" />
+        
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input
+                type="text"
+                name="username"
+                id="username"
+                value="{{ current_user.username }}"
+                required
+                minlength="3"
+                maxlength="64"
+                pattern="[a-zA-Z0-9_]+"
+                title="Hanya huruf, angka, dan underscore"
+            />
+            <small class="help-text">Hanya huruf, angka, dan underscore yang diperbolehkan</small>
         </div>
-        <form method="post" class="card-body">
-            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
-            <input type="hidden" name="action" value="update_password" />
-            
-            <div class="form-group">
-                <label for="current_password">Password Saat Ini</label>
-                <div class="password-wrapper">
-                    <input type="password" name="current_password" id="current_password" required placeholder="Masukkan password saat ini" />
-                    <button type="button" class="toggle-password" onclick="togglePassword('current_password')" title="Show/Hide Password">
-                        <span class="eye-icon">⌣</span>
-                    </button>
-                </div>
-            </div>
-            
-            <div class="form-group">
-                <label for="new_password">Password Baru</label>
-                <div class="password-wrapper">
-                    <input type="password" name="new_password" id="new_password" required minlength="8" placeholder="Min 8 karakter" />
-                    <button type="button" class="toggle-password" onclick="togglePassword('new_password')" title="Show/Hide Password">
-                        <span class="eye-icon">⌣</span>
-                    </button>
-                </div>
-            </div>
-            
-            <div class="form-group">
-                <label for="confirm_password">Konfirmasi Password Baru</label>
-                <div class="password-wrapper">
-                    <input type="password" name="confirm_password" id="confirm_password" required minlength="8" placeholder="Ulangi password baru" />
-                    <button type="button" class="toggle-password" onclick="togglePassword('confirm_password')" title="Show/Hide Password">
-                        <span class="eye-icon">⌣</span>
-                    </button>
-                </div>
-            </div>
-            
-            <div class="form-actions">
-                <button type="submit" class="btn btn-primary">Ubah Password</button>
-            </div>
-        </form>
+        
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Ubah Username</button>
+        </div>
+    </form>
+</div>
+
+<!-- Password Section -->
+<div class="card" style="max-width: 500px; margin-top: 1.5rem;">
+    <div class="card-header">
+        <h3>Ubah Password</h3>
     </div>
+    <form method="post" class="card-body">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+        <input type="hidden" name="action" value="update_password" />
+        
+        <div class="form-group">
+            <label for="current_password">Password Saat Ini</label>
+            <div class="password-wrapper">
+                <input type="password" name="current_password" id="current_password" required placeholder="Masukkan password saat ini" />
+                <button type="button" class="toggle-password" onclick="togglePassword('current_password')" title="Show/Hide Password">
+                    <span class="eye-icon">⌣</span>
+                </button>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="new_password">Password Baru</label>
+            <div class="password-wrapper">
+                <input type="password" name="new_password" id="new_password" required minlength="8" placeholder="Min 8 karakter" />
+                <button type="button" class="toggle-password" onclick="togglePassword('new_password')" title="Show/Hide Password">
+                    <span class="eye-icon">⌣</span>
+                </button>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="confirm_password">Konfirmasi Password Baru</label>
+            <div class="password-wrapper">
+                <input type="password" name="confirm_password" id="confirm_password" required minlength="8" placeholder="Ulangi password baru" />
+                <button type="button" class="toggle-password" onclick="togglePassword('confirm_password')" title="Show/Hide Password">
+                    <span class="eye-icon">⌣</span>
+                </button>
+            </div>
+        </div>
+        
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Ubah Password</button>
+        </div>
+    </form>
 </div>
 
 <!-- Account Info Section -->
-<div class="card" style="max-width: 450px; margin-top: 2rem;">
+<div class="card" style="max-width: 500px; margin-top: 1.5rem;">
     <div class="card-header">
         <h3>Informasi Akun</h3>
     </div>
     <div class="card-body">
-        <div class="info-row" style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid #eee;">
-            <span style="font-weight: 500;">Username:</span>
-            <span>{{ current_user.username }}</span>
+        <div class="form-group" style="margin-bottom: 0.5rem;">
+            <label>Username</label>
+            <p style="margin: 0; font-size: 0.875rem;">{{ current_user.username }}</p>
         </div>
-        <div class="info-row" style="display: flex; justify-content: space-between; padding: 0.5rem 0;">
-            <span style="font-weight: 500;">Role:</span>
-            <span class="role-badge role-{{ current_user.role.value }}">{{ current_user.role.value|upper }}</span>
+        <div class="form-group" style="margin-bottom: 0;">
+            <label>Role</label>
+            <p style="margin: 0;"><span class="role-badge role-{{ current_user.role.value }}">{{ current_user.role.value|upper }}</span></p>
         </div>
     </div>
 </div>

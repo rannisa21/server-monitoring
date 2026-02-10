@@ -4,45 +4,8 @@
     <h2>User Management</h2>
     <div class="header-actions">
         <span class="total-info">{{ pagination.total if pagination else users|length }} users</span>
-        <button type="button" class="btn btn-success" onclick="toggleAddForm()">Add User</button>
+        <a href="{{ url_for('user_management.add_user') }}" class="btn btn-success">Add User</a>
     </div>
-</div>
-
-<!-- Add User Form (Collapsible) -->
-<div id="addUserForm" class="card" style="display: none; margin-bottom: 1.5rem;">
-    <div class="card-header">
-        <h3>Add New User</h3>
-        <button type="button" class="btn-close" onclick="toggleAddForm()">&times;</button>
-    </div>
-    <form method="post" class="card-body">
-        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-        <div class="form-row">
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" name="username" id="username" required minlength="3" maxlength="64" pattern="[a-zA-Z0-9_]+" title="Only letters, numbers, and underscores allowed" placeholder="Enter username">
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <div class="password-wrapper">
-                    <input type="password" name="password" id="add_password" required minlength="8" placeholder="Min 8 characters">
-                    <button type="button" class="toggle-password" onclick="togglePassword('add_password')" title="Show/Hide Password">
-                        <span class="eye-icon">⌣</span>
-                    </button>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="role">Role</label>
-                <select name="role" id="role" required>
-                    <option value="user">User</option>
-                    <option value="admin">Admin</option>
-                </select>
-            </div>
-        </div>
-        <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Add User</button>
-            <button type="button" class="btn btn-secondary" onclick="toggleAddForm()">Cancel</button>
-        </div>
-    </form>
 </div>
 
 <!-- Toolbar: Search, Filter, Sort -->
@@ -69,7 +32,7 @@
                     <option value="desc" {% if sort_order == 'desc' %}selected{% endif %}>↓ Desc</option>
                 </select>
             </div>
-            <div class="filter-actions">
+            <div class="filter-item filter-actions">
                 <button type="submit" class="btn btn-primary btn-sm">Apply</button>
                 {% if search_query or role_filter %}
                 <a href="{{ url_for('user_management.user_management') }}" class="btn btn-secondary btn-sm">Clear</a>
@@ -81,12 +44,21 @@
 
 <!-- Users Table -->
 {% if users %}
-<table class="data-table">
+<div class="dashboard-table-wrapper">
+<table class="data-table" id="userTable">
     <thead>
         <tr>
             <th>No</th>
-            <th>Username</th>
-            <th>Role</th>
+            <th>
+                <a href="{{ url_for('user_management.user_management', search=search_query, role=role_filter, sort='username', order='desc' if sort_by == 'username' and sort_order == 'asc' else 'asc') }}" class="sort-link {% if sort_by == 'username' %}active{% endif %}">
+                    Username {% if sort_by == 'username' %}{{ '↑' if sort_order == 'asc' else '↓' }}{% endif %}
+                </a>
+            </th>
+            <th>
+                <a href="{{ url_for('user_management.user_management', search=search_query, role=role_filter, sort='role', order='desc' if sort_by == 'role' and sort_order == 'asc' else 'asc') }}" class="sort-link {% if sort_by == 'role' %}active{% endif %}">
+                    Role {% if sort_by == 'role' %}{{ '↑' if sort_order == 'asc' else '↓' }}{% endif %}
+                </a>
+            </th>
             <th>Actions</th>
         </tr>
     </thead>
@@ -111,6 +83,7 @@
         {% endfor %}
     </tbody>
 </table>
+</div>
 
 <!-- Pagination -->
 {% if pagination and pagination.pages > 1 %}
@@ -118,7 +91,7 @@
     {% if pagination.has_prev %}
     <a href="{{ url_for('user_management.user_management', page=pagination.prev_num, search=search_query, role=role_filter, sort=sort_by, order=sort_order) }}" class="btn btn-sm">&laquo; Prev</a>
     {% endif %}
-    <span class="page-info">Page {{ pagination.page }} of {{ pagination.pages }}</span>
+    <span class="page-info">Page {{ pagination.page }} of {{ pagination.pages }} ({{ pagination.total }} total)</span>
     {% if pagination.has_next %}
     <a href="{{ url_for('user_management.user_management', page=pagination.next_num, search=search_query, role=role_filter, sort=sort_by, order=sort_order) }}" class="btn btn-sm">Next &raquo;</a>
     {% endif %}
@@ -126,16 +99,11 @@
 {% endif %}
 
 {% else %}
-<div class="empty-state">
+<div class="no-data">
     <p>No users found.</p>
-    <button type="button" class="btn btn-primary" onclick="toggleAddForm()">Add First User</button>
+    <p>
+        <a href="{{ url_for('user_management.add_user') }}" class="btn">+ Add your first user</a>
+    </p>
 </div>
 {% endif %}
-
-<script>
-function toggleAddForm() {
-    var form = document.getElementById('addUserForm');
-    form.style.display = form.style.display === 'none' ? 'block' : 'none';
-}
-</script>
 {% endblock %}

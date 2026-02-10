@@ -4,7 +4,7 @@
   <h2>Server Management</h2>
   <div class="header-actions">
     <span class="total-info">{{ pagination.total if pagination else servers|length }} servers</span>
-    <button type="button" class="btn btn-success" onclick="window.location.href='{{ url_for('server.add_server') }}'">Add Server</button>
+    <a href="{{ url_for('server.add_server') }}" class="btn btn-success">Add Server</a>
   </div>
 </div>
 
@@ -21,9 +21,10 @@
       <div class="filter-item">
         <select name="brand" id="brand" onchange="this.form.submit()">
           <option value="">All Brands</option>
-          {% for brand in brands %}
-          <option value="{{ brand }}" {% if brand_filter == brand %}selected{% endif %}>{{ brand }}</option>
-          {% endfor %}
+          <option value="HPE" {% if brand_filter == 'HPE' %}selected{% endif %}>HPE</option>
+          <option value="Dell" {% if brand_filter == 'Dell' %}selected{% endif %}>Dell</option>
+          <option value="supermicro" {% if brand_filter == 'supermicro' %}selected{% endif %}>Supermicro</option>
+          <option value="custom" {% if brand_filter == 'custom' %}selected{% endif %}>Custom</option>
         </select>
       </div>
 
@@ -138,10 +139,12 @@
     <a href="{{ url_for('server.add_server') }}" class="btn">Add Server</a>
   </p>
   {% else %}
-  <p>No servers found.</p>
-  <p>
+  <div class="empty-state">
+  <p>No servers found</p>
+  <!-- <p>
     <a href="{{ url_for('server.add_server') }}" class="btn">+ Add your first server</a>
-  </p>
+  </p> -->
+  </div>
   {% endif %}
 </div>
 {% endif %}

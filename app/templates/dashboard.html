@@ -100,9 +100,10 @@
             <div class="filter-item">
                 <select name="category" id="category" onchange="this.form.submit()">
                     <option value="">All Categories</option>
-                    {% for cat in categories %}
-                    <option value="{{ cat }}" {% if category_filter == cat %}selected{% endif %}>{{ cat }}</option>
-                    {% endfor %}
+                    <option value="PSU" {% if category_filter == 'PSU' %}selected{% endif %}>PSU</option>
+                    <option value="harddisk" {% if category_filter == 'harddisk' %}selected{% endif %}>Harddisk</option>
+                    <option value="suhu" {% if category_filter == 'suhu' %}selected{% endif %}>Suhu</option>
+                    <option value="fan" {% if category_filter == 'fan' %}selected{% endif %}>Fan</option>
                 </select>
             </div>
 
@@ -155,15 +156,35 @@
         <thead>
             <tr>
                 <th>No</th>
-                <th>Server</th>
+                <th>
+                    <a href="{{ url_for('dashboard.dashboard', view='table', search=search_query, category=category_filter, status=status_filter, sort='server', order='desc' if sort_by == 'server' and sort_order == 'asc' else 'asc', **{'server_id': server_filter}) }}" class="sort-link {% if sort_by == 'server' %}active{% endif %}">
+                        Server {% if sort_by == 'server' %}{{ '↑' if sort_order == 'asc' else '↓' }}{% endif %}
+                    </a>
+                </th>
                 <th>IP</th>
                 <th>Brand</th>
-                <th>Component</th>
-                <th>Category</th>
+                <th>
+                    <a href="{{ url_for('dashboard.dashboard', view='table', search=search_query, category=category_filter, status=status_filter, sort='component', order='desc' if sort_by == 'component' and sort_order == 'asc' else 'asc', **{'server_id': server_filter}) }}" class="sort-link {% if sort_by == 'component' %}active{% endif %}">
+                        Component {% if sort_by == 'component' %}{{ '↑' if sort_order == 'asc' else '↓' }}{% endif %}
+                    </a>
+                </th>
+                <th>
+                    <a href="{{ url_for('dashboard.dashboard', view='table', search=search_query, category=category_filter, status=status_filter, sort='category', order='desc' if sort_by == 'category' and sort_order == 'asc' else 'asc', **{'server_id': server_filter}) }}" class="sort-link {% if sort_by == 'category' %}active{% endif %}">
+                        Category {% if sort_by == 'category' %}{{ '↑' if sort_order == 'asc' else '↓' }}{% endif %}
+                    </a>
+                </th>
                 <th>OID</th>
                 <th>Value</th>
-                <th>Timestamp</th>
-                <th>Status</th>
+                <th>
+                    <a href="{{ url_for('dashboard.dashboard', view='table', search=search_query, category=category_filter, status=status_filter, sort='timestamp', order='desc' if sort_by == 'timestamp' and sort_order == 'asc' else 'asc', **{'server_id': server_filter}) }}" class="sort-link {% if sort_by == 'timestamp' %}active{% endif %}">
+                        Timestamp {% if sort_by == 'timestamp' %}{{ '↑' if sort_order == 'asc' else '↓' }}{% endif %}
+                    </a>
+                </th>
+                <th>
+                    <a href="{{ url_for('dashboard.dashboard', view='table', search=search_query, category=category_filter, status=status_filter, sort='status', order='desc' if sort_by == 'status' and sort_order == 'asc' else 'asc', **{'server_id': server_filter}) }}" class="sort-link {% if sort_by == 'status' %}active{% endif %}">
+                        Status {% if sort_by == 'status' %}{{ '↑' if sort_order == 'asc' else '↓' }}{% endif %}
+                    </a>
+                </th>
             </tr>
         </thead>
         <tbody>
@@ -178,7 +199,7 @@
                 <td><code>{{ item.component.oid }}</code></td>
                 <td>{{ item.metric.value if item.metric else '-' }}</td>
                 <td>{{ item.metric.timestamp.strftime('%Y-%m-%d %H:%M:%S') if item.metric else '-' }}</td>
-                            <td>
+                <td>
                     {% if item.metric %}
                     <span class="status-badge status-{{ item.metric.status|lower }}">{{ item.metric.status }}</span>
                     {% else %}
@@ -193,12 +214,17 @@
 {% else %}
 <div class="no-data">
     {% if search_query or server_filter or category_filter or status_filter %}
-    <p>No monitoring data found matching your criteria.</p>
-    <p>
+    <div class="empty-state">
+    <p>No data available</p>
+    <!-- <p>
         <a href="{{ url_for('dashboard.dashboard') }}" class="btn btn-secondary">Clear Filters</a>
         <a href="{{ url_for('server.servers') }}" class="btn">Add Server & Component</a>
-    </p>
-    {% else %}<p>No data available</p>
+    </p> -->
+    </div>
+    {% else %}
+    <div class="empty-state">
+        <p>No data available</p>
+    </div>
     {% endif %}
 </div>
 {% endif %}

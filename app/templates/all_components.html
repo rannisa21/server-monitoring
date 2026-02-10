@@ -64,20 +64,10 @@
           onchange="document.getElementById('componentForm').submit()"
         >
           <option value="">All Categories</option>
-          {% for cat in categories %}
-          <option
-            value="{{ cat }}"
-            {%
-            if
-            category_filter=""
-            ="cat"
-            %}selected{%
-            endif
-            %}
-          >
-            {{ cat }}
-          </option>
-          {% endfor %}
+          <option value="PSU" {% if category_filter == 'PSU' %}selected{% endif %}>PSU</option>
+          <option value="harddisk" {% if category_filter == 'harddisk' %}selected{% endif %}>Harddisk</option>
+          <option value="suhu" {% if category_filter == 'suhu' %}selected{% endif %}>Suhu</option>
+          <option value="fan" {% if category_filter == 'fan' %}selected{% endif %}>Fan</option>
         </select>
       </div>
     </div>
