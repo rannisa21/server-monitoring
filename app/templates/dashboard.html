@@ -164,13 +164,13 @@
                 <th>IP</th>
                 <th>Brand</th>
                 <th>
-                    <a href="{{ url_for('dashboard.dashboard', view='table', search=search_query, category=category_filter, status=status_filter, sort='component', order='desc' if sort_by == 'component' and sort_order == 'asc' else 'asc', **{'server_id': server_filter}) }}" class="sort-link {% if sort_by == 'component' %}active{% endif %}">
-                        Component {% if sort_by == 'component' %}{{ '↑' if sort_order == 'asc' else '↓' }}{% endif %}
+                    <a href="{{ url_for('dashboard.dashboard', view='table', search=search_query, category=category_filter, status=status_filter, sort='category', order='desc' if sort_by == 'category' and sort_order == 'asc' else 'asc', **{'server_id': server_filter}) }}" class="sort-link {% if sort_by == 'category' %}active{% endif %}">
+                        Category {% if sort_by == 'category' %}{{ '↑' if sort_order == 'asc' else '↓' }}{% endif %}
                     </a>
                 </th>
                 <th>
-                    <a href="{{ url_for('dashboard.dashboard', view='table', search=search_query, category=category_filter, status=status_filter, sort='category', order='desc' if sort_by == 'category' and sort_order == 'asc' else 'asc', **{'server_id': server_filter}) }}" class="sort-link {% if sort_by == 'category' %}active{% endif %}">
-                        Category {% if sort_by == 'category' %}{{ '↑' if sort_order == 'asc' else '↓' }}{% endif %}
+                    <a href="{{ url_for('dashboard.dashboard', view='table', search=search_query, category=category_filter, status=status_filter, sort='component', order='desc' if sort_by == 'component' and sort_order == 'asc' else 'asc', **{'server_id': server_filter}) }}" class="sort-link {% if sort_by == 'component' %}active{% endif %}">
+                        Component {% if sort_by == 'component' %}{{ '↑' if sort_order == 'asc' else '↓' }}{% endif %}
                     </a>
                 </th>
                 <th>OID</th>
@@ -194,8 +194,8 @@
                 <td><strong>{{ item.server.name }}</strong></td>
                 <td>{{ item.server.ip }}</td>
                 <td>{{ item.server.brand }}</td>
-                <td>{{ item.component.name }}</td>
                 <td><span class="category-badge {{ item.component.category }}">{{ item.component.category }}</span></td>
+                <td>{{ item.component.name }}</td>
                 <td><code>{{ item.component.oid }}</code></td>
                 <td>{{ item.metric.value if item.metric else '-' }}</td>
                 <td>{{ item.metric.timestamp.strftime('%Y-%m-%d %H:%M:%S') if item.metric else '-' }}</td>
@@ -386,8 +386,8 @@ function updateTableView(data) {
             <td><strong>${escapeHtml(item.server_name)}</strong></td>
             <td>${escapeHtml(item.server_ip || '')}</td>
             <td>${escapeHtml(item.server_brand || '')}</td>
-            <td>${escapeHtml(item.component_name)}</td>
             <td><span class="category-badge ${item.category}">${escapeHtml(item.category)}</span></td>
+            <td>${escapeHtml(item.component_name)}</td>
             <td><code>${escapeHtml(item.component_oid)}</code></td>
             <td>${item.metric_value !== null ? escapeHtml(item.metric_value) : '-'}</td>
             <td>${item.metric_timestamp || '-'}</td>

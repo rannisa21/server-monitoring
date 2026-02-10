@@ -333,8 +333,7 @@ def download_report():
             periods = {
                 'OK': [],
                 'Warning': [],
-                'Critical': [],
-                'Failed': []
+                'Critical': []
             }
             
             prev_status = None
@@ -358,10 +357,8 @@ def download_report():
                 'Total OK Periods': len(periods['OK']),
                 'Total Warning Periods': len(periods['Warning']),
                 'Total Critical Periods': len(periods['Critical']),
-                'Total Failed Periods': len(periods['Failed']),
                 'Critical Period Timestamps': ', '.join(periods['Critical']) if periods['Critical'] else '-',
                 'Warning Period Timestamps': ', '.join(periods['Warning']) if periods['Warning'] else '-',
-                'Failed Period Timestamps': ', '.join(periods['Failed']) if periods['Failed'] else '-',
                 'Total Records': len(sorted_records)
             }
             analysis_results.append(analysis_row)
@@ -369,13 +366,12 @@ def download_report():
         df_analysis = pd.DataFrame(analysis_results)
         
         # ============ SHEET 3: Server Summary for Visualization ============
-        server_summary = defaultdict(lambda: {'OK': 0, 'Warning': 0, 'Critical': 0, 'Failed': 0})
+        server_summary = defaultdict(lambda: {'OK': 0, 'Warning': 0, 'Critical': 0})
         for row in analysis_results:
             server_name = row['Server Name']
             server_summary[server_name]['OK'] += row['Total OK Periods']
             server_summary[server_name]['Warning'] += row['Total Warning Periods']
             server_summary[server_name]['Critical'] += row['Total Critical Periods']
-            server_summary[server_name]['Failed'] += row['Total Failed Periods']
         
         # ============ CREATE EXCEL FILE ============
         output = BytesIO()
@@ -425,15 +421,13 @@ def download_report():
                 cell.alignment = Alignment(horizontal='center', vertical='center')
                 cell.border = thin_border
             
-            # Conditional formatting for critical/warning/failed counts
+            # Conditional formatting for critical/warning counts
             red_fill = PatternFill(start_color="FFCCCC", end_color="FFCCCC", fill_type="solid")
             orange_fill = PatternFill(start_color="FFE6CC", end_color="FFE6CC", fill_type="solid")
-            purple_fill = PatternFill(start_color="E6CCFF", end_color="E6CCFF", fill_type="solid")
             
             if len(df_analysis) > 0:
                 critical_col = get_column_letter(df_analysis.columns.get_loc('Total Critical Periods') + 1)
                 warning_col = get_column_letter(df_analysis.columns.get_loc('Total Warning Periods') + 1)
-                failed_col = get_column_letter(df_analysis.columns.get_loc('Total Failed Periods') + 1)
                 data_rows = len(df_analysis) + 1
                 
                 ws_analysis.conditional_formatting.add(
@@ -443,10 +437,6 @@ def download_report():
                 ws_analysis.conditional_formatting.add(
                     f'{warning_col}2:{warning_col}{data_rows}',
                     CellIsRule(operator='greaterThan', formula=['0'], fill=orange_fill)
-                )
-                ws_analysis.conditional_formatting.add(
-                    f'{failed_col}2:{failed_col}{data_rows}',
-                    CellIsRule(operator='greaterThan', formula=['0'], fill=purple_fill)
                 )
             
             # --- Sheet 3: Visualization ---
@@ -459,7 +449,7 @@ def download_report():
             ws_viz.merge_cells('A1:E1')
             
             # Headers for chart data
-            viz_headers = ['Server Name', 'OK Periods', 'Warning Periods', 'Critical Periods', 'Failed Periods']
+            viz_headers = ['Server Name', 'OK Periods', 'Warning Periods', 'Critical Periods']
             for col, header in enumerate(viz_headers, 1):
                 cell = ws_viz.cell(row=3, column=col, value=header)
                 cell.fill = header_fill
@@ -473,7 +463,6 @@ def download_report():
                 ws_viz.cell(row=row, column=2, value=counts['OK'])
                 ws_viz.cell(row=row, column=3, value=counts['Warning'])
                 ws_viz.cell(row=row, column=4, value=counts['Critical'])
-                ws_viz.cell(row=row, column=5, value=counts['Failed'])
                 row += 1
             
             # Adjust column widths
@@ -481,7 +470,6 @@ def download_report():
             ws_viz.column_dimensions['B'].width = 15
             ws_viz.column_dimensions['C'].width = 18
             ws_viz.column_dimensions['D'].width = 18
-            ws_viz.column_dimensions['E'].width = 15
             
             # Create Bar Chart
             if len(server_summary) > 0:
@@ -494,8 +482,8 @@ def download_report():
                 
                 data_end_row = 3 + len(server_summary)
                 
-                # Data references (Warning, Critical, Failed - columns 3,4,5)
-                data = Reference(ws_viz, min_col=3, min_row=3, max_col=5, max_row=data_end_row)
+                # Data references (Warning, Critical - columns 3,4)
+                data = Reference(ws_viz, min_col=3, min_row=3, max_col=4, max_row=data_end_row)
                 cats = Reference(ws_viz, min_col=1, min_row=4, max_row=data_end_row)
                 
                 chart1.add_data(data, titles_from_data=True)
@@ -509,8 +497,6 @@ def download_report():
                     chart1.series[0].graphicalProperties.solidFill = "FFC000"  # Warning - Orange
                 if len(chart1.series) >= 2:
                     chart1.series[1].graphicalProperties.solidFill = "FF0000"  # Critical - Red
-                if len(chart1.series) >= 3:
-                    chart1.series[2].graphicalProperties.solidFill = "7030A0"  # Failed - Purple
                 
                 ws_viz.add_chart(chart1, "G3")
                 
@@ -532,8 +518,6 @@ def download_report():
                     chart2.series[0].graphicalProperties.solidFill = "FFC000"
                 if len(chart2.series) >= 2:
                     chart2.series[1].graphicalProperties.solidFill = "FF0000"
-                if len(chart2.series) >= 3:
-                    chart2.series[2].graphicalProperties.solidFill = "7030A0"
                 
                 ws_viz.add_chart(chart2, "G20")
             
