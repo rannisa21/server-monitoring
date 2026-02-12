@@ -1,4 +1,6 @@
 import time
+import os
+import fcntl
 from app import db
 from app.models.server import Server, Component
 from app.models.metric import Metric
@@ -238,8 +240,21 @@ def poll_all_with_context(app):
         logger.error(f"Error running poll_all_with_context: {e}", exc_info=True)
 
 def start_scheduler(app):
-    """Start the background scheduler for periodic SNMP polling."""
+    """Start the background scheduler for periodic SNMP polling.
+    Uses a file lock to ensure only one Gunicorn worker runs the scheduler."""
     try:
+        # Use file lock to prevent multiple workers from starting scheduler
+        lock_file = '/tmp/scheduler.lock'
+        f = open(lock_file, 'w')
+        try:
+            fcntl.flock(f, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except (IOError, OSError):
+            logger.info("Scheduler already running in another worker, skipping")
+            return
+        
+        # Keep the lock file open to maintain the lock
+        app._scheduler_lock_file = f
+        
         poll_interval = app.config.get('SNMP_POLL_INTERVAL_MINUTES', 5)
         
         scheduler = BackgroundScheduler()
@@ -248,7 +263,8 @@ def start_scheduler(app):
             trigger="interval",
             minutes=poll_interval,
             id='snmp_polling',
-            replace_existing=True
+            replace_existing=True,
+            misfire_grace_time=300
         )
         scheduler.start()
         
