@@ -13,7 +13,7 @@ class Metric(db.Model):
     component_id = db.Column(db.Integer, db.ForeignKey('component.id'), nullable=False)
     oid = db.Column(db.String(128), nullable=False)
     value = db.Column(db.String(128), nullable=False)
-    status = db.Column(db.String(16), nullable=False)  # OK, Warning, Critical
+    status = db.Column(db.String(16), nullable=False)  # OK, Warning, Critical, Failed
     timestamp = db.Column(db.DateTime, default=wib_now)
     brand = db.Column(db.String(64), nullable=False)
     component_name = db.Column(db.String(128), nullable=False)

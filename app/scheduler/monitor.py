@@ -104,7 +104,7 @@ def snmp_get(server, component):
             iterator = getCmd(
                 SnmpEngine(),
                 CommunityData(server.community, mpModel=1),
-                UdpTransportTarget((server.ip, 161), timeout=2, retries=0),
+                UdpTransportTarget((server.ip, 161), timeout=5, retries=2),
                 ContextData(),
                 ObjectType(ObjectIdentity(component.oid))
             )
@@ -134,7 +134,7 @@ def snmp_get(server, component):
                     authProtocol=auth_proto,
                     privProtocol=priv_proto
                 ),
-                UdpTransportTarget((server.ip, 161), timeout=2, retries=0),
+                UdpTransportTarget((server.ip, 161), timeout=5, retries=2),
                 ContextData(),
                 ObjectType(ObjectIdentity(component.oid))
             )
@@ -167,7 +167,7 @@ def classify_value(server, component, value):
         return classifier(value)
     except (ValueError, TypeError) as e:
         logger.warning(f"Classification error for {server.name}/{component.name}: {e}")
-        return 'Critical'
+        return 'Failed'
 
 def poll_all():
     """Poll all servers and components for SNMP metrics."""
@@ -194,7 +194,7 @@ def poll_all():
                     value = snmp_get(server, component)
                     
                     if value is None:
-                        status = 'Critical'
+                        status = 'Failed'
                         value = 'N/A'
                         error_count += 1
                     else:

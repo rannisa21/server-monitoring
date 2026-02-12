@@ -508,6 +508,11 @@ button[type="submit"]:active,
   color: #6c757d;
 }
 
+.status-badge.failed {
+  background: #e2d5f1;
+  color: #4a235a;
+}
+
 .role-badge.admin {
   background: #f8d7da;
   color: #721c24;
@@ -539,6 +544,10 @@ button[type="submit"]:active,
 .status-unknown {
   color: #6c757d;
   font-style: italic;
+}
+.status-failed {
+  color: #7030a0;
+  font-weight: 600;
 }
 
 /* ===== Pagination ===== */
@@ -1017,6 +1026,11 @@ code {
   color: #6c757d;
 }
 
+.status-badge.status-failed {
+  background: #e2d5f1;
+  color: #4a235a;
+}
+
 /* ===== Status Row Colors ===== */
 .status-row-ok {
   background: rgba(212, 237, 218, 0.3);
@@ -1032,6 +1046,10 @@ code {
 
 .status-row-unknown {
   background: rgba(233, 236, 239, 0.3);
+}
+
+.status-row-failed {
+  background: rgba(226, 213, 241, 0.3);
 }
 
 /* ===== Total Info ===== */
@@ -1332,6 +1350,10 @@ code {
 
 .card-body .status-badge.status-unknown {
   color: #6c757d;
+}
+
+.card-body .status-badge.status-failed {
+  color: #7030a0;
 }
 
 /* ===== Dashboard Empty State ===== */
