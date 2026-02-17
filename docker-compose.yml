@@ -1,5 +1,6 @@
 services:
   web:
+    container_name: sm-web
     build: .
     command: gunicorn -b 0.0.0.0:5000 --timeout 120 --workers 2 wsgi:app
     volumes:
@@ -30,6 +31,7 @@ services:
       retries: 3
       start_period: 30s
   db:
+    container_name: sm-db
     image: postgres:15
     restart: always
     environment:

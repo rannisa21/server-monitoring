@@ -37,6 +37,10 @@ servermonitoring/
 
 #### Opsi A: Menggunakan Docker (Direkomendasikan) ✅
 
+> **Info:** Container names yang digunakan:
+> - Web app: `sm-web`
+> - Database: `sm-db`
+
 ```bash
 # 1. Pindah ke folder project
 cd servermonitoring
@@ -51,18 +55,18 @@ cp .env.example .env
 docker-compose up --build -d
 
 # 5. Tunggu sampai container siap (~30 detik)
-docker-compose logs -f
+docker logs -f sm-web
 
 # 6. Jalankan migrasi database
-docker-compose exec web flask db upgrade
+docker exec sm-web flask db upgrade
 
 # 7. Buat admin user (pilih salah satu):
 
 # Opsi 7a: Buat admin default (admin/admin123)
-docker-compose exec web python scripts/init_db.py
+docker exec sm-web python scripts/init_db.py
 
 # Opsi 7b: Buat admin dengan username/password custom
-docker-compose exec web python scripts/create_admin.py
+docker exec -it sm-web python scripts/create_admin.py
 
 # 8. Akses aplikasi di browser
 # http://localhost:5000
@@ -129,8 +133,8 @@ gunicorn -b 0.0.0.0:5000 --workers 2 wsgi:app
 ### Fresh Install (Database Baru)
 ```bash
 # Dengan Docker:
-docker-compose exec web flask db upgrade
-docker-compose exec web python scripts/init_db.py
+docker exec sm-web flask db upgrade
+docker exec sm-web python scripts/init_db.py
 
 # Tanpa Docker:
 flask db upgrade
@@ -140,8 +144,8 @@ python scripts/init_db.py
 ### Update Schema (Jika Ada Perubahan Model)
 ```bash
 # Dengan Docker:
-docker-compose exec web flask db migrate -m "deskripsi perubahan"
-docker-compose exec web flask db upgrade
+docker exec sm-web flask db migrate -m "deskripsi perubahan"
+docker exec sm-web flask db upgrade
 
 # Tanpa Docker:
 flask db migrate -m "deskripsi perubahan"
@@ -153,8 +157,8 @@ flask db upgrade
 # Dengan Docker:
 docker-compose down -v  # Hapus volume database
 docker-compose up -d
-docker-compose exec web flask db upgrade
-docker-compose exec web python scripts/init_db.py
+docker exec sm-web flask db upgrade
+docker exec sm-web python scripts/init_db.py
 
 # Tanpa Docker (PostgreSQL):
 psql -U postgres
@@ -172,7 +176,7 @@ python scripts/init_db.py
 ### Metode 1: Script Interaktif
 ```bash
 # Dengan Docker:
-docker-compose exec web python scripts/create_admin.py
+docker exec -it sm-web python scripts/create_admin.py
 
 # Tanpa Docker:
 python scripts/create_admin.py
@@ -181,7 +185,7 @@ python scripts/create_admin.py
 ### Metode 2: Script Auto (admin/admin123)
 ```bash
 # Dengan Docker:
-docker-compose exec web python scripts/init_db.py
+docker exec sm-web python scripts/init_db.py
 
 # Tanpa Docker:
 python scripts/init_db.py
@@ -190,7 +194,7 @@ python scripts/init_db.py
 ### Metode 3: Via Python Shell
 ```bash
 # Dengan Docker:
-docker-compose exec web flask shell
+docker exec -it sm-web flask shell
 
 # Tanpa Docker:
 flask shell
@@ -246,14 +250,14 @@ openssl rand -hex 32
 
 ### Container tidak bisa start
 ```bash
-docker-compose logs web
-docker-compose logs db
+docker logs sm-web
+docker logs sm-db
 ```
 
 ### Database connection error
 ```bash
 # Pastikan PostgreSQL sudah ready
-docker-compose exec db psql -U postgres -c "SELECT 1"
+docker exec sm-db psql -U postgres -c "SELECT 1"
 ```
 
 ### Reset semua dan mulai ulang
@@ -265,8 +269,8 @@ docker-compose up --build -d
 
 ### Cek status container
 ```bash
-docker-compose ps
-docker-compose logs -f
+docker ps --filter name=sm-
+docker logs -f sm-web
 ```
 
 ---
