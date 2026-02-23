@@ -24,7 +24,7 @@
     <div class="filter-row">
       <!-- Search -->
       <div class="filter-item">
-        <input type="text" name="search" id="search" value="{{ search_query }}" placeholder="Search component name or OID...">
+        <input type="text" name="search" id="search" value="{{ search_query }}" placeholder="Search component name or OID..." onkeydown="if(event.key==='Enter'){this.form.submit();}">
       </div>
 
       <!-- Category Filter -->
@@ -65,7 +65,6 @@
 
       <!-- Actions -->
       <div class="filter-item filter-actions">
-        <button type="submit" class="btn btn-primary btn-sm">Apply</button>
         {% if search_query or category_filter or status_filter %}
         <a href="{{ url_for('component.components', server_id=server.id) }}" class="btn btn-secondary btn-sm">Clear</a>
         {% endif %}

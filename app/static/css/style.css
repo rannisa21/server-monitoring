@@ -1522,3 +1522,337 @@ code {
   border-radius: 20px;
   font-weight: 500;
 }
+
+/* ===== Uptime View ===== */
+.uptime-toolbar {
+  background: #fff;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.uptime-toolbar .filter-row {
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #f0f2f5;
+}
+
+.uptime-time-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.uptime-time-row .time-panel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0;
+  flex-wrap: nowrap;
+}
+
+.uptime-toolbar-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.time-mode-tabs {
+  display: flex;
+  gap: 0;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.time-tab {
+  padding: 0.45rem 1rem;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: #666;
+  transition: all 0.2s;
+  border-right: 1px solid #e9ecef;
+  font-weight: 500;
+}
+
+.time-tab:last-child {
+  border-right: none;
+}
+
+.time-tab:hover {
+  background: #f0f2f5;
+  color: #333;
+}
+
+.time-tab.active {
+  background: #2c3e50;
+  color: #fff;
+}
+
+.time-panel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding: 0.5rem 0;
+}
+
+.time-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.time-input {
+  width: 80px;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.time-select {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  background: #fff;
+  min-width: 100px;
+}
+
+.time-input-datetime {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  background: #fff;
+}
+
+.uptime-period-info {
+  font-size: 0.8rem;
+  color: #6c757d;
+  padding-top: 0.5rem;
+  border-top: 1px solid #f0f2f5;
+  margin-top: 0.5rem;
+}
+
+.uptime-period-info:empty {
+  display: none;
+}
+
+/* ===== Uptime Cards ===== */
+.uptime-cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.uptime-server-card {
+  background: #fff;
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s;
+}
+
+.uptime-server-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-1px);
+}
+
+.uptime-server-header {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #fff;
+  padding: 0.6rem 0.75rem;
+  text-align: center;
+}
+
+.uptime-server-header h3 {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.3px;
+}
+
+.uptime-server-ip {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  display: block;
+  margin-top: 0.15rem;
+}
+
+.uptime-server-body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.35rem;
+  padding: 0.35rem;
+}
+
+.uptime-component-card {
+  border-radius: 6px;
+  padding: 0.6rem 0.5rem;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-height: 90px;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.uptime-component-card:hover {
+  filter: brightness(1.05);
+  transform: scale(1.02);
+}
+
+.uptime-component-card.uptime-ok {
+  background: linear-gradient(135deg, #1e8449 0%, #27ae60 50%, #2ecc71 100%);
+}
+
+.uptime-component-card.uptime-warning {
+  background: linear-gradient(135deg, #b7950b 0%, #f1c40f 50%, #f4d03f 100%);
+}
+
+.uptime-component-card.uptime-critical {
+  background: linear-gradient(135deg, #922b21 0%, #c0392b 50%, #e74c3c 100%);
+}
+
+.uptime-component-card.uptime-failed {
+  background: linear-gradient(135deg, #4a235a 0%, #7030a0 50%, #9b59b6 100%);
+}
+
+.uptime-component-card.uptime-no-data {
+  background: linear-gradient(135deg, #566573 0%, #7f8c8d 50%, #95a5a6 100%);
+}
+
+.uptime-comp-name {
+  font-size: 0.65rem;
+  font-weight: 500;
+  opacity: 0.9;
+  line-height: 1.2;
+  word-break: break-word;
+}
+
+.uptime-comp-status {
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.uptime-comp-pct {
+  font-size: 0.75rem;
+  font-weight: 600;
+  opacity: 0.95;
+}
+
+.uptime-comp-metrics {
+  font-size: 0.55rem;
+  opacity: 0.7;
+}
+
+/* ===== Report Modal Tabs ===== */
+.report-mode-tabs {
+  display: flex;
+  gap: 0;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.report-tab {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: #666;
+  transition: all 0.2s;
+  border-right: 1px solid #e9ecef;
+  font-weight: 500;
+  text-align: center;
+}
+
+.report-tab:last-child {
+  border-right: none;
+}
+
+.report-tab:hover {
+  background: #f0f2f5;
+  color: #333;
+}
+
+.report-tab.active {
+  background: #2c3e50;
+  color: #fff;
+}
+
+.report-panel {
+  animation: fadeIn 0.2s ease;
+}
+
+.quick-period-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.quick-period-row input[type="number"] {
+  width: 100px;
+  padding: 0.5rem 0.625rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.quick-period-row select {
+  flex: 1;
+  padding: 0.5rem 0.625rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  background: #fff;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Responsive Uptime ===== */
+@media (max-width: 1200px) {
+  .uptime-cards-wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .uptime-toolbar-row,
+  .uptime-time-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .uptime-cards-wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+  .uptime-server-body {
+    grid-template-columns: 1fr;
+  }
+  .time-panel {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

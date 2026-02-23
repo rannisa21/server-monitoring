@@ -14,7 +14,7 @@
     <div class="filter-row">
       <!-- Search -->
       <div class="filter-item">
-        <input type="text" name="search" id="search" value="{{ search_query }}" placeholder="Search server name or IP...">
+        <input type="text" name="search" id="search" value="{{ search_query }}" placeholder="Search server name or IP..." onkeydown="if(event.key==='Enter'){this.form.submit();}">
       </div>
 
       <!-- Brand Filter -->
@@ -53,7 +53,6 @@
 
       <!-- Actions -->
       <div class="filter-item filter-actions">
-        <button type="submit" class="btn btn-primary btn-sm">Apply</button>
         {% if search_query or brand_filter or snmp_filter %}
         <a href="{{ url_for('server.servers') }}" class="btn btn-secondary btn-sm">Clear</a>
         {% endif %}

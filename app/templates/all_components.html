@@ -1,68 +1,33 @@
 {% extends 'base.html' %} {% block content %}
-<h2>All Components</h2>
+<div class="page-header">
+  <h2>All Components</h2>
+  <div class="header-actions">
+    <span class="total-info">{{ pagination.total if pagination else components|length }} components</span>
+  </div>
+</div>
 
 <!-- Toolbar: Search, Filter -->
-<div class="toolbar">
-  <form
-    method="get"
-    action="{{ url_for('component.all_components') }}"
-    class="toolbar-form"
-    id="componentForm"
-  >
-    <!-- Search -->
-    <div class="toolbar-group">
-      <label for="search">Search:</label>
-      <input
-        type="text"
-        name="search"
-        id="search"
-        value="{{ search_query }}"
-        placeholder="Name or OID..."
-      />
-      <button type="submit" class="btn btn-sm">Search</button>
-      {% if search_query or server_filter or category_filter %}
-      <a
-        href="{{ url_for('component.all_components') }}"
-        class="btn btn-sm btn-secondary"
-        >Clear</a
-      >
-      {% endif %}
-    </div>
+<div class="dashboard-toolbar">
+  <form method="get" action="{{ url_for('component.all_components') }}" class="filter-form" id="componentForm">
+    <div class="filter-row">
+      <!-- Search -->
+      <div class="filter-item">
+        <input type="text" name="search" id="search" value="{{ search_query }}" placeholder="Search name or OID..." onkeydown="if(event.key==='Enter'){this.form.submit();}">
+      </div>
 
-    <!-- Filters -->
-    <div class="toolbar-filters">
-      <div class="toolbar-group">
-        <label for="server_id">Server:</label>
-        <select
-          name="server_id"
-          id="server_id"
-          onchange="document.getElementById('componentForm').submit()"
-        >
+      <!-- Server Filter -->
+      <div class="filter-item">
+        <select name="server_id" id="server_id" onchange="this.form.submit()">
           <option value="">All Servers</option>
           {% for server in servers %}
-          <option
-            value="{{ server.id }}"
-            {%
-            if
-            server_filter=""
-            ="server.id"
-            %}selected{%
-            endif
-            %}
-          >
-            {{ server.name }}
-          </option>
+          <option value="{{ server.id }}" {% if server_filter == server.id %}selected{% endif %}>{{ server.name }}</option>
           {% endfor %}
         </select>
       </div>
 
-      <div class="toolbar-group">
-        <label for="category">Category:</label>
-        <select
-          name="category"
-          id="category"
-          onchange="document.getElementById('componentForm').submit()"
-        >
+      <!-- Category Filter -->
+      <div class="filter-item">
+        <select name="category" id="category" onchange="this.form.submit()">
           <option value="">All Categories</option>
           <option value="PSU" {% if category_filter == 'PSU' %}selected{% endif %}>PSU</option>
           <option value="harddisk" {% if category_filter == 'harddisk' %}selected{% endif %}>Harddisk</option>
@@ -70,11 +35,20 @@
           <option value="fan" {% if category_filter == 'fan' %}selected{% endif %}>Fan</option>
         </select>
       </div>
+
+      <!-- Actions -->
+      <div class="filter-item filter-actions">
+        {% if search_query or server_filter or category_filter %}
+        <a href="{{ url_for('component.all_components') }}" class="btn btn-secondary btn-sm">Clear</a>
+        {% endif %}
+      </div>
     </div>
   </form>
 </div>
 
-<table class="component-table">
+{% if components %}
+<div class="dashboard-table-wrapper">
+<table class="data-table component-table">
   <thead>
     <tr>
       <th>No</th>
@@ -117,13 +91,13 @@
         </form>
       </td>
     </tr>
-    {% else %}
-    <tr>
-      <td colspan="7" class="text-center">No components found</td>
-    </tr>
     {% endfor %}
   </tbody>
 </table>
+</div>
+{% else %}
+<div class="empty-state"><p>No components found.</p></div>
+{% endif %}
 
 <!-- Pagination -->
 {% if pagination and pagination.pages > 1 %}

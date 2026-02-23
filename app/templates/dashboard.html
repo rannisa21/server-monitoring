@@ -11,9 +11,11 @@
         <!-- View Type Toggle Buttons -->
         <div class="view-toggle">
             <a href="{{ url_for('dashboard.dashboard', view='table', search=search_query, category=category_filter, status=status_filter, sort=sort_by, order=sort_order, **{'server_id': server_filter}) }}" 
-               class="btn-view {% if view_type == 'table' %}active{% endif %}">☰</a>
+               class="btn-view {% if view_type == 'table' %}active{% endif %}" title="Table View">☰</a>
             <a href="{{ url_for('dashboard.dashboard', view='card', search=search_query, category=category_filter, status=status_filter, sort=sort_by, order=sort_order, **{'server_id': server_filter}) }}" 
-               class="btn-view {% if view_type == 'card' %}active{% endif %}">▦</a>
+               class="btn-view {% if view_type == 'card' %}active{% endif %}" title="Card View">▦</a>
+            <a href="{{ url_for('dashboard.dashboard', view='uptime') }}" 
+               class="btn-view {% if view_type == 'uptime' %}active{% endif %}" title="Uptime View">⏱</a>
         </div>
         <button type="button" class="btn btn-success" onclick="openReportModal()">
             Download Report
@@ -23,40 +25,82 @@
 
 <!-- Download Report Modal -->
 <div id="reportModal" class="modal-overlay" style="display: none;">
-    <div class="modal-content">
+    <div class="modal-content" style="max-width: 480px;">
         <div class="modal-header">
             <h3>Download Report Excel</h3>
             <button type="button" class="modal-close" onclick="closeReportModal()">&times;</button>
         </div>
-        <form action="{{ url_for('dashboard.download_report') }}" method="post">
+        <form action="{{ url_for('dashboard.download_report') }}" method="post" id="reportForm">
             <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <input type="hidden" name="report_mode" id="reportModeInput" value="month">
             <div class="modal-body">
-                <div class="form-group">
-                    <label for="report_month">Bulan</label>
-                    <select name="month" id="report_month" required>
-                        <option value="">-- Pilih Bulan --</option>
-                        <option value="1">Januari</option>
-                        <option value="2">Februari</option>
-                        <option value="3">Maret</option>
-                        <option value="4">April</option>
-                        <option value="5">Mei</option>
-                        <option value="6">Juni</option>
-                        <option value="7">Juli</option>
-                        <option value="8">Agustus</option>
-                        <option value="9">September</option>
-                        <option value="10">Oktober</option>
-                        <option value="11">November</option>
-                        <option value="12">Desember</option>
-                    </select>
+                <!-- Mode Tabs -->
+                <div class="report-mode-tabs">
+                    <button type="button" class="report-tab active" onclick="switchReportMode('month', this)">Bulanan</button>
+                    <button type="button" class="report-tab" onclick="switchReportMode('quick', this)">Quick Period</button>
+                    <button type="button" class="report-tab" onclick="switchReportMode('range', this)">Custom Range</button>
                 </div>
-                <div class="form-group">
-                    <label for="report_year">Tahun</label>
-                    <select name="year" id="report_year" required>
-                        <option value="">-- Pilih Tahun --</option>
-                        {% for y in range(2024, 2031) %}
-                        <option value="{{ y }}">{{ y }}</option>
-                        {% endfor %}
-                    </select>
+
+                <!-- Month Mode -->
+                <div id="reportMonthPanel" class="report-panel">
+                    <div class="form-group">
+                        <label for="report_month">Bulan</label>
+                        <select name="month" id="report_month">
+                            <option value="">-- Pilih Bulan --</option>
+                            <option value="1">Januari</option>
+                            <option value="2">Februari</option>
+                            <option value="3">Maret</option>
+                            <option value="4">April</option>
+                            <option value="5">Mei</option>
+                            <option value="6">Juni</option>
+                            <option value="7">Juli</option>
+                            <option value="8">Agustus</option>
+                            <option value="9">September</option>
+                            <option value="10">Oktober</option>
+                            <option value="11">November</option>
+                            <option value="12">Desember</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="report_year">Tahun</label>
+                        <select name="year" id="report_year">
+                            <option value="">-- Pilih Tahun --</option>
+                            {% for y in range(2024, 2031) %}
+                            <option value="{{ y }}">{{ y }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Quick Period Mode -->
+                <div id="reportQuickPanel" class="report-panel" style="display: none;">
+                    <div class="form-group">
+                        <label>Jumlah Periode</label>
+                        <div class="quick-period-row">
+                            <input type="number" name="report_amount" id="reportAmount" value="1" min="1" max="9999" placeholder="Angka">
+                            <select name="report_unit" id="reportUnit">
+                                <option value="minute">Menit</option>
+                                <option value="hour" selected>Jam</option>
+                                <option value="day">Hari</option>
+                                <option value="week">Minggu</option>
+                                <option value="month">Bulan</option>
+                                <option value="year">Tahun</option>
+                            </select>
+                        </div>
+                        <span class="help-text">Contoh: Last 1 Jam, Last 30 Menit, Last 7 Hari</span>
+                    </div>
+                </div>
+
+                <!-- Custom Range Mode -->
+                <div id="reportRangePanel" class="report-panel" style="display: none;">
+                    <div class="form-group">
+                        <label for="reportFrom">Dari</label>
+                        <input type="datetime-local" name="report_from" id="reportFrom">
+                    </div>
+                    <div class="form-group">
+                        <label for="reportTo">Sampai</label>
+                        <input type="datetime-local" name="report_to" id="reportTo">
+                    </div>
                 </div>
             </div>
             <div class="modal-footer">
@@ -67,13 +111,14 @@
     </div>
 </div>
 
+{% if view_type != 'uptime' %}
 <!-- Filter, Search, and Sort Section -->
 <div class="dashboard-toolbar">
     <form method="get" action="{{ url_for('dashboard.dashboard') }}" class="filter-form" id="dashboardForm">
         <div class="filter-row">
             <!-- Search -->
             <div class="filter-item">
-                <input type="text" name="search" id="search" value="{{ search_query }}" placeholder="Search server, component, IP, OID...">
+                <input type="text" name="search" id="search" value="{{ search_query }}" placeholder="Search server, component, IP, OID..." onkeydown="if(event.key==='Enter'){this.form.submit();}">
             </div>
 
             <!-- Server Filter (Multi-select Dropdown) -->
@@ -136,14 +181,120 @@
 
             <!-- Actions -->
             <div class="filter-item filter-actions">
-                <button type="submit" class="btn btn-primary btn-sm">Apply</button>
                 {% if search_query or server_filter or category_filter or status_filter %}
-                <a href="{{ url_for('dashboard.dashboard') }}" class="btn btn-secondary btn-sm">Clear</a>
+                <a href="{{ url_for('dashboard.dashboard', view=view_type) }}" class="btn btn-secondary btn-sm">Clear</a>
                 {% endif %}
             </div>
         </div>
     </form>
 </div>
+{% else %}
+<!-- Uptime Toolbar - same style as table/card -->
+<div class="dashboard-toolbar">
+    <div class="filter-form">
+        <div class="filter-row">
+            <!-- Search -->
+            <div class="filter-item">
+                <input type="text" id="uptimeSearch" placeholder="Search server, component, IP, OID..." oninput="debounceUptimeFetch()" onkeydown="if(event.key==='Enter'){event.preventDefault();fetchUptimeData();}">
+            </div>
+
+            <!-- Server Filter -->
+            <div class="filter-item">
+                <div class="multi-select-wrapper">
+                    <button type="button" class="multi-select-btn" onclick="toggleDropdown('serverDropdownUptime')">
+                        <span id="serverLabelUptime">All Servers</span>
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div id="serverDropdownUptime" class="multi-select-dropdown">
+                        <label class="checkbox-item">
+                            <input type="checkbox" id="selectAllServersUptime" onchange="toggleAllServersUptime(this); updateUptimeClearBtn(); fetchUptimeData();" checked> <strong>Select All</strong>
+                        </label>
+                        {% for server in servers %}
+                        <label class="checkbox-item">
+                            <input type="checkbox" class="uptime-server-cb" value="{{ server.id }}" checked onchange="updateServerLabelUptime(); updateUptimeClearBtn(); fetchUptimeData();"> {{ server.name }}
+                        </label>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category Filter -->
+            <div class="filter-item">
+                <select id="uptimeCategory" onchange="updateUptimeClearBtn(); fetchUptimeData()">
+                    <option value="">All Categories</option>
+                    <option value="PSU">PSU</option>
+                    <option value="harddisk">Harddisk</option>
+                    <option value="suhu">Suhu</option>
+                    <option value="fan">Fan</option>
+                </select>
+            </div>
+
+            <!-- Status Filter -->
+            <div class="filter-item">
+                <select id="uptimeStatus" onchange="updateUptimeClearBtn(); fetchUptimeData()">
+                    <option value="">All Status</option>
+                    <option value="OK">OK</option>
+                    <option value="Warning">Warning</option>
+                    <option value="Critical">Critical</option>
+                    <option value="Failed">Failed</option>
+                    <option value="no_data">No Data</option>
+                </select>
+            </div>
+
+            <!-- Sort -->
+            <div class="filter-item sort-group">
+                <select id="uptimeSort" onchange="fetchUptimeData()">
+                    <option value="server">Server</option>
+                    <option value="component">Component</option>
+                    <option value="category">Category</option>
+                    <option value="status">Status</option>
+                    <option value="uptime">Uptime %</option>
+                </select>
+                <select id="uptimeOrder" onchange="fetchUptimeData()">
+                    <option value="asc">↑ Asc</option>
+                    <option value="desc">↓ Desc</option>
+                </select>
+            </div>
+
+            <!-- Actions -->
+            <div class="filter-item filter-actions">
+                <button type="button" class="btn btn-secondary btn-sm" id="uptimeClearBtn" onclick="clearUptimeFilters()" style="display:none;">Clear</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Time Period Selection -->
+<div class="dashboard-toolbar" style="margin-top: -0.5rem;">
+    <div class="uptime-time-row">
+        <div class="time-mode-tabs">
+            <button type="button" class="time-tab active" onclick="switchTimeMode('quick', this)">Quick Select</button>
+            <button type="button" class="time-tab" onclick="switchTimeMode('range', this)">Custom Range</button>
+        </div>
+
+        <div id="quickSelectPanel" class="time-panel">
+            <span class="time-label">Last</span>
+            <input type="number" id="uptimeAmount" value="1" min="1" max="9999" class="time-input" onchange="fetchUptimeData()">
+            <select id="uptimeUnit" class="time-select" onchange="fetchUptimeData()">
+                <option value="minute">Menit</option>
+                <option value="hour" selected>Jam</option>
+                <option value="day">Hari</option>
+                <option value="week">Minggu</option>
+                <option value="month">Bulan</option>
+                <option value="year">Tahun</option>
+            </select>
+        </div>
+
+        <div id="rangePanel" class="time-panel" style="display: none;">
+            <label class="time-label">From</label>
+            <input type="datetime-local" id="uptimeFrom" class="time-input-datetime" onchange="fetchUptimeData()">
+            <label class="time-label">To</label>
+            <input type="datetime-local" id="uptimeTo" class="time-input-datetime" onchange="fetchUptimeData()">
+        </div>
+    </div>
+    <div class="uptime-period-info" id="uptimePeriodInfo"></div>
+</div>
+{% endif %}
 
 {% if error %}
 <div class="flash flash-danger">{{ error }}</div>
@@ -271,6 +422,12 @@
             <p>No data available</p>
         </div>
     {% endif %}
+</div>
+
+{% elif view_type == 'uptime' %}
+<!-- UPTIME VIEW -->
+<div class="uptime-cards-wrapper" id="uptimeCardsContainer">
+    <div class="empty-state"><p>Loading data uptime...</p></div>
 </div>
 
 {% endif %}
@@ -475,6 +632,10 @@ function showLoadingIndicator(show) {
 
 // Fetch and update dashboard data
 async function refreshDashboardData() {
+    // Skip auto-refresh for uptime view (it has its own fetch)
+    const viewType = '{{ view_type }}';
+    if (viewType === 'uptime') return;
+    
     if (isRefreshing) return;
     isRefreshing = true;
     showLoadingIndicator(true);
@@ -568,6 +729,10 @@ document.addEventListener('visibilitychange', function() {
 // Initialize auto-refresh on page load
 document.addEventListener('DOMContentLoaded', function() {
     startAutoRefresh();
+    // Auto-trigger uptime fetch on page load
+    if ('{{ view_type }}' === 'uptime') {
+        fetchUptimeData();
+    }
 });
 
 // Manual refresh button (optional - can be triggered by user)
@@ -582,10 +747,26 @@ function openReportModal() {
     var now = new Date();
     document.getElementById('report_month').value = now.getMonth() + 1;
     document.getElementById('report_year').value = now.getFullYear();
+    // Reset to month mode
+    switchReportMode('month', document.querySelector('.report-tab'));
 }
 
 function closeReportModal() {
     document.getElementById('reportModal').style.display = 'none';
+}
+
+function switchReportMode(mode, btn) {
+    // Update hidden input
+    document.getElementById('reportModeInput').value = mode;
+    
+    // Toggle active tab
+    document.querySelectorAll('.report-tab').forEach(t => t.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+    
+    // Show/hide panels
+    document.getElementById('reportMonthPanel').style.display = mode === 'month' ? 'block' : 'none';
+    document.getElementById('reportQuickPanel').style.display = mode === 'quick' ? 'block' : 'none';
+    document.getElementById('reportRangePanel').style.display = mode === 'range' ? 'block' : 'none';
 }
 
 // Close modal when clicking outside
@@ -602,5 +783,221 @@ document.addEventListener('keydown', function(e) {
         closeReportModal();
     }
 });
+
+// ===== UPTIME VIEW FUNCTIONS =====
+let currentTimeMode = 'quick';
+let uptimeRefreshTimer = null;
+const UPTIME_REFRESH_INTERVAL = 5000; // 5 seconds
+let uptimeApplied = false;
+let uptimeDebounceTimer = null;
+
+function debounceUptimeFetch() {
+    if (uptimeDebounceTimer) clearTimeout(uptimeDebounceTimer);
+    uptimeDebounceTimer = setTimeout(() => { updateUptimeClearBtn(); fetchUptimeData(); }, 400);
+}
+
+function switchTimeMode(mode, btn) {
+    currentTimeMode = mode;
+    document.querySelectorAll('.time-tab').forEach(t => t.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+    document.getElementById('quickSelectPanel').style.display = mode === 'quick' ? 'flex' : 'none';
+    document.getElementById('rangePanel').style.display = mode === 'range' ? 'flex' : 'none';
+    // Stop auto-refresh when switching to range mode
+    if (mode === 'range') stopUptimeAutoRefresh();
+}
+
+function toggleAllServersUptime(checkbox) {
+    document.querySelectorAll('.uptime-server-cb').forEach(cb => {
+        cb.checked = checkbox.checked;
+    });
+    updateServerLabelUptime();
+}
+
+function updateServerLabelUptime() {
+    var checked = document.querySelectorAll('.uptime-server-cb:checked');
+    var total = document.querySelectorAll('.uptime-server-cb').length;
+    var label = document.getElementById('serverLabelUptime');
+    var selectAll = document.getElementById('selectAllServersUptime');
+    if (checked.length === 0 || checked.length === total) {
+        label.textContent = 'All Servers';
+    } else {
+        label.textContent = checked.length + ' server(s)';
+    }
+    if (selectAll) selectAll.checked = checked.length === total;
+}
+
+function buildUptimeParams() {
+    const params = new URLSearchParams();
+    params.set('mode', currentTimeMode);
+    if (currentTimeMode === 'quick') {
+        params.set('amount', document.getElementById('uptimeAmount').value);
+        params.set('unit', document.getElementById('uptimeUnit').value);
+    } else {
+        params.set('from_datetime', document.getElementById('uptimeFrom').value);
+        params.set('to_datetime', document.getElementById('uptimeTo').value);
+    }
+    const checkedServers = document.querySelectorAll('.uptime-server-cb:checked');
+    const totalServers = document.querySelectorAll('.uptime-server-cb').length;
+    if (checkedServers.length > 0 && checkedServers.length < totalServers) {
+        checkedServers.forEach(cb => params.append('server_id', cb.value));
+    }
+    // Search, filter, sort params
+    const search = document.getElementById('uptimeSearch').value.trim();
+    const category = document.getElementById('uptimeCategory').value;
+    const status = document.getElementById('uptimeStatus').value;
+    const sort = document.getElementById('uptimeSort').value;
+    const order = document.getElementById('uptimeOrder').value;
+    if (search) params.set('search', search);
+    if (category) params.set('category', category);
+    if (status) params.set('status', status);
+    if (sort) params.set('sort', sort);
+    if (order) params.set('order', order);
+    return params;
+}
+
+function updateUptimeClearBtn() {
+    const search = document.getElementById('uptimeSearch').value.trim();
+    const category = document.getElementById('uptimeCategory').value;
+    const status = document.getElementById('uptimeStatus').value;
+    const allServers = document.querySelectorAll('.uptime-server-cb');
+    const checkedServers = document.querySelectorAll('.uptime-server-cb:checked');
+    const serverFiltered = allServers.length > 0 && checkedServers.length < allServers.length;
+    const hasFilter = search || category || status || serverFiltered;
+    const btn = document.getElementById('uptimeClearBtn');
+    if (btn) btn.style.display = hasFilter ? '' : 'none';
+}
+
+function clearUptimeFilters() {
+    document.getElementById('uptimeSearch').value = '';
+    document.getElementById('uptimeCategory').value = '';
+    document.getElementById('uptimeStatus').value = '';
+    document.getElementById('uptimeSort').value = 'server';
+    document.getElementById('uptimeOrder').value = 'asc';
+    // Reset server checkboxes to all checked
+    document.querySelectorAll('.uptime-server-cb').forEach(cb => { cb.checked = true; });
+    const selectAll = document.getElementById('selectAllServersUptime');
+    if (selectAll) selectAll.checked = true;
+    updateServerLabelUptime();
+    updateUptimeClearBtn();
+    fetchUptimeData();
+}
+
+async function fetchUptimeData() {
+    // Validate inputs silently - skip fetch if invalid
+    if (currentTimeMode === 'quick') {
+        const amount = document.getElementById('uptimeAmount').value;
+        if (!amount || amount < 1) return;
+    } else {
+        const fromVal = document.getElementById('uptimeFrom').value;
+        const toVal = document.getElementById('uptimeTo').value;
+        if (!fromVal || !toVal) return;
+    }
+
+    uptimeApplied = true;
+    await doFetchUptime();
+
+    // For quick mode, start auto-refresh so "now" keeps moving
+    if (currentTimeMode === 'quick') {
+        startUptimeAutoRefresh();
+    } else {
+        stopUptimeAutoRefresh();
+    }
+}
+
+async function doFetchUptime() {
+    const params = buildUptimeParams();
+    const container = document.getElementById('uptimeCardsContainer');
+    try {
+        const response = await fetch(`{{ url_for('dashboard.api_uptime_data') }}?${params.toString()}`, {
+            headers: { 'Accept': 'application/json', 'X-Requested-With': 'XMLHttpRequest' },
+            credentials: 'same-origin'
+        });
+        const result = await response.json();
+        if (result.success) {
+            renderUptimeCards(result.data);
+            document.getElementById('uptimePeriodInfo').textContent =
+                'Periode: ' + result.from_time + ' \u2014 ' + result.to_time;
+            // Update total items count
+            const totalInfo = document.getElementById('total-items');
+            if (totalInfo && result.total_items !== undefined) {
+                totalInfo.textContent = result.total_items + ' items';
+            }
+            updateRefreshTimeDisplay();
+        } else {
+            container.innerHTML = '<div class="empty-state"><p>' + escapeHtml(result.error || 'Error') + '</p></div>';
+        }
+    } catch (err) {
+        console.error('Uptime fetch error:', err);
+        container.innerHTML = '<div class="empty-state"><p>Gagal memuat data uptime.</p></div>';
+    }
+}
+
+function startUptimeAutoRefresh() {
+    stopUptimeAutoRefresh();
+    uptimeRefreshTimer = setInterval(() => {
+        if (uptimeApplied && currentTimeMode === 'quick') doFetchUptime();
+    }, UPTIME_REFRESH_INTERVAL);
+}
+
+function stopUptimeAutoRefresh() {
+    if (uptimeRefreshTimer) { clearInterval(uptimeRefreshTimer); uptimeRefreshTimer = null; }
+}
+
+// Pause/resume when tab visibility changes
+document.addEventListener('visibilitychange', function() {
+    if (document.hidden) {
+        stopUptimeAutoRefresh();
+    } else if (uptimeApplied && currentTimeMode === 'quick' && '{{ view_type }}' === 'uptime') {
+        doFetchUptime();
+        startUptimeAutoRefresh();
+    }
+});
+
+// ===== UPTIME CARD COLOR HELPERS =====
+function getUptimeColorClass(currentStatus) {
+    if (!currentStatus) return 'uptime-no-data';
+    switch (currentStatus) {
+        case 'OK':       return 'uptime-ok';
+        case 'Warning':  return 'uptime-warning';
+        case 'Critical': return 'uptime-critical';
+        case 'Failed':   return 'uptime-failed';
+        default:         return 'uptime-no-data';
+    }
+}
+
+function renderUptimeCards(data) {
+    const container = document.getElementById('uptimeCardsContainer');
+    const keys = Object.keys(data);
+    if (keys.length === 0) {
+        container.innerHTML = '<div class="empty-state"><p>Tidak ada data untuk periode yang dipilih.</p></div>';
+        return;
+    }
+    container.innerHTML = keys.map(serverId => {
+        const server = data[serverId];
+        return `
+            <div class="uptime-server-card">
+                <div class="uptime-server-header">
+                    <h3>${escapeHtml(server.server_name)}</h3>
+                    <span class="uptime-server-ip">${escapeHtml(server.server_ip)}</span>
+                </div>
+                <div class="uptime-server-body">
+                    ${server.components.map(comp => {
+                        const statusText = comp.current_status ? (comp.current_status === 'OK' ? 'UP' : comp.current_status.toUpperCase()) : 'N/A';
+                        const pctText = comp.uptime_pct !== null ? comp.uptime_pct.toFixed(2) + '%' : 'N/A';
+                        const colorClass = getUptimeColorClass(comp.current_status);
+                        return `
+                            <div class="uptime-component-card ${colorClass}">
+                                <div class="uptime-comp-name">${escapeHtml(comp.component_name)}</div>
+                                <div class="uptime-comp-status">${statusText}</div>
+                                <div class="uptime-comp-pct">Uptime ${pctText}</div>
+                                <div class="uptime-comp-metrics">${comp.total_metrics} records</div>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+            </div>
+        `;
+    }).join('');
+}
 </script>
 {% endblock %}

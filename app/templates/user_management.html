@@ -13,7 +13,7 @@
     <form method="get" action="{{ url_for('user_management.user_management') }}" class="filter-form" id="userForm">
         <div class="filter-row">
             <div class="filter-item">
-                <input type="text" name="search" id="search" value="{{ search_query }}" placeholder="Search username...">
+                <input type="text" name="search" id="search" value="{{ search_query }}" placeholder="Search username..." onkeydown="if(event.key==='Enter'){this.form.submit();}">
             </div>
             <div class="filter-item">
                 <select name="role" id="role_filter" onchange="document.getElementById('userForm').submit()">
@@ -33,7 +33,6 @@
                 </select>
             </div>
             <div class="filter-item filter-actions">
-                <button type="submit" class="btn btn-primary btn-sm">Apply</button>
                 {% if search_query or role_filter %}
                 <a href="{{ url_for('user_management.user_management') }}" class="btn btn-secondary btn-sm">Clear</a>
                 {% endif %}
