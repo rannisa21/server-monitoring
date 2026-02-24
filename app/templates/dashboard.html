@@ -436,6 +436,7 @@
 // Dashboard Auto-Refresh Configuration
 const REFRESH_INTERVAL = 1000; // 1sec
 let refreshTimer = null;
+let clockTimer = null;
 let isRefreshing = false;
 
 function toggleDropdown(id) {
@@ -691,10 +692,21 @@ async function refreshDashboardData() {
     }
 }
 
+// Start the live clock (updates every second)
+function startClock() {
+    updateRefreshTimeDisplay();
+    if (clockTimer) clearInterval(clockTimer);
+    clockTimer = setInterval(updateRefreshTimeDisplay, 1000);
+}
+
+function stopClock() {
+    if (clockTimer) { clearInterval(clockTimer); clockTimer = null; }
+}
+
 // Start auto-refresh
 function startAutoRefresh() {
-    // Initial refresh time display
-    updateRefreshTimeDisplay();
+    // Start live clock independently
+    startClock();
     
     // Clear any existing timer
     if (refreshTimer) {
@@ -713,6 +725,7 @@ function stopAutoRefresh() {
         clearInterval(refreshTimer);
         refreshTimer = null;
     }
+    stopClock();
 }
 
 // Handle page visibility changes
