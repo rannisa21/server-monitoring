@@ -1,3 +1,4 @@
+tes lagi
 git log --all --decorate --oneline --graph
 
 # README
