@@ -165,18 +165,36 @@
             </div>
 
             <!-- Sort -->
-            <div class="filter-item sort-group">
-                <select name="sort" id="sort" onchange="this.form.submit()">
-                    <option value="server" {% if sort_by == 'server' %}selected{% endif %}>Server</option>
-                    <option value="component" {% if sort_by == 'component' %}selected{% endif %}>Component</option>
-                    <option value="category" {% if sort_by == 'category' %}selected{% endif %}>Category</option>
-                    <option value="status" {% if sort_by == 'status' %}selected{% endif %}>Status</option>
-                    <option value="timestamp" {% if sort_by == 'timestamp' %}selected{% endif %}>Timestamp</option>
-                </select>
-                <select name="order" id="order" onchange="this.form.submit()">
-                    <option value="asc" {% if sort_order == 'asc' %}selected{% endif %}>↑ Asc</option>
-                    <option value="desc" {% if sort_order == 'desc' %}selected{% endif %}>↓ Desc</option>
-                </select>
+            <input type="hidden" name="sort" id="sort" value="{{ sort_by }}">
+            <input type="hidden" name="order" id="order" value="{{ sort_order }}">
+            <div class="filter-item">
+                <div class="sort-btn-wrapper">
+                    <button type="button" class="sort-toggle-btn" onclick="toggleDropdown('sortDropdown')">
+                        <span class="sort-icon">⇅</span> Sort
+                    </button>
+                    <div id="sortDropdown" class="sort-dropdown">
+                        <div class="sort-option{% if sort_by == 'server' %} active{% endif %}" data-sort="server" onclick="applySort(this, 'server')">
+                            <span class="sort-option-label">Server</span>
+                            <span class="sort-option-arrow">{% if sort_by == 'server' %}{% if sort_order == 'asc' %}↑{% else %}↓{% endif %}{% endif %}</span>
+                        </div>
+                        <div class="sort-option{% if sort_by == 'component' %} active{% endif %}" data-sort="component" onclick="applySort(this, 'component')">
+                            <span class="sort-option-label">Component</span>
+                            <span class="sort-option-arrow">{% if sort_by == 'component' %}{% if sort_order == 'asc' %}↑{% else %}↓{% endif %}{% endif %}</span>
+                        </div>
+                        <div class="sort-option{% if sort_by == 'category' %} active{% endif %}" data-sort="category" onclick="applySort(this, 'category')">
+                            <span class="sort-option-label">Category</span>
+                            <span class="sort-option-arrow">{% if sort_by == 'category' %}{% if sort_order == 'asc' %}↑{% else %}↓{% endif %}{% endif %}</span>
+                        </div>
+                        <div class="sort-option{% if sort_by == 'status' %} active{% endif %}" data-sort="status" onclick="applySort(this, 'status')">
+                            <span class="sort-option-label">Status</span>
+                            <span class="sort-option-arrow">{% if sort_by == 'status' %}{% if sort_order == 'asc' %}↑{% else %}↓{% endif %}{% endif %}</span>
+                        </div>
+                        <div class="sort-option{% if sort_by == 'timestamp' %} active{% endif %}" data-sort="timestamp" onclick="applySort(this, 'timestamp')">
+                            <span class="sort-option-label">Timestamp</span>
+                            <span class="sort-option-arrow">{% if sort_by == 'timestamp' %}{% if sort_order == 'asc' %}↑{% else %}↓{% endif %}{% endif %}</span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Actions -->
@@ -242,18 +260,36 @@
             </div>
 
             <!-- Sort -->
-            <div class="filter-item sort-group">
-                <select id="uptimeSort" onchange="fetchUptimeData()">
-                    <option value="server">Server</option>
-                    <option value="component">Component</option>
-                    <option value="category">Category</option>
-                    <option value="status">Status</option>
-                    <option value="uptime">Uptime %</option>
-                </select>
-                <select id="uptimeOrder" onchange="fetchUptimeData()">
-                    <option value="asc">↑ Asc</option>
-                    <option value="desc">↓ Desc</option>
-                </select>
+            <input type="hidden" id="uptimeSort" value="server">
+            <input type="hidden" id="uptimeOrder" value="asc">
+            <div class="filter-item">
+                <div class="sort-btn-wrapper">
+                    <button type="button" class="sort-toggle-btn" onclick="toggleDropdown('sortDropdownUptime')">
+                        <span class="sort-icon">⇅</span> Sort
+                    </button>
+                    <div id="sortDropdownUptime" class="sort-dropdown">
+                        <div class="sort-option active" data-sort="server" onclick="applySortUptime(this, 'server')">
+                            <span class="sort-option-label">Server</span>
+                            <span class="sort-option-arrow">↑</span>
+                        </div>
+                        <div class="sort-option" data-sort="component" onclick="applySortUptime(this, 'component')">
+                            <span class="sort-option-label">Component</span>
+                            <span class="sort-option-arrow"></span>
+                        </div>
+                        <div class="sort-option" data-sort="category" onclick="applySortUptime(this, 'category')">
+                            <span class="sort-option-label">Category</span>
+                            <span class="sort-option-arrow"></span>
+                        </div>
+                        <div class="sort-option" data-sort="status" onclick="applySortUptime(this, 'status')">
+                            <span class="sort-option-label">Status</span>
+                            <span class="sort-option-arrow"></span>
+                        </div>
+                        <div class="sort-option" data-sort="uptime" onclick="applySortUptime(this, 'uptime')">
+                            <span class="sort-option-label">Uptime %</span>
+                            <span class="sort-option-arrow"></span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Actions -->
@@ -439,9 +475,15 @@ let refreshTimer = null;
 let clockTimer = null;
 let isRefreshing = false;
 
-function toggleDropdown(id) {
-    var dropdown = document.getElementById(id);
-    dropdown.classList.toggle('show');
+// ===== Sort Button Logic (Table/Card view) =====
+function applySort(el, field) {
+    applySortGeneric(field, 'sort', 'order', 'sortDropdown', 'dashboardForm');
+}
+
+// ===== Sort Button Logic (Uptime view) =====
+function applySortUptime(el, field) {
+    applySortGeneric(field, 'uptimeSort', 'uptimeOrder', 'sortDropdownUptime', null);
+    fetchUptimeData();
 }
 
 function toggleAllServers(checkbox) {
@@ -886,6 +928,7 @@ function clearUptimeFilters() {
     document.getElementById('uptimeStatus').value = '';
     document.getElementById('uptimeSort').value = 'server';
     document.getElementById('uptimeOrder').value = 'asc';
+    updateSortDropdownUI('sortDropdownUptime', 'server', 'asc');
     // Reset server checkboxes to all checked
     document.querySelectorAll('.uptime-server-cb').forEach(cb => { cb.checked = true; });
     const selectAll = document.getElementById('selectAllServersUptime');

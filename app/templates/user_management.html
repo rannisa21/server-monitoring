@@ -22,15 +22,24 @@
                     <option value="user" {% if role_filter == 'user' %}selected{% endif %}>User</option>
                 </select>
             </div>
-            <div class="filter-item sort-group">
-                <select name="sort" id="sort" onchange="document.getElementById('userForm').submit()">
-                    <option value="username" {% if sort_by == 'username' %}selected{% endif %}>Username</option>
-                    <option value="role" {% if sort_by == 'role' %}selected{% endif %}>Role</option>
-                </select>
-                <select name="order" id="order" onchange="document.getElementById('userForm').submit()">
-                    <option value="asc" {% if sort_order == 'asc' %}selected{% endif %}>↑ Asc</option>
-                    <option value="desc" {% if sort_order == 'desc' %}selected{% endif %}>↓ Desc</option>
-                </select>
+            <input type="hidden" name="sort" id="sort" value="{{ sort_by }}">
+            <input type="hidden" name="order" id="order" value="{{ sort_order }}">
+            <div class="filter-item">
+                <div class="sort-btn-wrapper">
+                    <button type="button" class="sort-toggle-btn" onclick="toggleDropdown('sortDropdown')">
+                        <span class="sort-icon">⇅</span> Sort
+                    </button>
+                    <div id="sortDropdown" class="sort-dropdown">
+                        <div class="sort-option{% if sort_by == 'username' %} active{% endif %}" data-sort="username" onclick="applySortGeneric('username','sort','order','sortDropdown','userForm')">
+                            <span class="sort-option-label">Username</span>
+                            <span class="sort-option-arrow">{% if sort_by == 'username' %}{{ '↑' if sort_order == 'asc' else '↓' }}{% endif %}</span>
+                        </div>
+                        <div class="sort-option{% if sort_by == 'role' %} active{% endif %}" data-sort="role" onclick="applySortGeneric('role','sort','order','sortDropdown','userForm')">
+                            <span class="sort-option-label">Role</span>
+                            <span class="sort-option-arrow">{% if sort_by == 'role' %}{{ '↑' if sort_order == 'asc' else '↓' }}{% endif %}</span>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="filter-item filter-actions">
                 {% if search_query or role_filter %}

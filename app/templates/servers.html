@@ -38,17 +38,32 @@
       </div>
 
       <!-- Sort -->
-      <div class="filter-item sort-group">
-        <select name="sort" id="sort" onchange="this.form.submit()">
-          <option value="name" {% if sort_by == 'name' %}selected{% endif %}>Server Name</option>
-          <option value="ip" {% if sort_by == 'ip' %}selected{% endif %}>IP Address</option>
-          <option value="brand" {% if sort_by == 'brand' %}selected{% endif %}>Brand</option>
-          <option value="snmp_version" {% if sort_by == 'snmp_version' %}selected{% endif %}>SNMP Version</option>
-        </select>
-        <select name="order" id="order" onchange="this.form.submit()">
-          <option value="asc" {% if sort_order == 'asc' %}selected{% endif %}>↑ Asc</option>
-          <option value="desc" {% if sort_order == 'desc' %}selected{% endif %}>↓ Desc</option>
-        </select>
+      <input type="hidden" name="sort" id="sort" value="{{ sort_by }}">
+      <input type="hidden" name="order" id="order" value="{{ sort_order }}">
+      <div class="filter-item">
+        <div class="sort-btn-wrapper">
+          <button type="button" class="sort-toggle-btn" onclick="toggleDropdown('sortDropdown')">
+            <span class="sort-icon">⇅</span> Sort
+          </button>
+          <div id="sortDropdown" class="sort-dropdown">
+            <div class="sort-option{% if sort_by == 'name' %} active{% endif %}" data-sort="name" onclick="applySortGeneric('name','sort','order','sortDropdown','serverForm')">
+              <span class="sort-option-label">Server Name</span>
+              <span class="sort-option-arrow">{% if sort_by == 'name' %}{{ '↑' if sort_order == 'asc' else '↓' }}{% endif %}</span>
+            </div>
+            <div class="sort-option{% if sort_by == 'ip' %} active{% endif %}" data-sort="ip" onclick="applySortGeneric('ip','sort','order','sortDropdown','serverForm')">
+              <span class="sort-option-label">IP Address</span>
+              <span class="sort-option-arrow">{% if sort_by == 'ip' %}{{ '↑' if sort_order == 'asc' else '↓' }}{% endif %}</span>
+            </div>
+            <div class="sort-option{% if sort_by == 'brand' %} active{% endif %}" data-sort="brand" onclick="applySortGeneric('brand','sort','order','sortDropdown','serverForm')">
+              <span class="sort-option-label">Brand</span>
+              <span class="sort-option-arrow">{% if sort_by == 'brand' %}{{ '↑' if sort_order == 'asc' else '↓' }}{% endif %}</span>
+            </div>
+            <div class="sort-option{% if sort_by == 'snmp_version' %} active{% endif %}" data-sort="snmp_version" onclick="applySortGeneric('snmp_version','sort','order','sortDropdown','serverForm')">
+              <span class="sort-option-label">SNMP Version</span>
+              <span class="sort-option-arrow">{% if sort_by == 'snmp_version' %}{{ '↑' if sort_order == 'asc' else '↓' }}{% endif %}</span>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Actions -->

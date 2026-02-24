@@ -51,16 +51,28 @@
       </div>
 
       <!-- Sort -->
-      <div class="filter-item sort-group">
-        <select name="sort" id="sort" onchange="this.form.submit()">
-          <option value="name" {% if sort_by == 'name' %}selected{% endif %}>Component Name</option>
-          <option value="category" {% if sort_by == 'category' %}selected{% endif %}>Category</option>
-          <option value="oid" {% if sort_by == 'oid' %}selected{% endif %}>OID</option>
-        </select>
-        <select name="order" id="order" onchange="this.form.submit()">
-          <option value="asc" {% if sort_order == 'asc' %}selected{% endif %}>↑ Asc</option>
-          <option value="desc" {% if sort_order == 'desc' %}selected{% endif %}>↓ Desc</option>
-        </select>
+      <input type="hidden" name="sort" id="sort" value="{{ sort_by }}">
+      <input type="hidden" name="order" id="order" value="{{ sort_order }}">
+      <div class="filter-item">
+        <div class="sort-btn-wrapper">
+          <button type="button" class="sort-toggle-btn" onclick="toggleDropdown('sortDropdown')">
+            <span class="sort-icon">⇅</span> Sort
+          </button>
+          <div id="sortDropdown" class="sort-dropdown">
+            <div class="sort-option{% if sort_by == 'name' %} active{% endif %}" data-sort="name" onclick="applySortGeneric('name','sort','order','sortDropdown','componentForm')">
+              <span class="sort-option-label">Component Name</span>
+              <span class="sort-option-arrow">{% if sort_by == 'name' %}{{ '↑' if sort_order == 'asc' else '↓' }}{% endif %}</span>
+            </div>
+            <div class="sort-option{% if sort_by == 'category' %} active{% endif %}" data-sort="category" onclick="applySortGeneric('category','sort','order','sortDropdown','componentForm')">
+              <span class="sort-option-label">Category</span>
+              <span class="sort-option-arrow">{% if sort_by == 'category' %}{{ '↑' if sort_order == 'asc' else '↓' }}{% endif %}</span>
+            </div>
+            <div class="sort-option{% if sort_by == 'oid' %} active{% endif %}" data-sort="oid" onclick="applySortGeneric('oid','sort','order','sortDropdown','componentForm')">
+              <span class="sort-option-label">OID</span>
+              <span class="sort-option-arrow">{% if sort_by == 'oid' %}{{ '↑' if sort_order == 'asc' else '↓' }}{% endif %}</span>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Actions -->

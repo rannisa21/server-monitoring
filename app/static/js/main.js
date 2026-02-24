@@ -219,3 +219,73 @@ function getStatusClass(value, warningThreshold, criticalThreshold) {
   if (numValue >= warningThreshold) return "warning";
   return "ok";
 }
+
+// ===== Sort Button Dropdown (shared across all pages) =====
+
+/**
+ * Toggle a dropdown by id, closing any other open sort/multi-select dropdowns.
+ */
+function toggleDropdown(id) {
+  document.querySelectorAll('.sort-dropdown.show, .multi-select-dropdown.show').forEach(function(d) {
+    if (d.id !== id) d.classList.remove('show');
+  });
+  var dropdown = document.getElementById(id);
+  if (dropdown) dropdown.classList.toggle('show');
+}
+
+// Close dropdowns when clicking outside
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.sort-btn-wrapper') && !e.target.closest('.multi-select-wrapper')) {
+    document.querySelectorAll('.sort-dropdown.show, .multi-select-dropdown.show').forEach(function(d) {
+      d.classList.remove('show');
+    });
+  }
+});
+
+/**
+ * Generic sort apply: update hidden inputs, update dropdown UI, then submit form.
+ * @param {string} field       - the sort field clicked
+ * @param {string} sortId      - id of the hidden sort input
+ * @param {string} orderId     - id of the hidden order input
+ * @param {string} dropdownId  - id of the sort-dropdown div
+ * @param {string} formId      - id of the form to submit (null = no submit, for AJAX pages)
+ */
+function applySortGeneric(field, sortId, orderId, dropdownId, formId) {
+  var sortInput = document.getElementById(sortId);
+  var orderInput = document.getElementById(orderId);
+  var currentSort = sortInput.value;
+  var currentOrder = orderInput.value;
+
+  if (currentSort === field) {
+    orderInput.value = currentOrder === 'asc' ? 'desc' : 'asc';
+  } else {
+    sortInput.value = field;
+    orderInput.value = 'asc';
+  }
+
+  updateSortDropdownUI(dropdownId, sortInput.value, orderInput.value);
+
+  if (formId) {
+    var form = document.getElementById(formId);
+    if (form) form.submit();
+  }
+}
+
+/**
+ * Update the visual state of sort dropdown options.
+ */
+function updateSortDropdownUI(dropdownId, activeSort, activeOrder) {
+  var dropdown = document.getElementById(dropdownId);
+  if (!dropdown) return;
+  dropdown.querySelectorAll('.sort-option').forEach(function(opt) {
+    var field = opt.getAttribute('data-sort');
+    var arrow = opt.querySelector('.sort-option-arrow');
+    if (field === activeSort) {
+      opt.classList.add('active');
+      arrow.textContent = activeOrder === 'asc' ? '↑' : '↓';
+    } else {
+      opt.classList.remove('active');
+      arrow.textContent = '';
+    }
+  });
+}
