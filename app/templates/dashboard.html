@@ -36,35 +36,35 @@
             <div class="modal-body">
                 <!-- Mode Tabs -->
                 <div class="report-mode-tabs">
-                    <button type="button" class="report-tab active" onclick="switchReportMode('month', this)">Bulanan</button>
-                    <button type="button" class="report-tab" onclick="switchReportMode('quick', this)">Quick Period</button>
+                    <button type="button" class="report-tab active" onclick="switchReportMode('month', this)">Monthly</button>
+                    <button type="button" class="report-tab" onclick="switchReportMode('quick', this)">Quick Select</button>
                     <button type="button" class="report-tab" onclick="switchReportMode('range', this)">Custom Range</button>
                 </div>
 
                 <!-- Month Mode -->
                 <div id="reportMonthPanel" class="report-panel">
                     <div class="form-group">
-                        <label for="report_month">Bulan</label>
+                        <label for="report_month">Month</label>
                         <select name="month" id="report_month">
-                            <option value="">-- Pilih Bulan --</option>
-                            <option value="1">Januari</option>
-                            <option value="2">Februari</option>
-                            <option value="3">Maret</option>
+                            <option value="">-- Select Month --</option>
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
                             <option value="4">April</option>
-                            <option value="5">Mei</option>
-                            <option value="6">Juni</option>
-                            <option value="7">Juli</option>
-                            <option value="8">Agustus</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
                             <option value="9">September</option>
-                            <option value="10">Oktober</option>
+                            <option value="10">October</option>
                             <option value="11">November</option>
-                            <option value="12">Desember</option>
+                            <option value="12">December</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="report_year">Tahun</label>
+                        <label for="report_year">Year</label>
                         <select name="year" id="report_year">
-                            <option value="">-- Pilih Tahun --</option>
+                            <option value="">-- Select Year --</option>
                             {% for y in range(2024, 2031) %}
                             <option value="{{ y }}">{{ y }}</option>
                             {% endfor %}
@@ -75,30 +75,30 @@
                 <!-- Quick Period Mode -->
                 <div id="reportQuickPanel" class="report-panel" style="display: none;">
                     <div class="form-group">
-                        <label>Jumlah Periode</label>
+                        <label>Period Amount</label>
                         <div class="quick-period-row">
-                            <input type="number" name="report_amount" id="reportAmount" value="1" min="1" max="9999" placeholder="Angka">
+                            <input type="number" name="report_amount" id="reportAmount" value="1" min="1" max="9999" placeholder="Number">
                             <select name="report_unit" id="reportUnit">
-                                <option value="minute">Menit</option>
-                                <option value="hour" selected>Jam</option>
-                                <option value="day">Hari</option>
-                                <option value="week">Minggu</option>
-                                <option value="month">Bulan</option>
-                                <option value="year">Tahun</option>
+                                <option value="minute">Minute</option>
+                                <option value="hour" selected>Hour</option>
+                                <option value="day">Day</option>
+                                <option value="week">Week</option>
+                                <option value="month">Month</option>
+                                <option value="year">Year</option>
                             </select>
                         </div>
-                        <span class="help-text">Contoh: Last 1 Jam, Last 30 Menit, Last 7 Hari</span>
+                        <span class="help-text">Example: Last 1 Hour, Last 30 Minutes, Last 7 Days</span>
                     </div>
                 </div>
 
                 <!-- Custom Range Mode -->
                 <div id="reportRangePanel" class="report-panel" style="display: none;">
                     <div class="form-group">
-                        <label for="reportFrom">Dari</label>
+                        <label for="reportFrom">From</label>
                         <input type="datetime-local" name="report_from" id="reportFrom">
                     </div>
                     <div class="form-group">
-                        <label for="reportTo">Sampai</label>
+                        <label for="reportTo">To</label>
                         <input type="datetime-local" name="report_to" id="reportTo">
                     </div>
                 </div>
@@ -312,12 +312,12 @@
             <span class="time-label">Last</span>
             <input type="number" id="uptimeAmount" value="1" min="1" max="9999" class="time-input" onchange="fetchUptimeData()">
             <select id="uptimeUnit" class="time-select" onchange="fetchUptimeData()">
-                <option value="minute">Menit</option>
-                <option value="hour" selected>Jam</option>
-                <option value="day">Hari</option>
-                <option value="week">Minggu</option>
-                <option value="month">Bulan</option>
-                <option value="year">Tahun</option>
+                <option value="minute">Minute</option>
+                <option value="hour" selected>Hour</option>
+                <option value="day">Day</option>
+                <option value="week">Week</option>
+                <option value="month">Month</option>
+                <option value="year">Year</option>
             </select>
         </div>
 
