@@ -7,7 +7,7 @@
 <!-- Username Section -->
 <div class="card" style="max-width: 500px;">
     <div class="card-header">
-        <h3>Ubah Username</h3>
+        <h3>Change Username</h3>
     </div>
     <form method="post" class="card-body">
         <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
@@ -30,7 +30,7 @@
         </div>
         
         <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Ubah Username</button>
+            <button type="submit" class="btn btn-primary">Change Username</button>
         </div>
     </form>
 </div>
@@ -38,7 +38,7 @@
 <!-- Password Section -->
 <div class="card" style="max-width: 500px; margin-top: 1.5rem;">
     <div class="card-header">
-        <h3>Ubah Password</h3>
+        <h3>Change Password</h3>
     </div>
     <form method="post" class="card-body">
         <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
@@ -47,7 +47,7 @@
         <div class="form-group">
             <label for="current_password">Password Saat Ini</label>
             <div class="password-wrapper">
-                <input type="password" name="current_password" id="current_password" required placeholder="Masukkan password saat ini" />
+                <input type="password" name="current_password" id="current_password" required placeholder="Enter current password" />
                 <button type="button" class="toggle-password" onclick="togglePassword('current_password')" title="Show/Hide Password">
                     <span class="eye-icon">⌣</span>
                 </button>
@@ -55,7 +55,7 @@
         </div>
         
         <div class="form-group">
-            <label for="new_password">Password Baru</label>
+            <label for="new_password">New Password</label>
             <div class="password-wrapper">
                 <input type="password" name="new_password" id="new_password" required minlength="8" placeholder="Min 8 karakter" />
                 <button type="button" class="toggle-password" onclick="togglePassword('new_password')" title="Show/Hide Password">
@@ -65,7 +65,7 @@
         </div>
         
         <div class="form-group">
-            <label for="confirm_password">Konfirmasi Password Baru</label>
+            <label for="confirm_password">Confirm New Password</label>
             <div class="password-wrapper">
                 <input type="password" name="confirm_password" id="confirm_password" required minlength="8" placeholder="Ulangi password baru" />
                 <button type="button" class="toggle-password" onclick="togglePassword('confirm_password')" title="Show/Hide Password">
@@ -75,7 +75,7 @@
         </div>
         
         <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Ubah Password</button>
+            <button type="submit" class="btn btn-primary">Change Password</button>
         </div>
     </form>
 </div>
@@ -83,7 +83,7 @@
 <!-- Account Info Section -->
 <div class="card" style="max-width: 500px; margin-top: 1.5rem;">
     <div class="card-header">
-        <h3>Informasi Akun</h3>
+        <h3>Account Information</h3>
     </div>
     <div class="card-body">
         <div class="form-group" style="margin-bottom: 0.5rem;">
