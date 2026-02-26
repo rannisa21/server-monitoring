@@ -32,48 +32,13 @@
         </div>
         <form action="{{ url_for('dashboard.download_report') }}" method="post" id="reportForm">
             <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-            <input type="hidden" name="report_mode" id="reportModeInput" value="month">
+            <input type="hidden" name="report_mode" id="reportModeInput" value="quick">
             <div class="modal-body">
-                <!-- Mode Tabs -->
                 <div class="report-mode-tabs">
-                    <button type="button" class="report-tab active" onclick="switchReportMode('month', this)">Monthly</button>
-                    <button type="button" class="report-tab" onclick="switchReportMode('quick', this)">Quick Select</button>
+                    <button type="button" class="report-tab active" onclick="switchReportMode('quick', this)">Quick Select</button>
                     <button type="button" class="report-tab" onclick="switchReportMode('range', this)">Custom Range</button>
                 </div>
-
-                <!-- Month Mode -->
-                <div id="reportMonthPanel" class="report-panel">
-                    <div class="form-group">
-                        <label for="report_month">Month</label>
-                        <select name="month" id="report_month">
-                            <option value="">-- Select Month --</option>
-                            <option value="1">January</option>
-                            <option value="2">February</option>
-                            <option value="3">March</option>
-                            <option value="4">April</option>
-                            <option value="5">May</option>
-                            <option value="6">June</option>
-                            <option value="7">July</option>
-                            <option value="8">August</option>
-                            <option value="9">September</option>
-                            <option value="10">October</option>
-                            <option value="11">November</option>
-                            <option value="12">December</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="report_year">Year</label>
-                        <select name="year" id="report_year">
-                            <option value="">-- Select Year --</option>
-                            {% for y in range(2024, 2031) %}
-                            <option value="{{ y }}">{{ y }}</option>
-                            {% endfor %}
-                        </select>
-                    </div>
-                </div>
-
-                <!-- Quick Period Mode -->
-                <div id="reportQuickPanel" class="report-panel" style="display: none;">
+                <div id="reportQuickPanel" class="report-panel" style="display: block;">
                     <div class="form-group">
                         <label>Period Amount</label>
                         <div class="quick-period-row">
@@ -90,8 +55,6 @@
                         <span class="help-text">Example: Last 1 Hour, Last 30 Minutes, Last 7 Days</span>
                     </div>
                 </div>
-
-                <!-- Custom Range Mode -->
                 <div id="reportRangePanel" class="report-panel" style="display: none;">
                     <div class="form-group">
                         <label for="reportFrom">From</label>
@@ -798,12 +761,8 @@ function manualRefresh() {
 // Report Modal Functions
 function openReportModal() {
     document.getElementById('reportModal').style.display = 'flex';
-    // Set default to current month/year
-    var now = new Date();
-    document.getElementById('report_month').value = now.getMonth() + 1;
-    document.getElementById('report_year').value = now.getFullYear();
-    // Reset to month mode
-    switchReportMode('month', document.querySelector('.report-tab'));
+    // Default to quick mode
+    switchReportMode('quick', document.querySelector('.report-tab'));
 }
 
 function closeReportModal() {
@@ -813,13 +772,10 @@ function closeReportModal() {
 function switchReportMode(mode, btn) {
     // Update hidden input
     document.getElementById('reportModeInput').value = mode;
-    
     // Toggle active tab
     document.querySelectorAll('.report-tab').forEach(t => t.classList.remove('active'));
     if (btn) btn.classList.add('active');
-    
     // Show/hide panels
-    document.getElementById('reportMonthPanel').style.display = mode === 'month' ? 'block' : 'none';
     document.getElementById('reportQuickPanel').style.display = mode === 'quick' ? 'block' : 'none';
     document.getElementById('reportRangePanel').style.display = mode === 'range' ? 'block' : 'none';
 }
