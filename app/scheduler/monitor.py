@@ -51,46 +51,68 @@ SNMP_CLASSIFICATION = {
     },
     'Dell': {
         'fan': lambda v: 'Unknown' if v is None or str(v).strip() == '' else
-            ('OK' if str(v).lower() in ['ok', 'good', '1', '2']
-             else ('Warning' if str(v).lower() in ['warning', 'degraded', '3']
-                   else ('Critical' if str(v).lower() in ['failed', 'error', 'critical', '4', '5']
+            ('OK' if str(v) in ['3']
+             else ('Warning' if str(v) in ['4']
+                   else ('Critical' if str(v) in ['5', '6']
                          else 'Unknown'))),
         'PSU': lambda v: 'Unknown' if v is None or str(v).strip() == '' else
-            ('OK' if str(v).lower() in ['ok', 'good', '1', '2']
-             else ('Warning' if str(v).lower() in ['warning', 'degraded', '3']
-                   else ('Critical' if str(v).lower() in ['failed', 'error', 'critical', '4', '5']
+            ('OK' if str(v) in ['3']
+             else ('Warning' if str(v) in ['4']
+                   else ('Critical' if str(v) in ['5', '6']
                          else 'Unknown'))),
         'harddisk': lambda v: 'Unknown' if v is None or str(v).strip() == '' else
-            ('OK' if str(v).lower() in ['ok', 'good', '1', '2']
-             else ('Warning' if str(v).lower() in ['warning', 'degraded', '3']
-                   else ('Critical' if str(v).lower() in ['failed', 'error', 'critical', '4', '5']
+            ('OK' if str(v) in ['3']
+             else ('Warning' if str(v) in ['4']
+                   else ('Critical' if str(v) in ['5', '6']
                          else 'Unknown'))),
         'suhu': lambda v: 'Unknown' if v is None or str(v).strip() == '' else
-            ('OK' if str(v).lower() in ['ok', 'good', '1', '2']
-             else ('Warning' if str(v).lower() in ['warning', 'degraded', '3']
-                   else ('Critical' if str(v).lower() in ['failed', 'error', 'critical', '4', '5']
+            ('OK' if str(v) in ['3']
+             else ('Warning' if str(v) in ['4']
+                   else ('Critical' if str(v) in ['5', '6']
                          else 'Unknown'))),
     },
     'supermicro': {
         'fan': lambda v: 'Unknown' if v is None or str(v).strip() == '' else
-            ('OK' if str(v).lower() in ['ok', 'good', '1', '2']
-             else ('Warning' if str(v).lower() in ['warning', 'degraded', '3']
-                   else ('Critical' if str(v).lower() in ['failed', 'error', 'critical', '4', '5']
+            ('OK' if str(v) in ['0']
+             else ('Warning' if str(v) in ['1']
+                   else ('Critical' if str(v) in ['2']
                          else 'Unknown'))),
         'PSU': lambda v: 'Unknown' if v is None or str(v).strip() == '' else
-            ('OK' if str(v).lower() in ['ok', 'good', '1', '2']
-             else ('Warning' if str(v).lower() in ['warning', 'degraded', '3']
-                   else ('Critical' if str(v).lower() in ['failed', 'error', 'critical', '4', '5']
+            ('OK' if str(v) in ['0']
+             else ('Warning' if str(v) in ['1']
+                   else ('Critical' if str(v) in ['2']
                          else 'Unknown'))),
         'harddisk': lambda v: 'Unknown' if v is None or str(v).strip() == '' else
-            ('OK' if str(v).lower() in ['ok', 'good', '1', '2']
-             else ('Warning' if str(v).lower() in ['warning', 'degraded', '3']
-                   else ('Critical' if str(v).lower() in ['failed', 'error', 'critical', '4', '5']
+            ('OK' if str(v) in ['0']
+             else ('Warning' if str(v) in ['1']
+                   else ('Critical' if str(v) in ['2']
                          else 'Unknown'))),
         'suhu': lambda v: 'Unknown' if v is None or str(v).strip() == '' else
-            ('OK' if str(v).lower() in ['ok', 'good', '1', '2']
-             else ('Warning' if str(v).lower() in ['warning', 'degraded', '3']
-                   else ('Critical' if str(v).lower() in ['failed', 'error', 'critical', '4', '5']
+            ('OK' if str(v) in ['0']
+             else ('Warning' if str(v) in ['1']
+                   else ('Critical' if str(v) in ['2']
+                         else 'Unknown'))),
+    },
+    'Lenovo': {
+        'fan': lambda v: 'Unknown' if v is None or str(v).strip() == '' else
+            ('OK' if str(v).lower() in ['normal']
+             else ('Warning' if str(v).lower() in ['warning']
+                   else ('Critical' if str(v).lower() in ['critical', 'nonrecoverable']
+                         else 'Unknown'))),
+        'PSU': lambda v: 'Unknown' if v is None or str(v).strip() == '' else
+            ('OK' if str(v).lower() in ['normal']
+             else ('Warning' if str(v).lower() in ['warning']
+                   else ('Critical' if str(v).lower() in ['critical', 'nonrecoverable']
+                         else 'Unknown'))),
+        'harddisk': lambda v: 'Unknown' if v is None or str(v).strip() == '' else
+            ('OK' if str(v).lower() in ['normal']
+             else ('Warning' if str(v).lower() in ['warning']
+                   else ('Critical' if str(v).lower() in ['critical', 'nonrecoverable']
+                         else 'Unknown'))),
+        'suhu': lambda v: 'Unknown' if v is None or str(v).strip() == '' else
+            ('OK' if str(v).lower() in ['normal']
+             else ('Warning' if str(v).lower() in ['warning']
+                   else ('Critical' if str(v).lower() in ['critical', 'nonrecoverable']
                          else 'Unknown'))),
     },
     'custom': {
