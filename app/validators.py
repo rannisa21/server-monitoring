@@ -99,7 +99,7 @@ def validate_category(category):
 
 def validate_brand(brand):
     """Validate server brand."""
-    valid_brands = ('HPE', 'Dell', 'supermicro', 'custom')
+    valid_brands = ('HPE', 'Dell', 'supermicro', 'Lenovo', 'custom')
     if brand not in valid_brands:
         raise ValidationError(f'Brand must be one of: {", ".join(valid_brands)}', 'brand')
     return brand

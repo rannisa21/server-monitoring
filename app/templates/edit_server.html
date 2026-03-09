@@ -23,36 +23,11 @@
   <div class="form-group">
     <label for="brand">Brand</label>
     <select name="brand" id="brand" required>
-      <option value="HPE" {% if server.brand="" ="HPE" %}selected{% endif %}>
-        HPE
-      </option>
-      <option value="Dell" {% if server.brand="" ="Dell" %}selected{% endif %}>
-        Dell
-      </option>
-      <option
-        value="supermicro"
-        {%
-        if
-        server.brand=""
-        ="supermicro"
-        %}selected{%
-        endif
-        %}
-      >
-        Supermicro
-      </option>
-      <option
-        value="custom"
-        {%
-        if
-        server.brand=""
-        ="custom"
-        %}selected{%
-        endif
-        %}
-      >
-        Custom
-      </option>
+        <option value="HPE" {% if server.brand=="HPE" %}selected{% endif %}>HPE</option>
+        <option value="Dell" {% if server.brand=="Dell" %}selected{% endif %}>Dell</option>
+        <option value="Lenovo" {% if server.brand=="Lenovo" %}selected{% endif %}>Lenovo</option>
+        <option value="supermicro" {% if server.brand=="supermicro" %}selected{% endif %}>Supermicro</option>
+        <option value="custom" {% if server.brand=="custom" %}selected{% endif %}>Custom</option>
     </select>
   </div>
   <div class="form-group">
